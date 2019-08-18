@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Industrial Control Technology | Junaid Jawed Khan</title>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+   <div id="lead">
+        <div id="lead-content">
+            <h1>Industrial Control Technology</h1>
+        </div>
+    <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="text-align: center;">
+                  
+                    <h2 class="heading" style="align-text:center;"> Brief Overview</h2>
+             
+                </div>
+          
+                <div class="col-md">
+                    <p>
+                       The ICT platform is a representation of a typical industrial automation system.The system includes component sorting, assembly inspection and accepts/reject processes.
+                       <br><br>
+                 
+                       The objective of this project was to develop an eﬃcient and robust, fully automated
+                       controller for the ICT setup to asssemble widgets using LabVIEW.
+                       <br><br>
+                       
+                       <b>LabVIEW</b> is a graphical programming
+                        environment which allows the creation of programs referred to as <b>virtual instruments</b>. <br><br>
+                         
+                       Using labVIEW, virtual instruments were created to read data through the sensors and manipulate the workspace using the actuators available in the ICT system, to assemble widgets.  A front-panel was also developed to:<br>
+                        
+                        <ul>
+                            <li> <p>Start and stop the assembly line using the front panel. </p>
+                            </li>
+                            <li>
+                               <p>
+                               Keep track of sensors and actuators of the system. 
+                                </p>
+                            </li>
+                            <li>
+                            <p>Keep track of complete and incomplete assemblies.  
+                            </p></li>
+                        </ul>
+                        <br>
+
+                          
+                         
+                       <p style="text-align:center;">
+                       <img src="../images/ICTsetup.png" alt="ict3 setup" style="width:500px;height:300px;"><br>
+                       <strong>Industrial Automation Setup.</strong>
+                       </p><br>
+                       
+                       
+                       <p style="text-align:center;">
+                       <img src="../images/assembledwidget.png" alt="negative feeback system" style="height:200px;" >
+                       <br> 
+                        <strong> A metal-peg with a plastic-hopper - desired final assembly.</strong>
+                       </p><br><br>
+                       
+                        
+                        <p style="text-align:center;">
+                        <img src="../images/plasticsortingflowchart.png" style="width:600px;height:600px;">
+                       <br>
+                       <strong>Flow chart for sorting plastic-hoppers.</strong>
+                       </p>
+                        <br><br>            
+                        
+                       <p style="text-align:center;">
+                       <img src="../images/plastichopperreleaseflowchart.png" alt="negative feeback system" style="width:400px;height:600px;" >
+                       <br><br>
+                        <strong> Flow chart to release plastic-hoppers on to metal-pegs. </strong>
+                       </p><br><br>
+                       
+                        <p style="text-align:center;">
+                       <img src="../images/QualityAssuranceflowchart.png" alt="negative feeback system" style="width:500px;height:500px;" >
+                       <br> <br>
+                        <strong> Flow chart for Quality Assurance flow.</strong>
+                       </p><br><br>
+                       
+                       <p style="text-align:center;">
+                       <img src="../images/rejectingacceptingassemblyflowchart.png" alt="negative feeback system" style="width:500px;height:500px;" >
+                       <br> 
+                        <strong> Flow chart for keeping track of accepted/rejected assemblies and counting parts. </strong>
+                       </p><br>
+                       
+                        <p style="text-align:center;">
+                       <img src="../images/FrontPanelGUI.JPG" alt="negative feeback system" style="width:600px;height:300px;" >
+                       <br> 
+                        <strong> Front-Panel GUI.  </strong>
+                       </p><br><br>
+                       
+                       <p style="text-align:center;">
+                     <video width="400" height="600" controls muted>
+                        <source src="../images/ictsetupvideo2.mp4">   
+                     </video>
+                       <br> 
+                        <strong> Final Result</strong>
+                       </p><br>
+                              
+                </div>
+                
+                <p>
+                   The objective of this project was to design a GUI controller for the ICT3 system using
+                    LabVIEW's Graphical programming language.
+                </p> <br>
+                
+                
+                <p>
+                
+                The controller implementation employed concepts from digital logic and
+applied different strategies in tackling different sections of the assembly line. For example:
+                </p> 
+
+<ul>
+   
+    <li>
+      <p>
+       Sorting of the plastic-hoppers in the sorting area was achieved by actions based on edge-trigerring.
+    </p> 
+    </li>
+    <li>
+      <p> Assembly in the assembly chute and hopper was based on timing.  </p>
+      
+    </li>
+    <li>
+       <p>
+           Sensing was based on edge-triggering and state ﬂags.
+       </p>
+        
+    </li>
+    <li>
+       <p>
+            Rejection or accepting an assembly was solely based on ﬂags.
+       </p>
+       
+    </li>
+</ul>
+            <br>
+            
+                <b> <strong> Note:</strong> If you're interested in the design process, I'm more than happy to share my labVIEW files, shoot me a message!</b>
+                
+            </div>    
+        </div>
+        
+    </div>
+   
+    <!-- End #about -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+</body>
+
+</html>
+
