@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Dynamic System | Junaid Jawed Khan</title>
+	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#report">Report</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+   <div id="lead">
+        <d
+        iv id="lead-content">
+               <h1> Dynamic System Design </h1>      
+        </div>
+   <!-- End #lead-content -->
+        <div id="lead-overlay"></div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+   </div>
+    <!-- End #lead -->
+  <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;"> Overview</h2>
+                </div>
+                <div class="col-md">
+                    <p>
+                       In this project, my team designed, analyzed and simulated a dynamic system that transports a ball from one corner to the other of a given vertical slab. The main objective of this project were to ensure that the ball took an average of 3-5 seconds to the reach the bottom of the vertical slab. 
+                    </p><br>
+                    <p style="text-align:center;">
+                       <img src="../images/dynamicsystemsicon.png" style="width:400px;height:400px;"><br>
+                       <strong> Preliminary Design </strong>
+                    </p><br>
+
+                    <p> The main objective of this project was achieved by including different components in the ball's path. The components include a rotating element, a curved path, a spring and an impact. All these components were added to the system to slow down the ball as it moved towards the end of vertical slab. The spring was included in the system to make the system passive, i.e. the ball's motion is initiated by the spring, no direct contact. <br><br>
+                    </p>
+
+                    <p>After satisfying objective of this project, the dynamic system was simulated using MATLAB to ensure that the real and simulated time of the dynamic system were within a <strong>reasonable degree of error.</strong></p>
+
+                    <h4>Design Updates</h4>
+                    <ol>
+                        <li>
+                          <p>The preliminary design was changed by removing the slope at the starting position (at the top of the vertical slab) - to ensure that the ball starts at rest. This would reduce error in simulating the motion of the ball in MATLAB. </p><br>
+                          <p style="text-align:center;">
+                            <img src="../images/preliminaryDesignUpdated.png" style="width:500px;height:500px;"><br>
+                              <strong> Design 1.1 - Removed the slope at start position. </strong>
+                          </p><br>
+                          <div style="text-align:left;">
+                            <h3 style="text-align: left;">Problems encountered with Design 1.1</h3>
+                            <ul>
+                              <li><p>Over-rotation of the lever arm.</p></li>
+                              <li><p>Ball travelled much faster than anticipated in the solidwork simulation.</p></li>
+                              <li><p>Ball bouncing on the curved path after impact.</p></li>
+                              <li><p>The ball doesn't have enough kinetic energy at the last horizontal path to make it up the slope.</p></li><br>
+                            </ul><br>
+                            <p style="text-align: center;color:red;"><strong> My team and I made changes to Design 1.1 to counteract the problems give above.</strong></p><br>
+                          </div>
+                        </li>
+                        <li>
+                            <p>To counteract the problems encountered in Design 1.1, the following changes were made:</p>
+                            <ul>
+                              <li><p>Removed initial impact - there are several other locations of impact along the path.</p></li>
+                              <li><p>Reduced slope height for final horizontal path - so ball has enough energy to make it over.</p></li>
+                              <li><p>Added stops for the rotating part.</p></li>
+                            </ul><br>
+                            <p style="text-align:center;">
+                              <img src="../images/DynamicSystemDesign1_2.png" style="width:500px;height:500px;"><br>
+                                <strong>Design 1.2</strong>
+                            </p><br>
+
+                            <p> The changes made to Design 1.1 were based off the observation that the initial impact required too much force for the ball to go past it and hence it was hard to get an optimal initial speed for the ball, which ultimately affected the total time. Also, to help the ball make it over into the stop ditch, the end slope’s top was sanded, as shown above. <strong style="color: red;">Unfortunately</strong>, controlling the initial speed wasn’t enough to reach the time requirements of the project as the ball was still covering the distance in a very short period.</p><br>
+
+                            <p style="text-align: center;color: red;"><strong>Therefore, the team decided to make changes to Design 1.1 to achieve our objective of 3-5 seconds of total displacment time. </strong></p> <br>
+                        </li>
+                        <li>
+                          <p>To counteract the problems encountered in Design 1.2, the following modifications were made to <strong style="color: blue;">Design 1.1</strong> </p>
+                            <ul>
+                              <li><p>Added two extra paths, to increase the total displacement.</p></li>
+                              <li><p>Add a more gradual slope at the end path, for a constant deceleration at the end.</p></li>
+                              <li><p>Placed the rotating rod at its original position to slow down the ball after slingshot.</p></li>
+                            </ul><br>
+                           <p style="text-align:center;">
+                            <img src="../images/DynamicSystemDesign1_3.png" style="width:400px;height:400px;"><br>
+                              <strong>Design 1.3 </strong>
+                          </p><br>
+
+                          <p> The two extra paths in Design 1.3 were not added until after the first test carried out with the initial impact - without the two extra paths, it was observed that the ball was being transported to the end zone swiftly. Addition of the two extra paths and the gradual slope for constant deceleration of the ball, resulted in <strong style="font-style: italic;color: blue;">optimum time of about 3 seconds </strong> - which was the main objective of this project.</p><br>
+                        </li>
+                    </ol>
+                    <p> Design 1.3 achieved our objective of 3-5 seconds toal displacment time. Therefore, Design 1.3 was accepted as the final design of the dynamic system and we moved on to simulating the motion of the ball using <strong style="color: red;">MATLAB.</strong></p>
+                    <p style="text-align:center;">
+                      <img src="../images/FinalDynamicDesign.png" style="width:400px;height:400px;"><br>
+                              <strong>Final Design of the Dynamic System </strong>
+                    </p><br>
+                </div>
+
+                 <div style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">MATLAB Simulations</h2>
+                          <p style="text-align:center;">
+                            <img src="../images/MATLABDisplacement.png" style="width:400px;height:400px;"><br>
+                              <strong>MATLAB Simulation</strong>
+                          </p><br>
+
+                          <p style="color:black;"> The detailed report of the project is included for your reference. The report includes details regarding the governing equations of each components employed in simulating the dynamic system in MATLAB. </p><br>
+
+                          <p style="color:black;">Shoot me a message and I'll share my <strong style="color: red" > MATLAB</strong> files!</p>
+
+
+
+                </div>
+            </div>    
+        </div>
+        
+    </div>
+    
+     <div id="report" >
+         <p style="text-align: center;">
+              <a href="../project-reports/DynamicSystemDesign.pdf" class="btn-rounded-black" style="text-align: center;">Dynamic System Design Report</a> 
+         </p><br>
+    </div> 
+   
+    <!-- End #about -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+</body>
+
+</html>
+
