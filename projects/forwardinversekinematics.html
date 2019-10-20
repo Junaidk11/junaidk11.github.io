@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Forward &amp; Inverse Kinematics| Junaid Jawed Khan</title>
+	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#report">Report</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+   <div id="lead">
+        <div id="lead-content">
+               <h1> Forward &amp; Inverse Kinematics</h1>      
+        </div>
+   <!-- End #lead-content -->
+        <div id="lead-overlay"></div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+   </div>
+    <!-- End #lead -->
+  <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;"> Overview</h2>
+                </div>
+                <div class="col-md">
+
+                    <p style="text-align:center;">
+                       <img src="../images/Al5DRoboticArm.jpg" style="width:400px;height:300px;"><br>
+                       <strong> Lynxmotion AL5D bench-top robotic arm</strong>
+                    </p><br>
+                    <p>
+                       In this project, a 5-axis robotic system, the Al5D robotic arm was programmed to place 3 blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong> configuration. The robotic arm was controlled using the SSC-32 servo controller. SSC-32 Sequencer is a software that helps control the robotic arm by allowing communications with the SSC-32 servo controller
+                    </p><br>
+                    
+                    <p> Initially, MATLAB was employed to implement an Inverse Kinematic function to determine joint angles for a given end-effector position and orientation. The <strong style="font-style: italic; color:black;">end-effector position and orientations</strong> were the different configurations of the AL5D robotic arm for placing the blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong>  configuration.
+                    </p>
+                    <br><br>
+
+                    <h4>Design Tasks</h4>
+                    <ol>
+                        <li>
+                          <p>Determine 4 critical precision points of the desired motion.</p>
+                          <p style="text-align:center;">
+                            <img src="../images/PrecisionPoints.png" style="width:800px;height:200px;"><br>
+                              <strong>Precision points </strong>
+                          </p><br>
+                        </li>
+                        <li>
+                          <p>Determine the rotation angle [radians] of the input link [beta] and the follower link [gamma] through each precision point relative to the first precision point. </p>
+                          <p style="text-align:center;">
+                            <img src="../images/betaAndGammaAngles.png" style="width:600px;height:400px;"><br>
+                              <strong>Beta and Gamma angles </strong>
+                          </p><br>
+                        </li>
+                        <li>
+                          <p>Utilize the function generation algorithm with your precision points, excluding the first precision point. The first precision point is fixed to indicate starting point of the motion. The function generation algorithm solves for the distances and displacements of each consequent point that comes after the initial precision point.</p>
+                           <p style="text-align:center;">
+                            <img src="../images/functiongenerationalgorithm.png" style="width:700px;height:200px;"><br>
+                              <strong>Function generation algorithm </strong>
+                          </p><br>
+                        </li>
+                    </ol>
+                </div>
+
+                 <div style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">4-Bar Mechanism</h2>
+                          <p style="text-align:center;">
+                            <img src="../images/FinalMechanismPrecisionPoints.png" style="width:800px;height:400px;"><br>
+                              <strong>Final Prototype</strong>
+                          </p><br>
+
+                  </div>
+            </div>    
+        </div>
+        
+    </div>
+    
+     <div id="report" >
+         <p style="text-align: center;">
+              <a href="../project-reports/chassisDesignReport.pdf" class="btn-rounded-black" style="text-align: center;">4-Bar Mechanism Design Report</a> 
+         </p><br>
+    </div> 
+   
+    <!-- End #about -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+</body>
+
+</html>
+
