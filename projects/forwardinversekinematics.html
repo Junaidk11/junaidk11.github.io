@@ -24,10 +24,10 @@
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="#about">Overview</a>
+              <a href="https://www.junaidjkhan.com"> Home </a>
             </li>
             <li>
-                <a href="#report">Report</a>
+                <a href="#about">Overview</a>
             </li>
             <li>
                 <a href="#contact">Contact</a>
@@ -63,58 +63,48 @@
                        <strong> Lynxmotion AL5D bench-top robotic arm</strong>
                     </p><br>
                     <p>
-                       In this project, a 5-axis robotic system, the Al5D robotic arm was programmed to place 3 blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong> configuration. The robotic arm was controlled using the SSC-32 servo controller. SSC-32 Sequencer is a software that helps control the robotic arm by allowing communications with the SSC-32 servo controller
+                       In this project, a 5-axis robotic system, the Al5D robotic arm was programmed to place 3 Lego-blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong> configuration. The robotic arm was controlled using the SSC-32 servo controller. SSC-32 Sequencer is a software that helps control the robotic arm by allowing communications with the SSC-32 servo controller
                     </p><br>
                     
-                    <p> Initially, MATLAB was employed to implement an Inverse Kinematic function to determine joint angles for a given end-effector position and orientation. The <strong style="font-style: italic; color:black;">end-effector position and orientations</strong> were the different configurations of the AL5D robotic arm for placing the blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong>  configuration.
+                    <p> Initially, <strong style="font-style: italic;color: black;"> MATLAB </strong> was employed to implement an Inverse Kinematic function which would determine <strong style="font-style: italic;color: black;">joint angles </strong> for a given end-effector position and orientation. The <strong style="font-style: italic; color:black;">end-effector position and orientations</strong> were the different configurations of the AL5D robotic arm for placing 3 Lego blocks in a <strong style="font-style: italic;color: black;">“𝜋” </strong>  configuration.
                     </p>
                     <br><br>
 
-                    <h4>Design Tasks</h4>
-                    <ol>
-                        <li>
-                          <p>Determine 4 critical precision points of the desired motion.</p>
-                          <p style="text-align:center;">
-                            <img src="../images/PrecisionPoints.png" style="width:800px;height:200px;"><br>
-                              <strong>Precision points </strong>
-                          </p><br>
-                        </li>
-                        <li>
-                          <p>Determine the rotation angle [radians] of the input link [beta] and the follower link [gamma] through each precision point relative to the first precision point. </p>
-                          <p style="text-align:center;">
-                            <img src="../images/betaAndGammaAngles.png" style="width:600px;height:400px;"><br>
-                              <strong>Beta and Gamma angles </strong>
-                          </p><br>
-                        </li>
-                        <li>
-                          <p>Utilize the function generation algorithm with your precision points, excluding the first precision point. The first precision point is fixed to indicate starting point of the motion. The function generation algorithm solves for the distances and displacements of each consequent point that comes after the initial precision point.</p>
-                           <p style="text-align:center;">
-                            <img src="../images/functiongenerationalgorithm.png" style="width:700px;height:200px;"><br>
-                              <strong>Function generation algorithm </strong>
-                          </p><br>
-                        </li>
-                    </ol>
+                    <p style="text-align:center;">
+                            <img src="../images/Al5D2DLabelledDiagram.png" style="width:700px;height:400px;"><br>
+                              <strong>AL5D Robotic Arm 2-D Layout </strong>
+                    </p><br>
+
+                    <p> The MATLAB script for Inverse Kinematics was used to determine the joint angles (shown above) for different positions and orientations of the robotic arm. These joint angles were then converted to motor encoder values. These motor encoder values were used in the SSC-32 Servo Sequencer software to control the robotic arm.
+                    </p> <br>
+
+                      <p style="text-align:center;">
+                        <img src="../images/Al5DPickPlaceBlock1.png" style="width:800px;height:500px;"><br>
+                          <strong>Robotic Arm Placing Block 1 </strong>
+                      </p><br>
+                      <p style="text-align:center;">
+                        <img src="../images/Al5DPlacingBlock2.png" style="width:500px;height:500px;"><br>
+                          <strong>Robotic Arm Placing Block 2  </strong>
+                      </p><br>
+                      <p style="text-align:center;">
+                        <img src="../images/Al5DPlacingBlock3.png" style="width:500px;height:500px;"><br>
+                          <strong>Robotic Arm Placing Block 3 </strong>
+                      </p><br>
                 </div>
-
                  <div style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">4-Bar Mechanism</h2>
-                          <p style="text-align:center;">
-                            <img src="../images/FinalMechanismPrecisionPoints.png" style="width:800px;height:400px;"><br>
-                              <strong>Final Prototype</strong>
-                          </p><br>
-
-                  </div>
+                   <h2 class="heading" style="align-text:center;">Al5D Robotic Arm in Action</h2>
+                      <p style="text-align:center;">
+                       <video width="400" height="600" controls muted>
+                          <source src="../images/AL5DInAction.mp4">   
+                       </video>
+                         <br>
+                      </p><br>
+                 </div> 
             </div>    
         </div>
         
     </div>
     
-     <div id="report" >
-         <p style="text-align: center;">
-              <a href="../project-reports/chassisDesignReport.pdf" class="btn-rounded-black" style="text-align: center;">4-Bar Mechanism Design Report</a> 
-         </p><br>
-    </div> 
-   
     <!-- End #about -->
 
     <div id="contact">
