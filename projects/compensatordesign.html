@@ -6,15 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Feedback Controller Design | Junaid Jawed Khan</title>
-	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
+
+    <style>
+            #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: black;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+
+            #myBtn:hover {
+              background-color: #555;
+            }
+</style>
 </head>
 
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
@@ -25,7 +48,8 @@
         </div>
         <ul id="menu" class="shadow">
              <li>
-              <a href="https://www.junaidjkhan.com"> Home </a>
+              <a onclick="goBack()"> Home </a>
+              <script> function goBack(){window.history.go(-1)}</script>
             </li>
             <li>
                 <a href="#about">Overview</a>
@@ -168,7 +192,7 @@
                     Moving on to comparing PID control and Lead-lag compensation, it is safe to conclude that a lead compensator acts approximately as a PD controller as they both speed up the response of the system by improving the transient response of the system. Slowing down the transient response makes the system slower, which is approximately what a PI controller does to a system. Therefore, it is safe to conclude that Lag compensator acts approximately as a PI controller. 
                 </p><br>
                 
-                <b> <strong> Note:</strong> If you're interested in the design process I've attached a link to my detailed report on this project. Also, I'm more than happy to share my MATLAB and LTSpice files, shoot me a message!</b>
+                <strong style="font-style: italic;color:red;">  If you're interested in the design process I've attached a link to my detailed report on this project. Also, I'm more than happy to share my MATLAB and LTSpice files, shoot me a message!</strong>
                 
             </div>    
         </div>
@@ -177,7 +201,7 @@
     
      <div id="report" >
            <p style="text-align: center;">
-            <a href="../project-reports/FeedbackProject_Report.pdf" class="btn-rounded-black" style="text-align: center;">View Report </a> 
+            <a href="../project-reports/FeedbackProject_Report.pdf" class="btn-rounded-black" style="text-align: center;">View Design Details </a> 
          </p>
     </div> 
    
@@ -227,6 +251,32 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/scripts.min.js"></script>
+
+
+    <!--  Scroll to the top: - If needed later.
+    <script>
+          //Get the button
+          var mybutton = document.getElementById("myBtn");
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+</script> -->
+
+
 </body>
 
 </html>
