@@ -1,132 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-	<title>Page Under Construction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Inventory Management | Junaid Jawed Khan</title>
+	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-	
-	<!--  -->
-	<div class="simpleslide100">
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg01.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg02.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg03.jpg');"></div>
-	</div>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+          <li>
+              <a onclick="goBack()"> Home </a>
+              <script> function goBack(){window.history.go(-1)}</script>
+            </li>
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#report">Report</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-	<div class="size1 overlay1">
-		<!--  -->
-		<div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
-			<h3 class="l1-txt1 txt-center p-b-25">
-			</h3>
+   <div id="lead">
+        <div id="lead-content">
+               <h1> Inventory Managment Application </h1>      
+        </div>
+   <!-- End #lead-content -->
+        <div id="lead-overlay"></div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+   </div>
+    <!-- End #lead -->
+  	<div id="about">
+        <div class="container">
+           <div class="row">
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;"> Overview</h2>
+                </div>
+                <div class="col-md">
+                    <p>
+                       Working as a Physics Lab Assistant at Fraser International College (FIC) I was tasked with maintaining the inventory using their excel sheets - a very tedious method.  To avoid the excel sheets for maintaining inventory I came up with an idea that would utilize a database to maintain the inventory. My supervisor was supportive of my idea and so I started looking into tutorials that explain the fundamentals of database-driven applications. It took me about a week to complete understand the road map to web-development, from frontend to backend. </p><br>
+                     <p>
+						From my research, as a beginner to full-stack development, everyone suggested to start with PHP on the backend, its easier to understand & implement server-side concepts. I took an introductory course to database-driven web applications on Udemy for the first 4-5 weeks. Upon finishing the course, I moved on to implementing the inventory management application for FIC using <strong style="color: red;font-style: italic;">PHP & MySQL </strong> on the backend, and <strong style="color: red;font-style: italic;">JavaScript & AJAX</strong> on the frontend. 
+ 
+                    </p><br>
+                </div>
+           </div>
+           <div class="row"> 
+           		<div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">Implemented Pages</h2>
+                </div>
+                <div class="col-md">
+                	<ol>
+                        <li> Login-page
+                        	 <p style="text-align:center;">
+		                       <img src="../images/inventorymanagementFrontPage.png" style="width:600px;height:300px;"><br>
+		                       <strong></strong>
+                			</p><br>		 
+                    	</li>
+                        <li>Account Page
+                        		<p style="text-align:center;">
+			                       <img src="../images/AccountPage.png" style="width:600px;height:300px;"><br>
+			                       <strong></strong>
+                				</p><br>		 
+                        </li>
+                        <li>Inventory Page 
+                        		<p style="text-align:center;">
+			                       <img src="../images/inventoryPage.png" style="width:600px;height:300px;"><br>
+			                       <strong></strong>
+                				</p><br>		
+                        </li>
+                        <li>Add Product Page 
+                        	<p style="text-align:center;">
+			                       <img src="../images/AddProductpage.png" style="width:600px;height:300px;"><br>
+			                       <strong></strong>
+            				</p><br>	
+                        </li>
+                        <li>Product Report Page
+                        	<p style="text-align:center;">
+			                       <img src="../images/ProductReportPage.png" style="width:600px;height:400px;"><br>
+			                       <strong></strong>
+            				</p><br>
+                        </li>
+                        <li> Email supplier Page
+                        	<p style="text-align:center;">
+			                       <img src="../images/placeNewOrderPage.png" style="width:600px;height:400px;"><br>
+			                       <strong></strong>
+            				</p><br>
+                        </li>
+                    </ol> 
 
-			<p class="m2-txt1 txt-center p-b-48">
-				Apologies, I'm currently fixing some bugs on this project, will upload a link to the final demo ASAP!
-            </p>
+                    <div>
+                    	<strong>Additional Feature:</strong><br>
+                    	<p>Every time a product quantity in the database is updated and <strong style="color: blue;font-style: italic;">if the new quantity is below the minimum required</strong> an email is <strong style="color: blue;font-style: italic;">automatically sent </strong> to the supplier for a new order. </p> 
+						
+						<p> The <strong style="color: red;font-style: italic;">idea</strong> was to use FIC’s ordering template to place new orders. At the moment, I’m sending an email that says “order placed successfully” - just for debugging purposes. </p>
+                    </p>   
+                    </div>	
+                </div>
+           </div>
+           <div class="row">
+           		<div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">DEMO</h2>
+                </div>
+                <div class="col-md">
+                		<p> Once I've covered all security grounds on my server, I will include a link to the web-app. For now, 	watch the video that shows all the pages mentioned above. </p><br>
 
-			<div class="flex-w flex-c-m cd100 p-b-33">
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 days" id="days"></span>
-					<span class="s2-txt1">Days</span>
-				</div>
-
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 hours" id="hours"></span>
-					<span class="s2-txt1">Hours</span>
-				</div>
-
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 minutes" id="minutes"></span>
-					<span class="s2-txt1">Minutes</span>
-				</div>
-
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 seconds" id="seconds"></span>
-					<span class="s2-txt1">Seconds</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="vendor/countdowntime/countdowntime.js"></script>
-	
- <!-- code for counter --> 
-<script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("November 15, 2019 15:37:25").getTime();
-
-	// Update the count down every 1 second
-    var x = setInterval(function() {
-
-	  	// Get today's date and time
-	  	var now = new Date().getTime();
-	    
-		  // Find the distance between now and the count down date
-		  var distance = countDownDate - now;
-		    
-		  // Time calculations for days, hours, minutes and seconds
-		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		    
-          document.getElementById("days").innerHTML = days; 
-          document.getElementById("hours").innerHTML = hours; 
-          document.getElementById("minutes").innerHTML = minutes; 
-          document.getElementById("seconds").innerHTML = seconds; 
-
-		    
-		  // If the count down is over, write some text 
-		  if (distance < 0) {
-		    clearInterval(x);
-		    document.getElementById("demo").innerHTML = "EXPIRED";
-		  }
-	}, 1000);
-</script>
+                		<p style="text-align:center;">
+                                     <video width="400" height="600" controls muted>
+                                        <source src="../images/Design1.1Video.mp4">   
+                                     </video>
+                                     <br> 
+                        </p><br>
+                </div> 	
+       	   </div>
+       	</div>
+    </div>
     
-    
-    <!-- code for counter ends here -->
+    <!-- End #about -->
 
-	
-	
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
 </body>
+
 </html>
+
