@@ -1,132 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-	<title>Page Under Construction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CAN Network | Junaid Jawed Khan</title>
+	   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <style>
+            #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: black;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+
+            #myBtn:hover {
+              background-color: #555;
+            }
+</style>
 </head>
+
 <body>
-	
-	<!--  -->
-	<div class="simpleslide100">
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg01.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg02.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg03.jpg');"></div>
-	</div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+             <li>
+              <a onclick="goBack()"> Home </a>
+              <script> function goBack(){window.history.go(-1)}</script>
+            </li>
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#report">Report</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-	<div class="size1 overlay1">
-		<!--  -->
-		<div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
-			<h3 class="l1-txt1 txt-center p-b-25">
-			</h3>
+   <div id="lead">
+        <div id="lead-content">
+               <h1>Controller Area Network</h1>      
+        </div>
+    <!-- End #lead-content -->
 
-			<p class="m2-txt1 txt-center p-b-48">
-			    Apologies, I'm currently working on this project, will update this page as soon as I have a working prototype!  
-            </p>
+        <div id="lead-overlay"></div>
 
-			<div class="flex-w flex-c-m cd100 p-b-33">
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 days" id="days"></span>
-					<span class="s2-txt1">Days</span>
-				</div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
 
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 hours" id="hours"></span>
-					<span class="s2-txt1">Hours</span>
-				</div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="text-align: center;">
+                  
+                    <h2 class="heading" style="align-text:center;"> Overview</h2>
+                </div>
+          
+                <div class="col-md">
 
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 minutes" id="minutes"></span>
-					<span class="s2-txt1">Minutes</span>
-				</div>
+                	 <p style="text-align:center;">
+                       <img src="../images/CANImage.jpg" style="width:800px;height:600px;"><br>
+                       <strong> A CAN Network with 2 Nodes. </strong>
+                    </p><br>
+                    <p>
 
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 seconds" id="seconds"></span>
-					<span class="s2-txt1">Seconds</span>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <p>
+                       A Controller Area Network (CAN) is a vehicle bus developed by Robert Bosch to allow interconnection of Electronic Circuit Units (ECU) inside a vehicle. The main reason for the development of this bus was to reduce the unnecessary weight & cost introduced by bulky wire harnessess associated with point-to-point wiring of ECUs.</p> <br> 
+
+                       <p> <strong style="color: red;font-style: italic;"> CAN is an event-driven, message-based, multi-master, and asynchronous communication protocol. </strong> </p> <br>
+
+                       <p> If you're fairly new to CAN protocol, I highly recommend going through my slides on CAN protocol below. This presentation was created for SFU Team Phantom's Embedded subteam, to familiarize the team members with CAN communication protocol. </p> <br>
 
 
+                       <iframe src="//www.slideshare.net/slideshow/embed_code/key/8bXVibnnCd19ZP" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+                       <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/JunaidJawedKhan/controller-area-network-team-phantom" title="Controller Area Network - Team Phantom" target="_blank">Controller Area Network - Team Phantom</a> </strong> from <strong><a href="https://www.slideshare.net/JunaidJawedKhan" target="_blank">Junaid Jawed Khan</a></strong> </div>
+               </div>
+               <div class="col-md">
+                       <br>
 
-	
+                       <p> 
+                       	In this project, I setup a CAN network with 3 nodes and wrote drivers for the CAN communication using interrupts to send messages from on the bus. The 3 nodes are: 
+                       <ol>
+                       	 <li><p> TMS570LS1227 - VCU</p></li>
+                       	 <li><p> TMS570LS1224 - BMS</p></li>
+                       	 <li><p> TM4C123GH6PM - Dashboard</p></li>
+                       </ol> 
+                       </p>
 
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="vendor/countdowntime/countdowntime.js"></script>
-	
- <!-- code for counter --> 
-<script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("November 20, 2019 15:37:25").getTime();
+                       <p> Initially, the CAN network included only the first two nodes (1 & 2). The idea was to establish communication between the two nodes, followed by addition of the third node. <br><br>
 
-	// Update the count down every 1 second
-    var x = setInterval(function() {
-
-	  	// Get today's date and time
-	  	var now = new Date().getTime();
-	    
-		  // Find the distance between now and the count down date
-		  var distance = countDownDate - now;
-		    
-		  // Time calculations for days, hours, minutes and seconds
-		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		    
-          document.getElementById("days").innerHTML = days; 
-          document.getElementById("hours").innerHTML = hours; 
-          document.getElementById("minutes").innerHTML = minutes; 
-          document.getElementById("seconds").innerHTML = seconds; 
-
-		    
-		  // If the count down is over, write some text 
-		  if (distance < 0) {
-		    clearInterval(x);
-		    document.getElementById("demo").innerHTML = "EXPIRED";
-		  }
-	}, 1000);
-</script>
+                       
+                        The tasks carried out in this project are:
+                    </p>
+                        
+                        <ul>
+                            <li> <p>Used Halcogen to configure and generate driver files for CAN0 peripheral of TMS570LS1227.</p>
+                            </li>
+                            <li>
+                               <p>Used Halcogen to configure and generate driver files for CAN0 peripheral of TMS570LS1224.</p>
+                            </li>
+                            <li>
+                            <p>Used Code Composer to write drivers for CAN communication between the two nodes. 
+                            </p></li>
+                        </ul>
+                         
+                         
+                       <p style="text-align:center;">
+                       <img src="../images/TMS1227AND1224.jpg" alt="RLC circuit" style="width:900px;height:600px;"><br>
+                       <strong> A CAN network with VCU & BMS. </strong>
+                       </p><br>
+                       
+                       
+                       <p style="text-align:center;">
+                       <img src="../images/DebugginTMS5701227AND1224.jpg" alt="negative feeback system" style="width:900px;height:600px;" >
+                       <br> 
+                        <strong> Debugging CAN communication between VCU & BMS. </strong>
+                       </p><br>
+                       
+                        
+                        <p style="text-align:center;">
+                        <img src="../images/ScopeReading.jpg" style="width:600px;height:600px;">
+                       <br>
+                       <strong> Analyzing CAN bus logic using a scope.</strong>
+                       </p>
+                        <br>            
+                        
+                       <p style="text-align:center;">
+                       <img src="../images/TMS570LS12242Nodes.jpg" alt="negative feeback system" style="width:900px;height:600px;" >
+                       <br> 
+                        <strong> A CAN network with two TMS570LS1224 nodes. </strong>
+                       </p><br>
+                       
+                        <p style="text-align:center;">
+                       <img src="../images/tm4c1231224Setup.jpg" alt="negative feeback system" style="width:900px;height:600px;" >
+                       <br> 
+                        <strong> A CAN network with Dashboard & BMS. </strong>
+                       </p><br>
+                       
+                       <p style="text-align:center;">
+                       <img src="../images/tm4c123with1224.jpg" alt="negative feeback system" style="width:900px;height:600px;" >
+                       <br> 
+                        <strong> Snipbit of Dashboard receiving message "NODE-1" from BMS. </strong>
+                       </p><br>
+                            
+                </div>
+               
+                <strong style="font-style: italic;color:red;">  
+                	 In the next few days I will upload videos that will help you setup your CAN network using Halcogen and Code composer,  and I will also walk you through my code.
+                </strong>
+                
+            </div>    
+        </div>
+        
+    </div>
     
-    
-    <!-- code for counter ends here -->
+     <div id="report" >
+           <p style="text-align: center;">
+            <a href="https://github.com/sfuphantom/firmware/tree/CAN/CAN_NETWORK" class="btn-rounded-black" style="text-align: center;">View Code </a> 
+         </p>
+    </div> 
+   
+    <!-- End #about -->
 
-	
-	
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+
+
+    <!--  Scroll to the top: - If needed later.
+    <script>
+          //Get the button
+          var mybutton = document.getElementById("myBtn");
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+</script> -->
+
 
 </body>
+
 </html>
+
