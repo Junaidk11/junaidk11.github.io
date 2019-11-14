@@ -220,88 +220,96 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul><br>
                </div>
-                <div class="col-md">
                 <div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"> Setting Up a CAN Network </h2>
-                </div>
-                          
-                          
-                          <!--  Work from Here --> 
-                           In this project, I setup a CAN network with 3 nodes and wrote drivers for the CAN communication using interrupts to send messages from on the bus. The 3 nodes are: </p>
-                       <ol>
-                       	 <li><p> TMS570LS1227 - VCU</p></li>
-                       	 <li><p> TMS570LS1224 - BMS</p></li>
-                       	 <li><p> TM4C123GH6PM - Dashboard</p></li>
-                       </ol> 
-                    
-
-                       <p> Initially, the CAN network included only the first two nodes (1 & 2). The idea was to establish communication between the two nodes, followed by addition of the third node. <br><br>
-
-                       
-                        The tasks carried out in this project are:
-                    </p>
-                        
-                        <ul>
-                            <li> <p>Used Halcogen to configure and generate driver files for CAN0 peripheral of TMS570LS1227.</p>
-                            </li>
-                            <li>
-                               <p>Used Halcogen to configure and generate driver files for CAN0 peripheral of TMS570LS1224.</p>
-                            </li>
-                            <li>
-                            <p>Used Code Composer to write drivers for CAN communication between the two nodes. 
-                            </p></li>
-                        </ul>
+                    <h2 class="heading" style="align-text:center;"> CAN Network Setup</h2>
+                </div>         
+                <div class="col-md">        
                          
-                         
-                       <p style="text-align:center;">
-                       <img src="../images/TMS1227AND1224.jpg"  style="width:900px;height:600px;"><br>
-                       <strong> A CAN network with VCU & BMS. </strong>
-                       </p><br>
-                       
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/DebugginTMS5701227AND1224.jpg" style="width:900px;height:600px;" >
-                       <br> 
-                        <strong> Debugging CAN communication between VCU & BMS. </strong>
-                       </p><br>
-                       
-                        
-                        <p style="text-align:center;">
-                        <img src="../images/ScopeReading.jpg" style="width:600px;height:600px;">
-                       <br>
-                       <strong> Analyzing CAN bus logic using a scope.</strong>
-                       </p>
-                        <br>            
-                        
-                       <p style="text-align:center;">
-                       <img src="../images/TMS570LS12242Nodes.jpg"  style="width:900px;height:600px;" >
-                       <br> 
-                        <strong> A CAN network with two TMS570LS1224 nodes. </strong>
-                       </p><br>
-                       
-                        <p style="text-align:center;">
-                       <img src="../images/tm4c1231224Setup.jpg"  style="width:900px;height:600px;" >
-                       <br> 
-                        <strong> A CAN network with Dashboard & BMS. </strong>
-                       </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/tm4c123with1224.jpg"  style="width:900px;height:600px;" >
-                       <br> 
-                        <strong> Snipbit of Dashboard receiving message "NODE-1" from BMS. </strong>
-                       </p><br>
-                            
-                </div>
-               
-                <strong style="font-style: italic;color:red;">  
+                      <p> In this project, I setup a CAN network with 3 nodes and write drivers for CAN communication protocol using interrupts, to send &amp; receive messages on the bus.</p>
+                      
+                      <h2> Hardware </h2>
+                      <p>For setting up the physical CAN network with 3 nodes, we need the following:</p>
+                      <ol>
+                         <li><div style="text-align: center;">
+                            <img src="../images/CAN/MCP2551.JPG" style="width:500px;height:300px;transform: rotate(180deg)"><p style="text-align:center;">MCP2551 Transcievers - 3 of them </p><br></div>
+                         </li>
+                         <li>
+                             <div style="text-align: center;">
+                             <img src="../images/CAN/CANBUS.JPG" style="width:500px;height:300px;"><p style="text-align:center;">Connectors - CAN_H &amp; CAN_L wires</p><br></div>
+                         </li>
+                         <li>
+                            <div style="text-align: center;">
+                            <img src="../images/CAN/Launchpad.JPG" style="width:500px;height:300px;"><p style="text-align:center;"> Node 1 - TMS570LS1224</p><br>
+                            </div>      
+                         </li>
+                         <li>
+                            <div style="text-align: center;">
+                            <img src="../images/CAN/VCU.JPG" style="width:500px;height:300px;transform: rotate(180deg);"><p style="text-align:center;"> Node 2 - Team Phantom's Vehicle Control Unit</p><br>
+                            </div>      
+                         </li>
+                         <li>
+                             <div style="text-align: center;">
+                            <img src="../images/CAN/Tiva.JPG" style="width:500px;height:300px;"><p style="text-align:center;"> Node 3 - Tiva Launchpad TM4C123GH6PM</p><br>
+                            </div>      
+                         </li>
+                          
+                      </ol>
+                      
+                      <p> All 3 nodes have a CAN peripheral on their board, which is responsible for handling the CAN frames and error handling. The MCP2551 transcievers are needed to convert the TTL logic of the respective node to the CAN bus logic. In TTL logic, a Logical 0 is represented by 0V and a Logical 1 is represented by 3.3V. However, in CAN bus logic, a logical 0 is represented by 3.5V on CAN_H &amp; 1.5V on CAN_L, and a logical 1 is represented by 2.5V on both CAN_H and CAN_L. Therefore, there is a need of a transciever to convert the back &amp; forth between TTL and CAN logic. </p> <br>
+                      
+                      <p> Initially, for simplicity purposes, I setup the CAN network between any two nodes. Eventually, the goal is to have all three nodes connected to the CAN bus and set priorities for each node's messsages.</p>
+                      
+                      <h2> Different CAN Networks</h2>
+                      <ol>
+                          <li>
+                             <div style="text-align: center;">
+                            <img src="../images/CAN/VCULaunchpad.JPG" style="width:700px;height:400px;"><p style="text-align:center;"> CAN with Nodes 1 &amp; 2</p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/LaunchPads.JPG" style="width:700px;height:500px;transform: rotate(180deg)"><p style="text-align:center;"> CAN with 2 TMS570LS1224s </p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/LaunchpadTiva.jpg" style="width:700px;height:500px;transform: rotate(180deg)"><p style="text-align:center;"> CAN with Nodes 1 &amp; 3</p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/TwoVCUs.jpg" style="width:700px;height:500px;"><p style="text-align:center;"> CAN with 2 VCUs</p><br>
+                            </div> 
+                          </li>
+                      </ol>
+                    </div>
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">FIRMWARE</h2>
+                </div> 
+                <div class="col-md">
+                    <p style="text-align:center;"> COMING SOON</p>
+                     <p><strong style="font-style: italic;color:red;">  
                 	 In the next few days I will upload videos that will help you setup your CAN network using Halcogen and Code composer,  and I will also walk you through my code.
-                </strong>
+                     </strong></p><br>
+                </div>
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">DEMO</h2>
+                </div>
+                <div class="col-md">
+                    <p>
+                        The following videos demonstrate CAN communication between the various CAN network setups I mentioned before. Node 1 has the highest priority and the priority decreases as you down the list - for this project. So, if I have a CAN network with Nodes 1 and 2, I would expect Node 1 to gain access to the bus before Node 2. Hence, I would expect the message from Node-1 to be received by Node-2 before I see Node-2's message in Node-1's message box. The similar idea applies for a network with Node-2 &amp; Node-3, Node-1 &amp; Node-3. 
+                    </p>
+                    
+                     <ul>
+                         <li><p>CAN network with Node-1 &amp; Node-2 - video will be uploaded soon.</p></li>
+                         <li><p>CAN network with Node-1 &amp; Node-3 - video will be uploaded soon.</p></li>
+                         <li><p>CAN network with Node-1, Node-2 &amp; Node-3 - video will be uploaded soon.</p></li>
+                     </ul>
+                </div>        
                 
-            </div>    
-        </div>
-        
+        </div>     
     </div>
     
      <div id="report" >
