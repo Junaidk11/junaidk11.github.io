@@ -88,16 +88,7 @@
                   
                     <h2 class="heading" style="align-text:center;"> Background</h2>
                 </div>
-          
                 <div class="col-md">
-
-                    <!--
-                	 <p style="text-align:center;">
-                       <img src="../images/CANImage.jpg" style="width:800px;height:600px;"><br>
-                       <strong> A CAN Network with 2 Nodes. </strong>
-                    </p><br>
-                    -->
-
                     <p>
                        A Controller Area Network (CAN) is a vehicle bus developed by Robert Bosch to allow interconnection of Electronic Circuit Units (ECU) inside a vehicle. The main reason for the development of this bus was to reduce the unnecessary weight & cost introduced by bulky wire harnessess associated with point-to-point wiring of ECUs.</p> <br> 
                        
@@ -111,9 +102,9 @@
                     <p style="text-align:center;">
                         <a href="https://copperhilltech.com/a-brief-introduction-to-controller-area-network/"><img src="../images/CAN/CANNodeModules.png" style="width:500px;height:300px;"></a><br>
                        <strong>A typical CAN network </strong>
-                    </p><br>
-                    
-                    <ol> <h3><p>Key definitions &amp; Points on CAN</p></h3>
+                    </p><br>  
+                     <h3><p>Key definitions</p></h3>                  
+                    <ol>
                        <li><p>CAN bus</p>
                            <ul><li>
                               <p>A two-wire vehicle bus standard for multiple CAN devices to communicate with each other, without a HOST computer.</p>       </li>
@@ -140,7 +131,8 @@
                        </li>
                        <li><p>CAN follows a wired-and logic to determine what is sent on the CAN bus, a dominant bit or recessive bit. </p>
                        </li>
-                       <li><p>A dominant bit on the CAN bus is represented by setting 3.5V on CAN_H &amp; 1.5V on CAN_L. A recessive bit on the CAN bus is represented by setting 2.5V on both CAN_H &amp; CAN_L. </p></li>
+                       <li><p>A dominant bit on the CAN bus is represented by setting 3.5V on CAN_H &amp; 1.5V on CAN_L. A recessive bit on the CAN bus is represented by setting 2.5V on both CAN_H &amp; CAN_L. </p>
+                       </li>
                        <li><p>Nodes</p>
                          <ul>
                              <li>
@@ -156,41 +148,94 @@
                                  </ul>
                              </li>
                          </ul>
-                          
                        </li>
-                        
+                       <li><p>A node's transceiver drives/detects the doominant and recessive bits by looking at the voltage difference between CAN_H and CAN_L wire.</p>
+                           <ul>
+                               <li><p> A voltage difference of 2V is denoted as a Logical 0 on the CAN bus; A dominant bit</p></li>
+                               <li><p> A voltage difference of 0V is denoted as a Logical 1 on the CAN bus; A recessive bit</p></li>
+                           </ul>
+                       </li>
                     </ol>
                     
-                    
-                    <h2> <p>Features of CAN Protocol</p></h2>
-                    
-                    <ul>
+                    <h2> <p>Features of CAN Protocol</p></h2> 
+                    <ul>  
                         <li><p>Multi-master</p>
                             <ul>
-                                <li> <p></p></li>
+                                <li><p>All the nodes in a CAN network have the capability to start transmission at any time. Although, to send its message, a node needs to win the arbitration process.</p></li>
                             </ul>
                         </li>
-                        <li><p>Event-driven</p></li>
-                        <li><p>Message-based</p></li>
-                        <li><p>Half-duplex</p></li>
-                        <li><p>Asynchronous</p></li>
+                        <li><p>Arbitration Process</p>
+                            <ul>
+                                <li>
+                                    <p>Whenever the CAN bus is in idle state, any node can start transmitting a message. If two or more nodes start transmission at the same time, there is a conflict. The conflict is resolved by an arbitration process. The arbitration process is a bitwise operation. Each node transmits its bit while receiving the bit on the CAN bus. The node that transmits the first RECESSIVE bit (i.e. a logical 1) has lost the arbitration process, it will quit transmitting its bits and will start receiving. Using filtering processes, the receiving NODES can filter the UNIQUE MESSAGE ID of the message on the CAN BUS to decide if it has any relevance to itself - i.e. should it receive this message or ignore it. </p>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li><p>Event-driven</p>
+                            <ul>
+                                <li><p>CAN bus is in idle-state when no one is trasnsmitting a message. Idle-state = Recessive bit on the CAN bus. </p></li>
+                            </ul>
+                        </li>
+                        <li><p>Message-based</p>
+                            <ul>
+                                <li><p>Unlike I2C, there is no need for addressing as receiver in the CAN network can decide to receive or ignore the message being transmitted on the CAN bus. </p></li>
+                            </ul>
+                        
+                        </li>
+                        <li><p>Half-duplex</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        A node cannot receive &amp; transmit simultaneously. 
+                                    </p>
+                                </li>
+                            </ul>
+                        
+                        </li>
+                        <li><p>Asynchronous</p>
+                            <ul>
+                                <li>
+                                    <p>The communication is not controlled by a clock pulse, a sequence of start &amp; stop bits are used to signal start and end of transmission. </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Different Frame Types for different purposes</p>
+                            <ul>
+                                <li>
+                                    <p>Data Frame</p>
+                                    <ul><li><p>Used for sending/broadcasting data in the CAN network.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Remote Frame </p>
+                                    <ul><li><p>Used for requesting the data from another node.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Error Frame</p>
+                                    <ul><li><p>Transmitted when a node detects an error in a message, and causes all other nodes in the network to send an error frame as well.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Overload Frame</p>
+                                    <ul><li><p>Transmitted by a node that becomes too busy. It is primarily used to provide for an extra delay between messages.</p></li></ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                     
-                      
-                       <p> CAN is an event-driven, message-based, multi-master, and asynchronous communication protocol.</p> <br>
-
                </div>
-               <div class="col-md">
-                       <br>
-
-                       <p> 
-                       	In this project, I setup a CAN network with 3 nodes and wrote drivers for the CAN communication using interrupts to send messages from on the bus. The 3 nodes are: 
+                <div class="col-md">
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;"> Setting Up a CAN Network </h2>
+                </div>
+                          
+                          
+                          <!--  Work from Here --> 
+                           In this project, I setup a CAN network with 3 nodes and wrote drivers for the CAN communication using interrupts to send messages from on the bus. The 3 nodes are: </p>
                        <ol>
                        	 <li><p> TMS570LS1227 - VCU</p></li>
                        	 <li><p> TMS570LS1224 - BMS</p></li>
                        	 <li><p> TM4C123GH6PM - Dashboard</p></li>
                        </ol> 
-                       </p>
+                    
 
                        <p> Initially, the CAN network included only the first two nodes (1 & 2). The idea was to establish communication between the two nodes, followed by addition of the third node. <br><br>
 
