@@ -1,132 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-	<title>Page Under Construction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CAN Network | Junaid Jawed Khan</title>
+	   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <style>
+            #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: black;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+
+            #myBtn:hover {
+              background-color: #555;
+            }
+</style>
 </head>
+
 <body>
-	
-	<!--  -->
-	<div class="simpleslide100">
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg01.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg02.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/bg03.jpg');"></div>
-	</div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+             <li>
+              <a onclick="goBack()"> Home </a>
+              <script> function goBack(){window.history.go(-1)}</script>
+            </li>
+            <li>
+                <a href="#about">Overview</a>
+            </li>
+            <li>
+                <a href="#report">Report</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-	<div class="size1 overlay1">
-		<!--  -->
-		<div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
-			<h3 class="l1-txt1 txt-center p-b-25">
-			</h3>
+   <div id="lead">
+        <div id="lead-content">
+               <h1>Controller Area Network</h1>      
+        </div>
+    <!-- End #lead-content -->
 
-			<p class="m2-txt1 txt-center p-b-48">
-			    Apologies, I'm currently working on this project, will update this page as soon as I have a working prototype!  
-            </p>
+        <div id="lead-overlay"></div>
 
-			<div class="flex-w flex-c-m cd100 p-b-33">
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 days" id="days"></span>
-					<span class="s2-txt1">Days</span>
-				</div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
 
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 hours" id="hours"></span>
-					<span class="s2-txt1">Hours</span>
-				</div>
-
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 minutes" id="minutes"></span>
-					<span class="s2-txt1">Minutes</span>
-				</div>
-
-				<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
-					<span class="l2-txt1 p-b-9 seconds" id="seconds"></span>
-					<span class="s2-txt1">Seconds</span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="vendor/countdowntime/countdowntime.js"></script>
-	
- <!-- code for counter --> 
-<script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("November 20, 2019 15:37:25").getTime();
-
-	// Update the count down every 1 second
-    var x = setInterval(function() {
-
-	  	// Get today's date and time
-	  	var now = new Date().getTime();
-	    
-		  // Find the distance between now and the count down date
-		  var distance = countDownDate - now;
-		    
-		  // Time calculations for days, hours, minutes and seconds
-		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		    
-          document.getElementById("days").innerHTML = days; 
-          document.getElementById("hours").innerHTML = hours; 
-          document.getElementById("minutes").innerHTML = minutes; 
-          document.getElementById("seconds").innerHTML = seconds; 
-
-		    
-		  // If the count down is over, write some text 
-		  if (distance < 0) {
-		    clearInterval(x);
-		    document.getElementById("demo").innerHTML = "EXPIRED";
-		  }
-	}, 1000);
-</script>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" style="text-align: center;">
+                  
+                    <h2 class="heading" style="align-text:center;"> Background</h2>
+                </div>
+                <div class="col-md">
+                    <p>
+                       A Controller Area Network (CAN) is a vehicle bus developed by Robert Bosch to allow interconnection of Electronic Circuit Units (ECU) inside a vehicle. The main reason for the development of this bus was to reduce the unnecessary weight & cost introduced by bulky wire harnessess associated with point-to-point wiring of ECUs.</p> <br> 
+                       
+                    <p style="text-align:center;"><a href="https://copperhilltech.com/a-brief-introduction-to-controller-area-network/"><img src="../images/CAN/WithWithoutCANImage.png" style="width:500px;height:300px;"></a></p>
+                    <br>
+                        
+                    <p>
+                       CAN protocol's energetic features for safety has made it the standard in-vehicle network type and protocol known as <strong>ISO-11898</strong>. A key feature of CAN is its ability to confine a fault in the network. We will look into this features in a few minutes. 
+                    </p>
+                    
+                    <p style="text-align:center;">
+                        <a href="https://copperhilltech.com/a-brief-introduction-to-controller-area-network/"><img src="../images/CAN/CANNodeModules.png" style="width:500px;height:300px;"></a><br>
+                       <strong>A typical CAN network </strong>
+                    </p><br>  
+                     <h3><p>Key definitions</p></h3>                  
+                    <ol>
+                       <li><p>CAN bus</p>
+                           <ul><li>
+                              <p>A two-wire vehicle bus standard for multiple CAN devices to communicate with each other, without a HOST computer.</p>       </li>
+                              <li>
+                               <p>The two wires are called CAN High (CAN_H) &amp; CAN Low (CAN_L). They're twisted with 120-ohm resistors at ANY two ends of the CAN bus.</p>
+                               </li>
+                               <li>
+                                   <p>The two wires are twisted, to keep them close to each other, so that a magnetic field has an equal effect on both wires, thereby having no effect on the difference in voltage between the two wires, which results in no change in the CAN signal on the CAN bus, making CAN communication ROBUST and the most suitable type of communication protocol in such harsh environments.</p>
+                               </li>
+                               <li>
+                                   <p>The 120 ohm resistors are called "Termination resistors". The termination resistors return the CAN bus to idle state, preventing any echoes on the CAN bus.</p>
+                               </li>
+                           </ul>
+                       </li>
+                       <li><p>CAN bus Signal </p>
+                          <ul>
+                              <li><p>Comprised of two logic levels. They're called:</p>
+                                  <ul>
+                                      <li><p>A Logical 0 on the CAN bus is called a Dominant bit.</p></li>
+                                      <li><p>A Logical 1 on the CAN bus is called a Recessive bit.</p></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                       </li>
+                       <li><p>CAN follows a wired-and logic to determine what is sent on the CAN bus, a dominant bit or recessive bit. </p>
+                       </li>
+                       <li><p>A dominant bit on the CAN bus is represented by setting 3.5V on CAN_H &amp; 1.5V on CAN_L. A recessive bit on the CAN bus is represented by setting 2.5V on both CAN_H &amp; CAN_L. </p>
+                       </li>
+                       <li><p>Nodes</p>
+                         <ul>
+                             <li>
+                                 <p>CAN devices on the CAN bus are called Nodes. You need atleast two nodes to setup a CAN network.</p>
+                             </li>
+                             <li><p>Each node on the CAN network needs the following 3 modules to work together in a CAN network.</p>
+                                 <ul>
+                                 <li><p> A transceiver to convert data from TTL logic to CAN bus Logic.</p></li>
+                                 <li><p> A CAN controller to handle Framing &amp; perform Cyclic-Redundancy Check on data received &amp; transmitted.</p></li>
+                                 <li><p> A microcontroller to decodes the received messages and control what is to be transmitted on the CAN bus for the CAN network.
+                                    </p>
+                                 </li>
+                                 </ul>
+                             </li>
+                         </ul>
+                       </li>
+                       <li><p>A node's transceiver drives/detects the doominant and recessive bits by looking at the voltage difference between CAN_H and CAN_L wire.</p>
+                           <ul>
+                               <li><p> A voltage difference of 2V is denoted as a Logical 0 on the CAN bus; A dominant bit</p></li>
+                               <li><p> A voltage difference of 0V is denoted as a Logical 1 on the CAN bus; A recessive bit</p></li>
+                           </ul>
+                       </li>
+                    </ol>
+                    
+                    <h2> <p>Features of CAN Protocol</p></h2> 
+                    <ul>  
+                        <li><p>Multi-master</p>
+                            <ul>
+                                <li><p>All the nodes in a CAN network have the capability to start transmission at any time. Although, to send its message, a node needs to win the arbitration process.</p></li>
+                            </ul>
+                        </li>
+                        <li><p>Arbitration Process</p>
+                            <ul>
+                                <li>
+                                    <p>Whenever the CAN bus is in idle state, any node can start transmitting a message. If two or more nodes start transmission at the same time, there is a conflict. The conflict is resolved by an arbitration process. The arbitration process is a bitwise operation. Each node transmits its bit while receiving the bit on the CAN bus. The node that transmits the first RECESSIVE bit (i.e. a logical 1) has lost the arbitration process, it will quit transmitting its bits and will start receiving. Using filtering processes, the receiving NODES can filter the UNIQUE MESSAGE ID of the message on the CAN BUS to decide if it has any relevance to itself - i.e. should it receive this message or ignore it. </p>
+                                </li>
+                            </ul> 
+                        </li>
+                        <li><p>Event-driven</p>
+                            <ul>
+                                <li><p>CAN bus is in idle-state when no one is trasnsmitting a message. Idle-state = Recessive bit on the CAN bus. </p></li>
+                            </ul>
+                        </li>
+                        <li><p>Message-based</p>
+                            <ul>
+                                <li><p>Unlike I2C, there is no need for addressing as receiver in the CAN network can decide to receive or ignore the message being transmitted on the CAN bus. </p></li>
+                            </ul>
+                        
+                        </li>
+                        <li><p>Half-duplex</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        A node cannot receive &amp; transmit simultaneously. 
+                                    </p>
+                                </li>
+                            </ul>
+                        
+                        </li>
+                        <li><p>Asynchronous</p>
+                            <ul>
+                                <li>
+                                    <p>The communication is not controlled by a clock pulse, a sequence of start &amp; stop bits are used to signal start and end of transmission. </p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Different Frame Types for different purposes</p>
+                            <ul>
+                                <li>
+                                    <p>Data Frame</p>
+                                    <ul><li><p>Used for sending/broadcasting data in the CAN network.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Remote Frame </p>
+                                    <ul><li><p>Used for requesting the data from another node.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Error Frame</p>
+                                    <ul><li><p>Transmitted when a node detects an error in a message, and causes all other nodes in the network to send an error frame as well.</p></li></ul>
+                                </li>
+                                <li>
+                                    <p>Overload Frame</p>
+                                    <ul><li><p>Transmitted by a node that becomes too busy. It is primarily used to provide for an extra delay between messages.</p></li></ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul><br>
+               </div>
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;"> CAN Network Setup</h2>
+                </div>         
+                <div class="col-md">        
+                         
+                      <p> In this project, I setup a CAN network with 3 nodes and write drivers for CAN communication protocol using interrupts, to send &amp; receive messages on the bus.</p>
+                      
+                      <h2> Hardware </h2>
+                      <p>For setting up the physical CAN network with 3 nodes, we need the following:</p>
+                      <ol>
+                         <li><div style="text-align: center;">
+                            <img src="../images/CAN/MCP2551.JPG" style="width:500px;height:300px;transform: rotate(180deg)"><p style="text-align:center;">MCP2551 Transcievers - 3 of them </p><br></div>
+                         </li>
+                         <li>
+                             <div style="text-align: center;">
+                             <img src="../images/CAN/CANBUS.JPG" style="width:500px;height:300px;"><p style="text-align:center;">Connectors - CAN_H &amp; CAN_L wires</p><br></div>
+                         </li>
+                         <li>
+                            <div style="text-align: center;">
+                            <img src="../images/CAN/Launchpad.JPG" style="width:500px;height:300px;"><p style="text-align:center;"> Node 1 - TMS570LS1224</p><br>
+                            </div>      
+                         </li>
+                         <li>
+                            <div style="text-align: center;">
+                            <img src="../images/CAN/VCU.JPG" style="width:500px;height:300px;transform: rotate(180deg);"><p style="text-align:center;"> Node 2 - Team Phantom's Vehicle Control Unit</p><br>
+                            </div>      
+                         </li>
+                         <li>
+                             <div style="text-align: center;">
+                            <img src="../images/CAN/Tiva.JPG" style="width:500px;height:300px;"><p style="text-align:center;"> Node 3 - Tiva Launchpad TM4C123GH6PM</p><br>
+                            </div>      
+                         </li>
+                          
+                      </ol>
+                      
+                      <p> All 3 nodes have a CAN peripheral on their board, which is responsible for handling the CAN frames and error handling. The MCP2551 transcievers are needed to convert the TTL logic of the respective node to the CAN bus logic. In TTL logic, a Logical 0 is represented by 0V and a Logical 1 is represented by 3.3V. However, in CAN bus logic, a logical 0 is represented by 3.5V on CAN_H &amp; 1.5V on CAN_L, and a logical 1 is represented by 2.5V on both CAN_H and CAN_L. Therefore, there is a need of a transciever to convert the back &amp; forth between TTL and CAN logic. </p> <br>
+                      
+                      <p> Initially, for simplicity purposes, I setup the CAN network between any two nodes. Eventually, the goal is to have all three nodes connected to the CAN bus and set priorities for each node's messsages.</p>
+                      
+                      <h2> Different CAN Networks</h2>
+                      <ol>
+                          <li>
+                             <div style="text-align: center;">
+                            <img src="../images/CAN/VCULaunchpad.JPG" style="width:700px;height:400px;"><p style="text-align:center;"> CAN with Nodes 1 &amp; 2</p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/LaunchPads.JPG" style="width:700px;height:500px;transform: rotate(180deg)"><p style="text-align:center;"> CAN with 2 TMS570LS1224s </p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/LaunchpadTiva.jpg" style="width:700px;height:500px;transform: rotate(180deg)"><p style="text-align:center;"> CAN with Nodes 1 &amp; 3</p><br>
+                            </div> 
+                          </li>
+                          <li>
+                              <div style="text-align: center;">
+                            <img src="../images/CAN/TwoVCUs.jpg" style="width:700px;height:500px;"><p style="text-align:center;"> CAN with 2 VCUs</p><br>
+                            </div> 
+                          </li>
+                      </ol>
+                    </div>
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">FIRMWARE</h2>
+                </div> 
+                <div class="col-md">
+                    <p style="text-align:center;"> COMING SOON</p>
+                     <p><strong style="font-style: italic;color:red;">  
+                	 In the next few days I will upload videos that will help you setup your CAN network using Halcogen and Code composer,  and I will also walk you through my code.
+                     </strong></p><br>
+                </div>
+                <div class="col-md" style="text-align: center;">
+                    <h2 class="heading" style="align-text:center;">DEMO</h2>
+                </div>
+                <div class="col-md">
+                    <p>
+                        The following videos demonstrate CAN communication between the various CAN network setups I mentioned before. Node 1 has the highest priority and the priority decreases as you down the list - for this project. So, if I have a CAN network with Nodes 1 and 2, I would expect Node 1 to gain access to the bus before Node 2. Hence, I would expect the message from Node-1 to be received by Node-2 before I see Node-2's message in Node-1's message box. The similar idea applies for a network with Node-2 &amp; Node-3, Node-1 &amp; Node-3. 
+                    </p>
+                    
+                     <ul>
+                         <li><p>CAN network with Node-1 &amp; Node-2 - video will be uploaded soon.</p></li>
+                         <li><p>CAN network with Node-1 &amp; Node-3 - video will be uploaded soon.</p></li>
+                         <li><p>CAN network with Node-1, Node-2 &amp; Node-3 - video will be uploaded soon.</p></li>
+                     </ul>
+                </div>        
+                
+        </div>     
+    </div>
     
-    
-    <!-- code for counter ends here -->
+     <div id="report" >
+           <p style="text-align: center;">
+            <a href="https://github.com/sfuphantom/firmware/tree/CAN/CAN_NETWORK" class="btn-rounded-black" style="text-align: center;">View Code </a> 
+         </p>
+    </div> 
+   
+    <!-- End #about -->
 
-	
-	
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+
+
+    <!--  Scroll to the top: - If needed later.
+    <script>
+          //Get the button
+          var mybutton = document.getElementById("myBtn");
+
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+
+          function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+</script> -->
+
 
 </body>
+
 </html>
+
