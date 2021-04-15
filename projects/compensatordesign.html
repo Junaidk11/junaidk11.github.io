@@ -125,60 +125,78 @@
                           <p>
                               The steps taken to complete the tasks above and the results obtained are analyzed in the attached report for anyone interested in designing a PID controller or a Lead-lag compensator.<br>
                           </p>      
-                          
-                         
-                       <p style="text-align:center;">
-                       <img src="../images/electronicircuit.jpg" alt="RLC circuit" style="width:500px;height:300px;"><br>
-                       <strong>The plant: A simple RLC circuit. </strong>
-                       </p><br>
-                       
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/negativefeedbackcircuit.jpg" alt="negative feeback system" style="width:700px;height:300px;" >
+                     
+                        <div class="card">
+                             <p style="text-align:center;">
+
+                           <img src="../images/electronicircuit.jpg" alt="RLC circuit" style="width:400px;height:200px;"><br>
+                           <strong>The plant: A simple RLC circuit. </strong>
+                          </p><br>
+                        </div>
+                     
+                       <div class="card">
+                           <p style="text-align:center;">
+                       <img src="../images/negativefeedbackcircuit.jpg" alt="negative feeback system" style="width:400px;height:200px;" >
                        <br> 
                         <strong> Circuit implementation of a negative feedback system. </strong>
                        </p><br>
+                     </div>
                        
-                        
+                       
+                    <div class="card">
                         <p style="text-align:center;">
-                        <img src="../images/OLvsCLwithoutcontroller.jpg" style="width:500px;height:300px;">
+                        <img src="../images/OLvsCLwithoutcontroller.jpg" style="width:300px;height:300px;">
                        <br>
                        <strong>Open-loop vs Closed-loop Step-response without controller/compensator.</strong>
                        </p>
-                        <br>            
-                        
-                       <p style="text-align:center;">
-                       <img src="../images/LTspicPIDcontroller.jpg" alt="negative feeback system" style="width:700px;height:300px;" >
+                        <br>  
+                    </div>
+                                  
+                     <div class="card">
+                         <p style="text-align:center;">
+                       <img src="../images/LTspicPIDcontroller.jpg" alt="negative feeback system" style="width:400px;height:200px;" >
                        <br> 
                         <strong> Circuit implementation of a PID controller using LTSpice. </strong>
                        </p><br>
+                     </div>   
                        
+                    <div class="card">
                         <p style="text-align:center;">
-                       <img src="../images/CLwPIDcontrollerresponse.jpg" alt="negative feeback system" style="width:500px;height:300px;" >
+                       <img src="../images/CLwPIDcontrollerresponse.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
                        <br> 
                         <strong> Closed-loop system step-response with PID controller. </strong>
                        </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/LTspiceleadlagcompensator.jpg" alt="negative feeback system" style="width:700px;height:300px;" >
+                    </div>
+                        
+                    <div class="card">
+                        <p style="text-align:center;">
+                       <img src="../images/LTspiceleadlagcompensator.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
                        <br> 
                         <strong> Circuit implementation of a Lead-lag compensator using LTSpice. </strong>
                        </p><br>
-                       
+                    </div>   
+                    
+                    <div class="card">
                         <p style="text-align:center;">
-                       <img src="../images/CLwLeadlagcompensator.jpg" alt="negative feeback system" style="width:500px;height:300px;" >
+                       <img src="../images/CLwLeadlagcompensator.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
                        <br> 
                         <strong> Closed-loop system step-response with Lead-lag compensator. </strong>
                        </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/bodeplotleadlagdesign.jpg" alt="negative feeback system" style="width:500px;height:300px;" >
+                    </div>                       
+                        
+                     <div class="card">
+                         <p style="text-align:center;">
+                       <img src="../images/bodeplotleadlagdesign.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
                        <br> 
                         <strong> Bode plot of system with and without Lead-lag compensator. </strong>
                        </p><br>
+                    </div>  
+                       
                               
-                </div>
                 
+                </div>
+                <div class="col-md">
+                   
                 <p>
                    
                     Completion of this project has made me appreciate the usefulness of negative feedback in control systems. A feedback in a system paired with a controller/compensator, allows the system to keep track of the output error and compensate accordingly. Designing a controller specifically for a system allows you to control the response time and steady-state accuracy. Hence, a feedback system with a controller ensures optimal performance.
@@ -188,21 +206,27 @@
                     Moreover, the investigation carried out in the Lead-Lag Compensation has established a few key points that I will keep in mind when designing a lead-lag compensator. Namely, that the lag compensator’s purpose is to improve the steady-state accuracy and this can only be achieved by adding the lag compensator at low frequencies, while a lead compensator’s purpose is to improve the transient response and this is achieved by adding the lead compensator at high-frequencies. Finally, proportional gain is added to the system to push the improved transient and steady-state response, to the desired value. However, care needs to be taken to ensure that the added proportional gain is not greater than the gain margin of the improved system, as the system can become unstable.
                 </p><br>
                 
+                </div>
+                <div class="col-md">
+             
                 <p>
                     Moving on to comparing PID control and Lead-lag compensation, it is safe to conclude that a lead compensator acts approximately as a PD controller as they both speed up the response of the system by improving the transient response of the system. Slowing down the transient response makes the system slower, which is approximately what a PI controller does to a system. Therefore, it is safe to conclude that Lag compensator acts approximately as a PI controller. 
                 </p><br>
                 
                 <strong style="font-style: italic;color:red;">  If you're interested in the design process I've attached a link to my detailed report on this project. Also, I'm more than happy to share my MATLAB and LTSpice files, shoot me a message!</strong>
                 
+                </div>
             </div>    
         </div>
         
+    
     </div>
     
      <div id="report" >
            <p style="text-align: center;">
             <a href="../project-reports/FeedbackProject_Report.pdf" class="btn-rounded-black" style="text-align: center;">View Design Details </a> 
          </p>
+    
     </div> 
    
     <!-- End #about -->
