@@ -1,317 +1,277 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> EleCycle | Junaid Jawed Khan</title>
-	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Design - Junaid Jawed Khan</title>
+    <meta name="description" content="Design and analysis of an electric motorcycle (EleCycle) including chassis, FEA, fatigue, and transmission system.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
         </div>
-        <ul id="menu" class="shadow">
-          <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Report</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        </div>
+        </div>
+    </nav>
 
-   <div id="lead">
-        <div id="lead-content">
-               <h1> Machine Design</h1>      
-        </div>
-   <!-- End #lead-content -->
-        <div id="lead-overlay"></div>
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-   </div>
-    <!-- End #lead -->
-  <div id="about">
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"> Overview</h2>
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
                 </div>
-                <div class="col-md">
-                    <p>
-                       As the world transitions from fossil fuels to green energy, electricity is the first thing that comes to mind. Manufacturers are leaning towards more fuel economic and zero emission transportation vehicles. <br><br>
+                    <h1 class="project-title">Machine Design (EleCycle)</h1>
+                    <p class="project-subtitle">Mechanical Design • Electric Vehicle</p>
+                    <p class="project-description">
+                        Team project to design a two-wheeled electric motorcycle (EleCycle) for urban environments, including chassis, FEA, fatigue analysis, and transmission system.
                     </p>
-                    <p> The objective of this team-project was to design a two wheeled electric motorcycle which will be capable of traversing through an urban environment. The key design aspects we focused on was a motorcycle that would carry a maximum of two passengers, equipped with a rechargeable battery powering an electric motor that gives you a day’s worth of drivability. We aimed for EleCycle to be able to withstand various cyclic and impulse forces. Initially, the electric-motorcycle's chassis was designed, followed by transmission design. <br><br>
-                    </p>
-
-                    <h4>The electric-cycle's Design Specifications </h4>
-                    <ul>
-                        <li><p>Maintain speeds of 60[km/h] with top speed of 70[km/h] </p></li>
-                        <li><p>Acceleration around 3.5 [m/s] </p></li>
-                        <li><p>Minimum ground clearance of a 1⁄2 foot</p></li>
-                        <li><p>Maximum Height of 3.5 feet</p></li>
-                        <li><p>Overall weight less than 150kgs</p></li>
-                        <li><p>Low center of Gravity</p></li>
-                        <li><p>Range greater than 100 kilometers</p></li>
-                        <li><p>Carry a maximum of two passengers</p></li>
-                    </ul>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: CAD, FEA, Fatigue Analysis, SolidWorks</span>
+                        </div>
                 </div>
-
-                 <div style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">Chassis Design</h2>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
                   </div>
-
-                <div class="col-md">
-                    <h4> Concept Sketches</h4>
-                    <ul>
-                      <li>
-                          <h4 style="text-align:left;">Dually - inspired by a tandem bicycle</h4>
-                          <img src="../images/dually.jpg" style="width:1000px;height:700px;">
-                        </p>
-                      </li>
-                      <li>
-                        <h4 style="text-align:left;"> High Rise - inspired by a double decker bus</h4>
-                        <img src="../images/highrise.jpg" style="width:1000px;height:700px;">
-                      </li>
-                      <li >
-                        <h4 style="text-align:left;"> Streamliner - inspired by a cafe racer</h4>
-                        <img src="../images/streamliner.jpg" style="width:1000px;height:700px;">
-                      </li>
-                    </ul>
                 </div>
-                <div class="col-md">
-                    <p>
-                     Each group-member played an essential role in designing the electric-cycle. I carried out the design stress analysis via FEA and Fatigue Failure Analysis to ensure that the final design satisfied the design specifications. 
-                   </p>
-
-                     <h4>FEA analysis and Fatigue Failure analysis were carried at each step of the chasis design process, as shown below by the images: </h4>
-                    
-                       <p style="text-align:center;">
-                       <img src="../images/preliminarychassisDesign.png" style="width:400px;height:300px;"><br>
-                       <strong>Preliminary Chassis Design </strong>
-                       </p><br>
-                       
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/preliminaryDesignStressAnalysis.png" style="width:400px;height:300px;"><br> 
-                        <strong> Stress Analysis of Preliminary Chassis Design </strong>
-                       </p><br>
-                       
-                        
-                        <p style="text-align:center;">
-                        <img src="../images/preliminaryDesignStrainanalysis.png" style="width:400px;height:300px;">
-                       <br>
-                       <strong>Strain Analysis of Preliminary Chassis Design</strong>
-                       </p>
-                        <br>            
-                        
-                       <p style="text-align:center;">
-                       <img src="../images/preliminaryDesignDisplacementAnalysis.png"  style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Displacement Analysis of Preliminary Chassis Design </strong>
-                       </p><br>
-                       
-                        <p style="text-align:center;">
-                       <img src="../images/StreamLinerFinalDesign.png"  style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Final Chassis Design - Streamliner </strong>
-                       </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/streamlinerStressAnalysis.png" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Stress Analysis of Streamliner </strong>
-                       </p><br>
-                       
-                        <p style="text-align:center;">
-                       <img src="../images/streamlinerStrainAnalysis.png" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Strain Analysis of Streamliner  </strong>
-                       </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/StreamlinerDeformationAnalysis.png" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Deformation Analysis of Streamliner </strong>
-                       </p><br>            
+                <div class="project-hero-image">
+                    <img src="../images/machinedesignicon.png" alt="Machine Design">
                 </div>
-                <div class="col-md">
-                  <div style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">Streamliner Chassis</h2>
                   </div>
-                  <div style="text-align: center;">
-                  <img src="../images/StreamLinerFinalAssembly.png" style="width:600px;height:400px;">
                   </div>
-                  <p> The final design consists of the streamliner chassis design with a set of wheels and handlebars using screws and fasteners. Also, the final design has gone through many iterations for it to be a viable option and live up to the daily wear and tear,  which ultimately result in various cyclic and impulse forces. The key design aspects the team focused on are to design a motorcycle that would give you a days’ worth of drivability using rechargeable batteries and an electric motor, whilst still being able to carry a maximum of two passengers. 
-                  </p><br>
-                  <p> The final design that my team came up isn't road ready but the design process from concept sketches, to solidwork modelling, to stress-strain and fatigue analysis has been a great experience. 
-                   </p><br>
-                </div>
+    </section>
 
-                <div style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">Transmission Design</h2>
-                </div>
-                <div class="col-md">
-                    <h4> Concept Sketches</h4>
-                    <ul>
-                      <li>
-                          <h4 style="text-align:left;">Worm gear reducer and V-belt</h4>
-                          <p style="text-align: center;"><img src="../images/TransmissionDesign1.png" style="width:500px;height:300px;"></p>
-                          <p>
-                            The initial transmission design sketch required a worm gear reducer to control the
-                            high-speed motor being employed in our final product. The worm gear reducer was
-                            connected to the rear wheel via a V-belt. Though this design ensured low cost and
-                            maintenance, a chain would last longer than a V-belt.
-                          </p>
-                        </p>
-                      </li>
-                      <li>
-                        <h4 style="text-align:left;"> Spur gear train and sprocket-chain</h4>
-                        <p style="text-align: center;"><img src="../images/TransmissionDesign2.png" style="width:500px;height:300px;"></p>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
                         <p>
-                          The second design sketch required a spur gear train to increase torque
-                          from the motor, followed by a sprocket-chain design to drive the rear wheel. This design
-                          is more reliable than our initial design, mainly due to chain's longer service life as
-                          compared to belt. Moreover, spur-gears give a larger variety and are cheaper as
-                          compared to worm-gear drive. It was also noted that the use of spur-gears and chain drive
-                          would result in an increase in the weight and space required to hold the system.
+                            As the world transitions from fossil fuels to green energy, manufacturers are leaning towards more fuel economic and zero emission transportation vehicles. The objective of this team project was to design a two-wheeled electric motorcycle (EleCycle) for urban environments, focusing on chassis, FEA, fatigue, and transmission design.
                         </p>
-                      </li>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <ul>
+                            <li>Design a lightweight, robust electric motorcycle chassis for two passengers</li>
+                            <li>Ensure safety, reliability, and manufacturability</li>
+                            <li>Optimize for urban driving conditions and daily use</li>
                     </ul>
-
-                    <p>
-                        A decision matrix that weighed safety as most important, followed by cost,longevity, reliability, maintenance and size was employed to select a tranmission system for the previously designed Streamliner Chassis. The decision matrix can be found in the <a href="../project-reports/TransmissionDesignReport.pdf">Transmission Design report</a>. The team decided to go with the second tranmission concept, spur-gear train with sprocket chain. The design process can be found in the <a href="../project-reports/TransmissionDesignReport.pdf">Transmission Design report</a>.
-                    </p>
                 </div>
 
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <ul>
+                            <li>Concept sketches for different chassis designs (Dually, High Rise, Streamliner)</li>
+                            <li>FEA and fatigue analysis at each design stage</li>
+                            <li>Transmission system design and decision matrix for selection</li>
+                        </ul>
+                        <div class="image-gallery">
+                            <img src="../images/dually.jpg" alt="Dually Concept" class="gallery-image">
+                            <img src="../images/highrise.jpg" alt="High Rise Concept" class="gallery-image">
+                            <img src="../images/streamliner.jpg" alt="Streamliner Concept" class="gallery-image">
+                        </div>
+                    </div>
 
-                 <div class="col-md">
-                     <h4>Transmission System CAD models</h4>
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Chassis Design & Analysis</h3>
+                        <ul>
+                            <li>Preliminary chassis design and FEA (stress, strain, displacement)</li>
+                            <li>Iterative design improvements based on analysis</li>
+                            <li>Final Streamliner chassis design and assembly</li>
+                        </ul>
+                        <div class="image-gallery">
+                            <img src="../images/preliminarychassisDesign.png" alt="Preliminary Chassis Design" class="gallery-image">
+                            <img src="../images/preliminaryDesignStressAnalysis.png" alt="Stress Analysis" class="gallery-image">
+                            <img src="../images/preliminaryDesignStrainanalysis.png" alt="Strain Analysis" class="gallery-image">
+                            <img src="../images/preliminaryDesignDisplacementAnalysis.png" alt="Displacement Analysis" class="gallery-image">
+                            <img src="../images/StreamLinerFinalDesign.png" alt="Final Chassis Design" class="gallery-image">
+                            <img src="../images/streamlinerStressAnalysis.png" alt="Streamliner Stress Analysis" class="gallery-image">
+                            <img src="../images/streamlinerStrainAnalysis.png" alt="Streamliner Strain Analysis" class="gallery-image">
+                            <img src="../images/StreamlinerDeformationAnalysis.png" alt="Streamliner Deformation Analysis" class="gallery-image">
+                            <img src="../images/StreamLinerFinalAssembly.png" alt="Final Assembly" class="gallery-image">
+                        </div>
+                        <h3>Transmission System</h3>
+                        <ul>
+                            <li>Concept sketches: worm gear reducer & V-belt, spur gear train & chain</li>
+                            <li>Decision matrix for selection (safety, cost, longevity, reliability, maintenance, size)</li>
+                            <li>CAD models for transmission system (sketch, gear train, chain drive, shaft)</li>
+                        </ul>
+                        <div class="image-gallery">
+                            <img src="../images/TransmissionDesign1.png" alt="Worm Gear Reducer & V-belt" class="gallery-image">
+                            <img src="../images/TransmissionDesign2.png" alt="Spur Gear Train & Chain" class="gallery-image">
+                            <img src="../images/TransmissionSketch.png" alt="Transmission Sketch" class="gallery-image">
+                            <img src="../images/GearTrain.png" alt="Gear Train" class="gallery-image">
+                            <img src="../images/chainDrive.png" alt="Chain Drive" class="gallery-image">
+                            <img src="../images/shaftDesign.png" alt="Shaft" class="gallery-image">
+                            <img src="../images/FinalModel.png" alt="Final Model" class="gallery-image">
+                        </div>
+                        <p style="text-align:center;">
+                            <a href="../project-reports/chassisDesignReport.pdf" class="btn btn-primary" target="_blank">View Chassis Design Details (PDF)</a>
+                            <a href="../project-reports/StressAnalysis.pdf" class="btn btn-primary" target="_blank">View FEA & Fatigue Analysis (PDF)</a>
+                            <a href="../project-reports/TransmissionDesignReport.pdf" class="btn btn-primary" target="_blank">View Transmission Design (PDF)</a>
+                        </p>
+                    </div>
 
-                       <p style="text-align:center;">
-                       <img src="../images/TransmissionSketch.png" style="width:900px;height:500px;"><br>
-                       <strong>Transmission Sketch </strong>
-                       </p><br>
-                       
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/GearTrain.png" style="width:900px;height:500px;"><br> 
-                        <strong> Gear Train</strong>
-                       </p><br>
-                       
-                        
-                        <p style="text-align:center;">
-                        <img src="../images/chainDrive.png" style="width:900px;height:500px;">
-                       <br>
-                       <strong>Chain Drive</strong>
-                       </p>
-                        <br>            
-                        
-                       <p style="text-align:center;">
-                       <img src="../images/shaftDesign.png"  style="width:900px;height:500px;" >
-                       <br> 
-                        <strong> Shaft </strong>
-                       </p><br>
-                       
-                        <p style="text-align:center;">
-                       <img src="../images/FinalModel.png"  style="width:900px;height:500px;" >
-                       <br> 
-                        <strong> Streamliner Chassis and transmission system </strong>
-                       </p><br>
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <ul>
+                            <li>Developed a robust, lightweight electric motorcycle chassis</li>
+                            <li>Validated design through FEA and fatigue analysis</li>
+                            <li>Optimized transmission system for reliability and performance</li>
+                            <li>Documented design process and results in detailed reports</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li>Importance of iterative design and analysis in engineering projects</li>
+                            <li>Value of FEA and fatigue analysis for safety and reliability</li>
+                            <li>Teamwork and communication are key to successful project delivery</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <strong style="font-style: italic;color:red;">If you're interested in the stress analysis, I've attached a link to my FEA & fatigue analysis. Also, if you're interested in the entire project, I've attached a link to the chassis and transmission design reports that my team compiled. The final report goes into more details and I hope you enjoy and appreciate the work that my team put into this project. 
-                </strong>
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><span class="label">Category:</span><span class="value">Mechanical Design</span></div>
+                        <div class="detail-item"><span class="label">Duration:</span><span class="value">4 months</span></div>
+                        <div class="detail-item"><span class="label">Role:</span><span class="value">FEA & Fatigue Analysis Lead</span></div>
+                        <div class="detail-item"><span class="label">Team Size:</span><span class="value">4 people</span></div>
+                        <div class="detail-item"><span class="label">Status:</span><span class="value">Completed</span></div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">CAD</span>
+                            <span class="tech-tag">FEA</span>
+                            <span class="tech-tag">Fatigue Analysis</span>
+                            <span class="tech-tag">SolidWorks</span>
+                            <span class="tech-tag">Mechanical Design</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Chassis Design</li>
+                            <li>FEA & Fatigue Analysis</li>
+                            <li>Transmission System</li>
+                            <li>CAD Modeling</li>
+                            <li>Prototype Visualization</li>
+                            <li>Team Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
             </div>    
         </div>
-        
-    </div>
-    
-     <div id="report" >
-         <p style="text-align: center;">
-           
-              <a href="../project-reports/chassisDesignReport.pdf" class="btn-rounded-black" style="text-align: center;">View Chassis Design Details</a> 
-            
-         </p><br>
-         <p style="text-align: center;"> 
-              <a href="../project-reports/StressAnalysis.pdf" class="btn-rounded-black" style="text-align: center;">View FEA & Fatigue Analysis Details </a>  
-         </p><br>
-         <p style="text-align: center;">
-              <a href="../project-reports/TransmissionDesignReport.pdf" class="btn-rounded-black" style="text-align: center;">View Transmission Design Details</a>
-         </p>
+    </section>
 
-    </div> 
-   
-    <!-- End #about -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
+    <!-- Related Projects -->
+    <section class="related-projects">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="fourbarmechanism.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/4barmechanismicon.png" alt="Four-Bar Mechanism">
+                    </div>
+                    <div class="project-content">
+                        <h3>Four-Bar Mechanism</h3>
+                        <p>Mechanism design and function generation</p>
+                    </div>
+                </a>
+                <a href="framestressanalysis.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/streamlinerStressAnalysis.png" alt="Frame Stress Analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3>Frame Stress Analysis</h3>
+                        <p>Structural analysis and FEA of mechanical frames</p>
+                    </div>
+                </a>
+                <a href="dynamicsystem.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/dynamicsystemsicon.png" alt="Dynamic System Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dynamic System Design</h3>
+                        <p>Dynamic system modeling and control</p>
+    </div>
+                </a>
+    </div> 
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <script src="../js/modern-scripts.js"></script>
 </body>
-
 </html>
 

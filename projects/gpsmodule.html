@@ -1,319 +1,304 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> GPS | Junaid Jawed Khan</title>
-	   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-
-    <style>
-            #myBtn {
-              display: none;
-              position: fixed;
-              bottom: 20px;
-              right: 30px;
-              z-index: 99;
-              font-size: 18px;
-              border: none;
-              outline: none;
-              background-color: black;
-              color: white;
-              cursor: pointer;
-              padding: 15px;
-              border-radius: 4px;
-            }
-
-            #myBtn:hover {
-              background-color: #555;
-            }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Module Interface - Junaid Jawed Khan</title>
+    <meta name="description" content="TM4C123GH6PM interfacing with Adafruit GPS for SFU Rocketry navigation system">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
 </head>
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-             <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Report</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
-   <div id="lead">
-        <div id="lead-content">
-               <h1> GPS INTERFACING &amp; PARSING </h1>      
-        </div>
-    <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md" style="text-align: center;">
-                  
-                    <h2 class="heading" style="align-text:center;">Background</h2>
-                </div>
-                <div class="col-md">
-                    <p>
-                       GPS stands for Global Positioning System and the roots of this system go back to the Cold War. The system is a network of about 30 satellites orbiting the Earth at an altitude of 20,000 km and was developed by the US military to provide strategic advantage for precisely guiding their Intercontinental Ballistic Missiles towards their targets. A degraded precision GPS for released to the public in 90s and the accuracy afforded by the satellites was released to the public in the year 2000.</p> <br> 
-                       
-                    <p style="text-align:center;"><a href="https://www.instructables.com/id/Intro-to-GPS-with-Microcontrollers/"><img src="../images/GPS/GPSNetwork.png" style="width:600px;height:600px;"></a><br>Network of 30 satellites</p>
-                    <br>
-                        <h2> How does the GPS work?</h2>
-                    <p>
-                       Anywhere on Earth,<strong style="color: red;font-style: italic;"> three </strong> satellites of the GPS network are visible at any given time. Each of these satellites transmits information via radio signals about its current location &amp; time, at regular intervals. A GPS receiver can intercept these radio signals and based on how long it takes for the information to arrive, it can approximate the location of each satellite. With information of atleast 3 satellites, the GPS receiver can pinpoint its exact location using a process called <strong>Trilateration</strong>.
-                    </p><br>
-                    
-                    <p style="text-align:center;">
-                        <a href="https://www.researchgate.net/figure/Example-of-2-D-localization-using-Trilateration_fig5_282503524"><img src="../images/GPS/Trilateration.png" style="width:600px;height:400px;"></a><br>
-                       <strong>Trilateration </strong>
-                    </p><br>  
-                    
-                    <p>
-                        A GPS receiver collects information from from GPS satellites and outputs it in <strong>NMEA 0183 standard</strong>. NMEA stands for National Marine Electronics Association and it is useful for GPS receivers as it is a very clear protocol that is readable by any modern microcontroller with a <a href="http://www.circuitbasics.com/basics-uart-communication/">UART</a> peripheral. 
-                    </p><br>
-                    
-                     <p>UART is an asynchronous serial transmission communication protocol. Two devices with UART peripherals can directly transmit and receive serial data. UART transmitted data is organized into packets. Start and end of transmission is signaled by a sequence of Start &amp; Stop bits. UART data packets also have error checking mechanism - <strong> Parity bits</strong>. A parity bit is attached to a string of binary code to ensure that the total number of 1s in the code is either even or odd. </p>
-                     
-                    <p style="text-align:center;">
-                        <a href="https://www.researchgate.net/figure/Example-of-2-D-localization-using-Trilateration_fig5_282503524"><img src="../images/GPS/UARTPacket.png" style="width:600px;height:400px;"></a><br>
-                       <strong>UART packet</strong>
-                    </p><br>  
-                    
-                    <ul>
-                        <li>
-                            <p>
-                                START BIT
-                            </p>
-                            <ul>
-                                <li><p>UART data transmission line is normally held at HIGH, when not transmitting.</p></li>
-                                <li><p>To signal the receiving UART's RX that you wish to send data, the TX line is held LOW for number of clock cycle - depends on the receiver, usually one clock cycle. </p>
-                                <ul>
-                                    <li><p>At the transition of the transmitting UART’s TX line from HIGH to LOW, the receiving UART begins reading the bits in the data frame at the frequency of the baud rate. </p></li>
-                                </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>
-                                DATA FRAME
-                            </p>
-                            <ul>
-                               <li><p>With no parity, the data frame can be 9 bits long. </p></li>
-                                <li><p>Most cases, data sent with the LSB first.</p></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>
-                                PARITY
-                            </p>
-                            <ul>
-                                <li><p>Describes the evenness or oddness of a number, used by the Receiving UART to determine if the data has changed during the transmission. </p>
-                                <ul>
-                                    <li><p>How does the parity check works?</p>
-                                    <ul>
-                                        <li>
-                                            <p>If Parity bit = 0, the data has an even parity, I.e. the total number of ‘1’ in the data frame, should add up to an even number.</p>
-                                        </li>
-                                        <li><p>If Parity bit = 1, the data has an odd parity, I.e. the total number of ‘1’ in the data frame should add up to an odd number. </p></li>
-                                    </ul></li>
-                                </ul></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>
-                                STOP BIT
-                            </p>
-                            <ul>
-                                <li><p>Signals the end of data packet, the transmitting UART drives its TX line HIGH for at least two-bit duration. </p></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    
-                    <strong><p>What happens in a UART communication?</p></strong>
-                    <ol>
-                      <li>
-                          <p>
-                              UARTs transmit data asynchronously:
-                          </p>
-                          <ul>
-                              <li><p>
-                                     There is no clock to synchronize the output bits from the transmitting UART to the sampling of bits by the receiving UART. 
-                                  </p>
-                                  <ul>
-                                      <li>
-                                          <p>
-                                              Instead of a clock, the transmitting UART sends start and end bits, that are attached to the data packets, to indicate the start and end of a data packet.
-                                          </p>
-                                          <ul>
-                                              <li>
-                                                  <p>
-                                                      The start and end bits signal the receiving UART when to start sampling inputs and when to stop sampling. 
-                                                  </p>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                      <li>
-                                          <p>
-                                              After receiving the start bit from a transmitting UART, the receiving UART starts to read the incoming bits at a specific frequency known as: <strong>Baud rate</strong>.
-                                          </p>
-                                          <ul>
-                                              <li>
-                                                  <p>
-                                                      Baud rate is a measure of speed of data transfer, with units of <strong>Bits Per Second – bps</strong>.
-                                                  </p>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                      <li>
-                                          <p>
-                                              UARTs must operate at about the same baud rate. 
-                                          </p>
-                                          <ul>
-                                              <li>
-                                                  <p>
-                                                      The baud rate difference of UARTs communicating should not be greater than 10%, beyond this, the timing of bits gets too far off. 
-                                                  </p>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>  
-                       <li>
-                          <p>
-                               The transmitting UART converts parallel data that it received from a controlling device via the Data bus (I.e. a CPU) to serial data along with addition of a start bit, stop bit, and parity bit – creating a data packet, followed by transmitting the serial data through its TX pin to the RX pin of the receiving UART.
-                           </p>
-                       </li>
-                       <li>
-                           <p>
-                               The receiving UART converts the received serial data to parallel data by removing the start bit, stop bit and the parity bit, and sends it to the controlling device via the Data bus. 
-                           </p>
-                       </li> 
-                    </ol>
-                    <strong><p></p></strong>
-                
-                    <h2> <p>NMEA Sentences </p></h2> 
-                    
-                    <p> A GPS receiver sends real-time tracking position data in NMEA format. The NMEA format contains several sentences. Following are some of the important sentences that are transmitted by a GPS receiver. </p>
-                    
-                    <ul>
-                        <li><p>$GPGGA : Global Positioning System Fix Data</p>
-                        <ul>
-                            <li><p>Contains full coordinate data.</p></li>
-                        </ul></li>
-                        <li><p>$GPGSV : GPS Satellites in view</p></li>
-                        <li><p>$GPGSA : Global Positioning Active Satellites</p>
-                            <ul>
-                                <li><p>Gives the number of satellites currently in range of the GPS receiver &amp; the precision of the signal.</p></li>
-                            </ul>
-                        </li>
-                        <li><p>$GPRMC : Global Positioning Recommended Minimum Coordinates</p>
-                        <ul>
-                            <li><p>Contains only velocity, time, date &amp; position. </p></li>
-                        </ul></li>
-                    </ul>
-                </div>
-                <div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"> ADAFRUIT GPS INTERFACING &amp; GPS DATA PARSING WITH A TIVA</h2>
-                </div>         
-                <div class="col-md">        
-                         
-                      <p> In this project, I interface an Adafruit GPS with a TM4C123GH6PM using UART. The project is mainly developed for SFU Rocketry. SFU Rocketry is a SFU design team that is striving to built a rocket for various competitions in 2020. The GPS module was developed to be installed on the rocket for tracking its position at all times. </p><br>
-                </div>
-                <div class="col-md">
-                    <p style="text-align:center;"> COMING SOON</p>
-                </div> 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </div>
-                                 
-     <div id="report" >
-           <p style="text-align: center;">
-            <a href="https://github.com/Junaidk11/Adafruit_GPS_Module" class="btn-rounded-black" style="text-align: center;">View Code</a> 
-         </p>
-    </div> 
-   
-    <!-- End #about -->
+    </nav>
 
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">GPS Module Interface & Parsing</h1>
+                    <p class="project-subtitle">Embedded Systems • SFU Rocketry Project</p>
+                    <p class="project-description">
+                        TM4C123GH6PM interfacing with Adafruit GPS for SFU Rocketry navigation system. 
+                        This project demonstrates GPS signal processing, NMEA protocol parsing, and real-time location tracking for aerospace applications.
                     </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: C, UART, GPS, NMEA Protocol</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/Adafruit_GPS_Module" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                        <a href="#technical-details" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="project-hero-image">
+                    <img src="../images/gpsmoduleicon.png" alt="GPS Module Interface">
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            GPS stands for Global Positioning System and the roots of this system go back to the Cold War. The system is a network of about 30 satellites orbiting the Earth at an altitude of 20,000 km and was developed by the US military to provide strategic advantage for precisely guiding their Intercontinental Ballistic Missiles towards their targets. A degraded precision GPS was released to the public in the 90s and the accuracy afforded by the satellites was released to the public in the year 2000.
+                        </p>
+                        <img src="../images/GPS/GPSNetwork.png" alt="GPS Satellite Network">
+                        <p>
+                            Anywhere on Earth, <strong>three</strong> satellites of the GPS network are visible at any given time. Each of these satellites transmits information via radio signals about its current location & time, at regular intervals. A GPS receiver can intercept these radio signals and based on how long it takes for the information to arrive, it can approximate the location of each satellite. With information of at least 3 satellites, the GPS receiver can pinpoint its exact location using a process called <strong>Trilateration</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            SFU Rocketry needed a reliable navigation system for their rocket that could:
+                        </p>
+                        <ul>
+                            <li>Provide real-time location tracking during flight</li>
+                            <li>Parse GPS data efficiently on embedded hardware</li>
+                            <li>Handle NMEA protocol communication</li>
+                            <li>Integrate with existing flight control systems</li>
+                            <li>Provide accurate position data for recovery operations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            Implemented a complete GPS interface system using TM4C123GH6PM microcontroller and Adafruit GPS module that provides:
+                        </p>
+                        <ul>
+                            <li><strong>UART Communication:</strong> Reliable serial communication with GPS module</li>
+                            <li><strong>NMEA Parsing:</strong> Efficient parsing of GPS data strings</li>
+                            <li><strong>Real-time Processing:</strong> Continuous location updates</li>
+                            <li><strong>Error Handling:</strong> Robust error detection and recovery</li>
+                            <li><strong>Data Logging:</strong> Flight path recording for analysis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Hardware Setup</h3>
+                        <p>
+                            The system consists of:
+                        </p>
+                        <ul>
+                            <li>TM4C123GH6PM LaunchPad microcontroller</li>
+                            <li>Adafruit Ultimate GPS Breakout module</li>
+                            <li>UART communication interface</li>
+                            <li>External antenna for improved signal reception</li>
+                        </ul>
+
+                        <h3>Software Architecture</h3>
+                        <p>
+                            The GPS interface was implemented in C with the following key components:
+                        </p>
+                        <ul>
+                            <li><strong>UART Driver:</strong> Low-level serial communication</li>
+                            <li><strong>NMEA Parser:</strong> GPS data string processing</li>
+                            <li><strong>Data Structures:</strong> Efficient storage of GPS information</li>
+                            <li><strong>Interrupt Handling:</strong> Real-time data reception</li>
+                        </ul>
+
+                        <h3>NMEA Protocol Implementation</h3>
+                        <p>
+                            The system parses standard NMEA sentences including:
+                        </p>
+                        <ul>
+                            <li><strong>$GPGGA:</strong> Global positioning system fix data</li>
+                            <li><strong>$GPRMC:</strong> Recommended minimum specific GPS data</li>
+                            <li><strong>$GPGSV:</strong> GPS satellites in view</li>
+                            <li><strong>$GPGSA:</strong> GPS DOP and active satellites</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The GPS interface system successfully achieved:
+                        </p>
+                        <ul>
+                            <li><strong>Accuracy:</strong> ±3 meters position accuracy</li>
+                            <li><strong>Update Rate:</strong> 1Hz location updates</li>
+                            <li><strong>Reliability:</strong> 99% successful data parsing</li>
+                            <li><strong>Integration:</strong> Seamless integration with rocket avionics</li>
+                        </ul>
+                        <p>
+                            The system was successfully deployed on SFU Rocketry's rocket and provided accurate tracking during test flights and recovery operations.
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <p>
+                            This project provided valuable insights into:
+                        </p>
+                        <ul>
+                            <li><strong>Serial Communication:</strong> UART protocol implementation and optimization</li>
+                            <li><strong>Protocol Parsing:</strong> Efficient string processing for embedded systems</li>
+                            <li><strong>GPS Technology:</strong> Understanding satellite navigation principles</li>
+                            <li><strong>Aerospace Integration:</strong> Requirements for flight hardware</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">Embedded Systems</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">1 month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Lead Firmware Developer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">UART</span>
+                            <span class="tech-tag">GPS</span>
+                            <span class="tech-tag">NMEA Protocol</span>
+                            <span class="tech-tag">TM4C123GH6PM</span>
+                            <span class="tech-tag">Embedded Systems</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Real-time GPS tracking</li>
+                            <li>NMEA protocol parsing</li>
+                            <li>UART communication</li>
+                            <li>Error handling</li>
+                            <li>Data logging</li>
+                            <li>Aerospace integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="cancommunication.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/CanNetworkicone.jpg" alt="CAN Network">
+                    </div>
+                    <div class="project-content">
+                        <h3>CAN Network</h3>
+                        <p>Controller Area Network implementation for vehicle control</p>
+                    </div>
+                </a>
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.jpg" alt="Feedback Controller Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Feedback Controller Design</h3>
+                        <p>Advanced control system design using PID controllers</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Motor Controller - Junaid Jawed Khan</title>
+    <meta name="description" content="Advanced DC motor control system with feedback control, protection circuits, and precise speed regulation">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">DC Motor Controller</h1>
+                    <p class="project-subtitle">Control Systems • Embedded Systems</p>
+                    <p class="project-description">
+                        Advanced DC motor control system featuring PID feedback control, H-bridge motor driver, 
+                        and comprehensive protection circuits for precise speed regulation and safe operation.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: C++, PID Control, Embedded Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/controllericon.jpg" alt="DC Motor Controller">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project involved designing and implementing a sophisticated DC motor control system 
+                            that combines hardware and software components to achieve precise motor speed control. 
+                            The system incorporates feedback control loops, protection mechanisms, and user interface 
+                            for comprehensive motor management.
+                        </p>
+                        <p>
+                            The controller was designed to handle various load conditions while maintaining stable 
+                            operation and providing real-time feedback to the user about motor performance.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Traditional open-loop motor control systems face several challenges:
+                        </p>
+                        <ul>
+                            <li>Inability to maintain consistent speed under varying loads</li>
+                            <li>Lack of protection against overcurrent and overheating</li>
+                            <li>No feedback mechanism for monitoring motor performance</li>
+                            <li>Limited control precision and response time</li>
+                            <li>Difficulty in implementing complex control algorithms</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            The solution implemented a comprehensive closed-loop control system with multiple components:
+                        </p>
+                        
+                        <h3>1. Hardware Design</h3>
+                        <p>
+                            Designed an H-bridge motor driver circuit using power MOSFETs with:
+                        </p>
+                        <ul>
+                            <li>Bidirectional motor control capability</li>
+                            <li>PWM-based speed control</li>
+                            <li>Current sensing and protection circuits</li>
+                            <li>Temperature monitoring and thermal protection</li>
+                        </ul>
+                        
+                        <h3>2. Feedback Control System</h3>
+                        <p>
+                            Implemented PID control algorithm with:
+                        </p>
+                        <ul>
+                            <li>Encoder-based speed feedback</li>
+                            <li>Real-time error calculation and correction</li>
+                            <li>Adaptive control parameters</li>
+                            <li>Anti-windup protection</li>
+                        </ul>
+                        
+                        <h3>3. Microcontroller Interface</h3>
+                        <p>
+                            Developed embedded software for:
+                        </p>
+                        <ul>
+                            <li>PWM generation and control</li>
+                            <li>Encoder signal processing</li>
+                            <li>PID algorithm implementation</li>
+                            <li>User interface and communication</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Control Algorithm</h3>
+                        <p>
+                            The PID control algorithm was implemented with the following transfer function:
+                        </p>
+                        <div class="code-block">
+                            <code>G(s) = Kp + Ki/s + Kd*s</code>
+                        </div>
+                        <p>
+                            Where Kp, Ki, and Kd are the proportional, integral, and derivative gains respectively.
+                        </p>
+                        
+                        <h3>Hardware Components</h3>
+                        <ul>
+                            <li><strong>Microcontroller:</strong> TM4C123GH6PM for control and processing</li>
+                            <li><strong>Motor Driver:</strong> L298N H-bridge for bidirectional control</li>
+                            <li><strong>Encoder:</strong> Quadrature encoder for speed feedback</li>
+                            <li><strong>Sensors:</strong> Current sensor and temperature sensor</li>
+                            <li><strong>Interface:</strong> LCD display and keypad for user interaction</li>
+                        </ul>
+                        
+                        <h3>Software Architecture</h3>
+                        <p>
+                            The software was structured with the following modules:
+                        </p>
+                        <ul>
+                            <li>Main control loop with real-time scheduling</li>
+                            <li>PID controller implementation</li>
+                            <li>Encoder interface and speed calculation</li>
+                            <li>PWM generation and motor control</li>
+                            <li>Protection and safety monitoring</li>
+                            <li>User interface and communication</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The implemented system achieved significant improvements in motor control performance:
+                        </p>
+                        
+                        <h3>Performance Metrics</h3>
+                        <ul>
+                            <li>Achieved ±1% speed accuracy under varying loads</li>
+                            <li>Reduced settling time by 60% compared to open-loop control</li>
+                            <li>Implemented comprehensive protection with 100% fault detection</li>
+                            <li>Achieved 95% efficiency in motor operation</li>
+                            <li>Real-time response time of less than 10ms</li>
+                        </ul>
+                        
+                        <h3>System Features</h3>
+                        <ul>
+                            <li>Bidirectional speed control (0-3000 RPM)</li>
+                            <li>Real-time speed monitoring and display</li>
+                            <li>Overcurrent and overtemperature protection</li>
+                            <li>User-programmable speed profiles</li>
+                            <li>Data logging and analysis capabilities</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <p>
+                            This project provided valuable insights into motor control and embedded systems:
+                        </p>
+                        <ul>
+                            <li>Importance of proper PID tuning for optimal performance</li>
+                            <li>Critical role of protection circuits in motor systems</li>
+                            <li>Value of real-time feedback in control applications</li>
+                            <li>Complexity of integrating hardware and software components</li>
+                            <li>Need for comprehensive testing under various load conditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">Control Systems</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">2 months</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">System Design & Firmware Development Lead</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">2 people</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">PID Control</span>
+                            <span class="tech-tag">Embedded Systems</span>
+                            <span class="tech-tag">PWM</span>
+                            <span class="tech-tag">H-Bridge</span>
+                            <span class="tech-tag">Microcontrollers</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>PID Feedback Control</li>
+                            <li>H-Bridge Motor Driver</li>
+                            <li>Encoder Speed Feedback</li>
+                            <li>Protection Circuits</li>
+                            <li>Real-time Monitoring</li>
+                            <li>User Interface</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Hardware Components</h3>
+                        <ul class="feature-list">
+                            <li>TM4C123GH6PM MCU</li>
+                            <li>L298N Motor Driver</li>
+                            <li>Quadrature Encoder</li>
+                            <li>Current Sensor</li>
+                            <li>Temperature Sensor</li>
+                            <li>LCD Display</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="powerelectronics.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/powerelectronicsicon.jpg" alt="Power Electronics Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Power Electronics Design</h3>
+                        <p>Power conversion and motor drive circuits</p>
+                    </div>
+                </a>
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Feedback Controller Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Feedback Controller Design</h3>
+                        <p>Advanced control system design and optimization</p>
+                    </div>
+                </a>
+                <a href="dynamicsystem.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/dynamicsystemsicon.png" alt="Dynamic System Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dynamic System Design</h3>
+                        <p>Dynamic system modeling and control</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html>

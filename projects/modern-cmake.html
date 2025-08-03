@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CMake Project - Junaid Jawed Khan</title>
+    <meta name="description" content="Comprehensive guide to modern CMake practices and build systems for C++ projects.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Modern CMake Project</h1>
+                    <p class="project-subtitle">Software Development • Build Systems</p>
+                    <p class="project-description">
+                        A hands-on guide and personal learning project for mastering modern CMake. This repository demonstrates a 
+                        progressive journey from basic setup to advanced features like libraries, testing, and dependency management, 
+                        showcasing modern C++ development practices and build system expertise.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Ongoing: 2025-Present</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: CMake, C++, Build Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/how-to-cmake-good" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="#technical-details" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/cmakeicon.png" alt="Modern CMake Project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project serves as a comprehensive learning resource for modern CMake practices, demonstrating 
+                            progressive complexity from basic project setup to advanced build system features. It showcases 
+                            contemporary C++ development practices and build system management techniques.
+                        </p>
+                        <p>
+                            The repository is structured as a learning journey, with each step building upon the previous one, 
+                            making it an excellent resource for developers transitioning to modern CMake practices.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Many developers struggle with modern CMake practices and build system management. The challenges include:
+                        </p>
+                        <ul>
+                            <li>Understanding modern CMake syntax and best practices</li>
+                            <li>Managing complex project dependencies and libraries</li>
+                            <li>Implementing proper testing frameworks in build systems</li>
+                            <li>Creating portable and maintainable build configurations</li>
+                            <li>Integrating with modern development tools and workflows</li>
+                            <li>Transitioning from legacy build systems to modern CMake</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <h3>Progressive Learning</h3>
+                                <p>Step-by-step progression from basic CMake setup to advanced features with clear explanations.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Modern Practices</h3>
+                                <p>Implementation of contemporary CMake practices including target-based approach and modern syntax.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Practical Examples</h3>
+                                <p>Real-world examples demonstrating library management, testing, and dependency handling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Learning Progression</h3>
+                        <ul>
+                            <li><strong>Basic Setup:</strong> Simple CMakeLists.txt with executable targets</li>
+                            <li><strong>Library Management:</strong> Static and shared library creation and linking</li>
+                            <li><strong>Testing Integration:</strong> CTest and Google Test framework integration</li>
+                            <li><strong>Dependency Management:</strong> External dependencies and package management</li>
+                            <li><strong>Advanced Features:</strong> Custom targets, generators, and platform-specific configurations</li>
+                        </ul>
+
+                        <h3>Modern CMake Features</h3>
+                        <ul>
+                            <li><strong>Target-Based Approach:</strong> Modern target-oriented configuration</li>
+                            <li><strong>Property Management:</strong> Target and directory property configuration</li>
+                            <li><strong>Generator Expressions:</strong> Advanced conditional configuration</li>
+                            <li><strong>Package Configuration:</strong> FindPackage and Config file creation</li>
+                            <li><strong>Cross-Platform Support:</strong> Platform-agnostic build configurations</li>
+                        </ul>
+
+                        <h3>Development Workflow</h3>
+                        <ul>
+                            <li><strong>Version Control:</strong> Git integration and branching strategies</li>
+                            <li><strong>CI/CD Integration:</strong> GitHub Actions and automated testing</li>
+                            <li><strong>Documentation:</strong> Comprehensive README and inline documentation</li>
+                            <li><strong>Code Quality:</strong> Linting and formatting tools integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results & Impact -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            This project has become a valuable learning resource for modern CMake practices with the following achievements:
+                        </p>
+                        <ul>
+                            <li>Comprehensive coverage of modern CMake features and best practices</li>
+                            <li>Clear, progressive learning structure suitable for all skill levels</li>
+                            <li>Practical examples demonstrating real-world build system scenarios</li>
+                            <li>Integration with modern development tools and workflows</li>
+                            <li>Active maintenance and continuous updates with latest CMake features</li>
+                            <li>Used as reference material for CMake learning and project setup</li>
+                        </ul>
+                        <p>
+                            The project demonstrates strong understanding of modern C++ development practices and build system management.
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li><strong>Modern CMake:</strong> Importance of using target-based approach over legacy practices</li>
+                            <li><strong>Build System Design:</strong> Creating maintainable and portable build configurations</li>
+                            <li><strong>Dependency Management:</strong> Effective handling of external dependencies and packages</li>
+                            <li><strong>Testing Integration:</strong> Proper integration of testing frameworks in build systems</li>
+                            <li><strong>Documentation:</strong> Clear documentation essential for build system maintenance</li>
+                            <li><strong>Tool Integration:</strong> Seamless integration with modern development tools and workflows</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Details -->
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">Ongoing (2025-Present)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Lead Developer & Educator</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Active Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">CMake</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Build Systems</span>
+                            <span class="tech-tag">Modern C++</span>
+                            <span class="tech-tag">Testing</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Progressive learning structure</li>
+                            <li>Modern CMake practices</li>
+                            <li>Library management examples</li>
+                            <li>Testing framework integration</li>
+                            <li>Dependency management</li>
+                            <li>Cross-platform support</li>
+                        </ul>
+                    </div>
+
+                    <!-- Learning Topics -->
+                    <div class="sidebar-card">
+                        <h3>Learning Topics Covered</h3>
+                        <ul class="feature-list">
+                            <li>Basic CMake Setup</li>
+                            <li>Target-Based Configuration</li>
+                            <li>Library Creation & Linking</li>
+                            <li>Testing Integration</li>
+                            <li>Dependency Management</li>
+                            <li>Advanced CMake Features</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/dsaicon.png" alt="Data Structures & Algorithms">
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>Comprehensive C/C++ implementations with modern development practices</p>
+                        <a href="datastructures-algorithms.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/inventorymanagementappicon.png" alt="Inventory Management">
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Management System</h3>
+                        <p>Web-based application demonstrating software development skills</p>
+                        <a href="inventorymanagementapp.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/forwardinversekinematics.html" alt="Forward & Inverse Kinematics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Forward & Inverse Kinematics</h3>
+                        <p>Algorithmic solutions with modern C++ implementation</p>
+                        <a href="forwardinversekinematics.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Modern C++ Development?</h2>
+                <p>Let's discuss how we can work together on your next C++ project or build system optimization.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Filter Design - Junaid Jawed Khan</title>
+    <meta name="description" content="Implementation of Butterworth and Chebyshev digital filters with comprehensive analysis and optimization.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Digital Filter Design</h1>
+                    <p class="project-subtitle">Signal Processing • DSP</p>
+                    <p class="project-description">
+                        Comprehensive implementation of digital filter design algorithms including Butterworth and Chebyshev filters. 
+                        This project demonstrates advanced signal processing skills, filter theory, and practical implementation 
+                        techniques for digital signal processing applications.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: MATLAB, Signal Processing, Filter Design</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/digital_filter_design" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="#technical-details" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/filtericon.png" alt="Digital Filter Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project implements fundamental digital filter design algorithms with a focus on Butterworth and 
+                            Chebyshev filter types. The work demonstrates deep understanding of filter theory, frequency response 
+                            analysis, and practical implementation techniques for digital signal processing.
+                        </p>
+                        <p>
+                            The implementation includes both theoretical analysis and practical code examples, making it a valuable 
+                            resource for learning digital filter design principles and their applications.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Digital signal processing applications often require filtering to remove noise, extract specific frequency 
+                            components, or modify signal characteristics. The challenges include:
+                        </p>
+                        <ul>
+                            <li>Understanding filter design theory and mathematical foundations</li>
+                            <li>Implementing efficient filter algorithms with optimal performance</li>
+                            <li>Balancing filter characteristics (ripple, roll-off, phase response)</li>
+                            <li>Optimizing computational complexity for real-time applications</li>
+                            <li>Validating filter performance through analysis and testing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <h3>Butterworth Filters</h3>
+                                <p>Implemented maximally flat magnitude response filters with smooth frequency characteristics.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Chebyshev Filters</h3>
+                                <p>Developed equiripple filters with optimized roll-off characteristics and controlled ripple.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Analysis Tools</h3>
+                                <p>Created comprehensive analysis and visualization tools for filter performance evaluation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Filter Design Algorithms</h3>
+                        <ul>
+                            <li><strong>Butterworth Design:</strong> Bilinear transformation and pole-zero placement</li>
+                            <li><strong>Chebyshev Design:</strong> Chebyshev polynomial approximation and ripple optimization</li>
+                            <li><strong>Filter Types:</strong> Low-pass, high-pass, band-pass, and band-stop implementations</li>
+                            <li><strong>Order Calculation:</strong> Automatic filter order determination based on specifications</li>
+                        </ul>
+
+                        <h3>Implementation Features</h3>
+                        <ul>
+                            <li><strong>Transfer Function:</strong> S-domain to Z-domain transformation</li>
+                            <li><strong>Frequency Response:</strong> Magnitude and phase response calculation</li>
+                            <li><strong>Filter Coefficients:</strong> IIR filter coefficient generation</li>
+                            <li><strong>Stability Analysis:</strong> Pole-zero analysis and stability verification</li>
+                        </ul>
+
+                        <h3>Analysis Capabilities</h3>
+                        <ul>
+                            <li><strong>Frequency Domain:</strong> Bode plots and frequency response analysis</li>
+                            <li><strong>Time Domain:</strong> Impulse and step response analysis</li>
+                            <li><strong>Performance Metrics:</strong> Cutoff frequency, ripple, and roll-off measurement</li>
+                            <li><strong>Comparison Tools:</strong> Side-by-side filter performance comparison</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results & Impact -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The project successfully implemented robust digital filter design algorithms with the following achievements:
+                        </p>
+                        <ul>
+                            <li>Accurate implementation of Butterworth and Chebyshev filter algorithms</li>
+                            <li>Comprehensive analysis tools for filter performance evaluation</li>
+                            <li>Efficient computational algorithms suitable for real-time applications</li>
+                            <li>Clear documentation and examples for educational purposes</li>
+                            <li>Validation against theoretical filter design principles</li>
+                            <li>Practical applications in signal processing and communications</li>
+                        </ul>
+                        <p>
+                            This work demonstrates strong mathematical foundations and practical implementation skills in digital signal processing.
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li><strong>Mathematical Foundations:</strong> Importance of understanding filter theory and mathematical principles</li>
+                            <li><strong>Numerical Methods:</strong> Challenges in implementing stable numerical algorithms</li>
+                            <li><strong>Performance Optimization:</strong> Balancing accuracy with computational efficiency</li>
+                            <li><strong>Validation Techniques:</strong> Importance of thorough testing and validation</li>
+                            <li><strong>Practical Applications:</strong> Understanding real-world constraints and requirements</li>
+                            <li><strong>Documentation:</strong> Clear documentation essential for educational and reference purposes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Details -->
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">1 month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Filter Design & Algorithm Development Lead</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Digital Filters</span>
+                            <span class="tech-tag">Signal Processing</span>
+                            <span class="tech-tag">DSP</span>
+                            <span class="tech-tag">Filter Theory</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Butterworth filter implementation</li>
+                            <li>Chebyshev filter implementation</li>
+                            <li>Multiple filter types (LP, HP, BP, BS)</li>
+                            <li>Frequency response analysis</li>
+                            <li>Filter coefficient generation</li>
+                            <li>Performance visualization tools</li>
+                        </ul>
+                    </div>
+
+                    <!-- Filter Types -->
+                    <div class="sidebar-card">
+                        <h3>Filter Types Implemented</h3>
+                        <ul class="feature-list">
+                            <li>Low-pass Filters</li>
+                            <li>High-pass Filters</li>
+                            <li>Band-pass Filters</li>
+                            <li>Band-stop Filters</li>
+                            <li>Butterworth Response</li>
+                            <li>Chebyshev Response</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/eeglabicon.png" alt="EEG Signal Processing">
+                    </div>
+                    <div class="project-content">
+                        <h3>EEG Signal Processing</h3>
+                        <p>Advanced signal processing for biomedical applications</p>
+                        <a href="eeglab-dsp.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/analogcircuit.png" alt="Analog Circuit Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Analog Circuit Design</h3>
+                        <p>Analog filter design and signal conditioning circuits</p>
+                        <a href="analogcircuit.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/simulationandnmodellingicon.png" alt="System Modelling">
+                    </div>
+                    <div class="project-content">
+                        <h3>System Modelling & Simulation</h3>
+                        <p>MATLAB-based system modeling and analysis</p>
+                        <a href="systemmodellingandsimulation.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Signal Processing Projects?</h2>
+                <p>Let's discuss how we can work together on your next digital signal processing or filter design project.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html> 

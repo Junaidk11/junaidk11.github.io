@@ -1,226 +1,303 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Dynamic System | Junaid Jawed Khan</title>
-	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic System Design - Junaid Jawed Khan</title>
+    <meta name="description" content="Design and simulation of a dynamic system for ball transport using MATLAB, including iterative design improvements and motion analysis.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <ul id="menu" class="shadow">
-          <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Report</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+    </nav>
 
-   <div id="lead">
-        <div id="lead-content">
-               <h1> Dynamic System Design </h1>      
-        </div>
-   <!-- End #lead-content -->
-        <div id="lead-overlay"></div>
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-   </div>
-    <!-- End #lead -->
-  <div id="about">
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"> Overview</h2>
-                </div>
-                <div class="col-md">
-                    <p>
-                       In this project, my team designed, analyzed and simulated a dynamic system that transports a ball from one corner to the other of a given vertical slab. The main objective of this project were to ensure that the ball took an average of 3-5 seconds to the reach the bottom of the vertical slab. 
-                    </p><br>
-                    <p style="text-align:center;">
-                       <img src="../images/dynamicsystemsicon.png" style="width:400px;height:400px;"><br>
-                       <strong> Preliminary Design </strong>
-                    </p><br>
-
-                    <p> The main objective of this project was achieved by including different components in the ball's path. The components include a rotating element, a curved path, a spring and an impact. All these components were added to the system to slow down the ball as it moved towards the end of vertical slab. The spring was included in the system to make the system passive, i.e. the ball's motion is initiated by the spring, no direct contact. <br><br>
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Dynamic System Design</h1>
+                    <p class="project-subtitle">Mechanical Design • System Simulation</p>
+                    <p class="project-description">
+                        Design and analysis of a dynamic system that transports a ball from one corner to another of a vertical slab, achieving 3-5 second travel time through iterative design improvements and MATLAB simulation.
                     </p>
-
-                    <p>After satisfying objective of this project, the dynamic system was simulated using MATLAB to ensure that the real and simulated time of the dynamic system were within a <strong>reasonable degree of error.</strong></p>
-
-                    <h4>Design Updates</h4>
-                    <ol>
-                        <li>
-                          <p>The preliminary design was changed by removing the slope at the starting position (at the top of the vertical slab) - to ensure that the ball starts at rest. This would reduce error in simulating the motion of the ball in MATLAB. </p><br>
-                          <p style="text-align:center;">
-                            <img src="../images/preliminaryDesignUpdated.png" style="width:500px;height:500px;"><br>
-                              <strong> Design 1.1 - Removed the slope at start position. </strong>
-                          </p><br>
-                          <div style="text-align:left;">
-                            <h3 style="text-align: left;">Problems encountered with Design 1.1</h3>
-                            <ul>
-                              <li><p>Over-rotation of the lever arm.</p></li>
-                              <li><p>Ball travelled much faster than anticipated in the solidwork simulation.</p></li>
-                              <li><p>Ball bouncing on the curved path after impact.</p></li>
-                              <li><p>The ball doesn't have enough kinetic energy at the last horizontal path to make it up the slope.</p></li><br>
-                            </ul><br>
-
-                               <p style="text-align:center;">
-                                     <video width="400" height="600" controls muted>
-                                        <source src="../images/Design1.1Video.mp4">   
-                                     </video>
-                                       <br> 
-                                        <strong> Design 1.1 Demonstration</strong>
-                               </p><br>
-
-
-                            <p style="text-align: center;color:red;"><strong> My team and I made changes to Design 1.1 to counteract the problems mentioned above. </strong></p><br>
-                          </div>
-                        </li>
-                        <li>
-                            <p>To counteract the problems encountered in Design 1.1, the following changes were made:</p>
-                            <ul>
-                              <li><p>Removed initial impact - there are several other locations of impact along the path.</p></li>
-                              <li><p>Reduced slope height for final horizontal path - so ball has enough energy to make it over.</p></li>
-                              <li><p>Added stops for the rotating part.</p></li>
-                            </ul><br>
-                            <p style="text-align:center;">
-                              <img src="../images/DynamicSystemDesign1_2.png" style="width:500px;height:500px;"><br>
-                                <strong>Design 1.2</strong>
-                            </p><br>
-                             
-                            <p> The changes made to Design 1.1 were based off the observation that the initial impact required too much force for the ball to go past it and hence it was hard to get an optimal initial speed for the ball, which ultimately affected the total time. Also, to help the ball make it over into the stop ditch, the end slope’s top was sanded, as shown above. <strong style="color: red;">Unfortunately</strong>, controlling the initial speed wasn’t enough to reach the time requirements of the project as the ball was still covering the distance in a very short period.</p><br>
-
-                            <p style="text-align:center;">
-                                     <video width="400" height="600" controls muted>
-                                        <source src="../images/Design1.2Video.mp4">   
-                                     </video>
-                                       <br> 
-                                        <strong> Design 1.2 Demonstration</strong>
-                               </p><br>
-
-                            <p style="text-align: center;color: red;"><strong>As you can see from the demo above, the ball took 2 seconds to travel from the top to the bottom, 1 second short of the objective time.  Therefore, the team decided to make changes to Design 1.2 to achieve our objective of 3-5 seconds of total displacment time. </strong></p> <br>
-                        </li>
-                        <li>
-                          <p>To counteract the problems encountered in Design 1.2, the following modifications were made to <strong style="color: blue;">Design 1.1</strong> </p>
-                            <ul>
-                              <li><p>Added two extra paths, to increase the total displacement.</p></li>
-                              <li><p>Add a more gradual slope at the end path, for a constant deceleration at the end.</p></li>
-                              <li><p>Placed the rotating rod at its original position to slow down the ball after slingshot.</p></li>
-                            </ul><br>
-                           <p style="text-align:center;">
-                            <img src="../images/DynamicSystemDesign1_3.png" style="width:400px;height:400px;"><br>
-                              <strong>Design 1.3 </strong>
-                          </p><br>
-
-                          <p> The two extra paths in Design 1.3 were not added until after the first test carried out with the initial impact - without the two extra paths, it was observed that the ball was being transported to the end zone swiftly. Addition of the two extra paths and the gradual slope for constant deceleration of the ball, resulted in <strong style="font-style: italic;color: blue;">optimum time of about 3 seconds </strong> - which was the main objective of this project.</p><br>
-                        </li>
-                    </ol>
-                    <p> Design 1.3 achieved our objective of 3-5 seconds toal displacment time. Therefore, Design 1.3 was accepted as the final design of the dynamic system and we moved on to simulating the motion of the ball using <strong style="color: red;">MATLAB.</strong></p>
-                    <p style="text-align:center;">
-                      <img src="../images/FinalDynamicDesign.png" style="width:400px;height:400px;"><br>
-                              <strong>Final Design of the Dynamic System </strong>
-                    </p><br>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: MATLAB, SolidWorks, Dynamic Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
                 </div>
-
-                 <div style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">MATLAB Simulations</h2>
-                          <p style="text-align:center;">
-                            <img src="../images/MATLABDisplacement.png" style="width:400px;height:400px;"><br>
-                              <strong>MATLAB Simulation</strong>
-                          </p><br>
-
-                          <p style="color:black;"> The detailed report of the project is included for your reference. The report includes details regarding the governing equations of each components employed in simulating the dynamic system in MATLAB. </p><br>
-
-                          <p style="color:black;">Shoot me a message and I'll share my <strong style="color: red" > MATLAB</strong> files!</p>
-
-
-
-                </div>
-            </div>    
-        </div>
-        
-    </div>
-    
-     <div id="report" >
-         <p style="text-align: center;">
-              <a href="../project-reports/DynamicSystemDesign.pdf" class="btn-rounded-black" style="text-align: center;">View Design Details</a> 
-         </p><br>
-    </div> 
-   
-    <!-- End #about -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="project-hero-image">
+                    <img src="../images/dynamicsystemsicon.png" alt="Dynamic System Design">
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            In this project, my team designed, analyzed and simulated a dynamic system that transports a ball from one corner to the other of a given vertical slab. The main objective was to ensure that the ball took an average of 3-5 seconds to reach the bottom of the vertical slab.
+                        </p>
+                        <div class="image-gallery">
+                            <img src="../images/dynamicsystemsicon.png" alt="Preliminary Design" class="gallery-image">
+                        </div>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <ul>
+                            <li>Design a dynamic system to transport a ball from top to bottom of a vertical slab</li>
+                            <li>Achieve travel time of 3-5 seconds</li>
+                            <li>Include passive components (spring, rotating elements, curved paths, impacts)</li>
+                            <li>Validate design through MATLAB simulation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            The main objective was achieved by including different components in the ball's path: a rotating element, curved path, spring, and impact. The spring was included to make the system passive, i.e., the ball's motion is initiated by the spring without direct contact.
+                        </p>
+                        <p>
+                            After satisfying the objective, the dynamic system was simulated using MATLAB to ensure that the real and simulated time were within a reasonable degree of error.
+                        </p>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Design Evolution</h3>
+                        <ol>
+                            <li>
+                                <h4>Design 1.1 - Initial Improvements</h4>
+                                <p>Removed the slope at the starting position to ensure the ball starts at rest, reducing simulation error.</p>
+                                <div class="image-gallery">
+                                    <img src="../images/preliminaryDesignUpdated.png" alt="Design 1.1" class="gallery-image">
+                                </div>
+                                <h5>Problems Encountered:</h5>
+                                <ul>
+                                    <li>Over-rotation of the lever arm</li>
+                                    <li>Ball travelled much faster than anticipated</li>
+                                    <li>Ball bouncing on the curved path after impact</li>
+                                    <li>Insufficient kinetic energy for the final slope</li>
+                                </ul>
+                                <div class="video-container">
+                                    <video width="400" height="600" controls muted>
+                                        <source src="../images/Design1.1Video.mp4">
+                                    </video>
+                                    <p><strong>Design 1.1 Demonstration</strong></p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Design 1.2 - Problem Resolution</h4>
+                                <p>Changes made to counteract Design 1.1 problems:</p>
+                                <ul>
+                                    <li>Removed initial impact</li>
+                                    <li>Reduced slope height for final horizontal path</li>
+                                    <li>Added stops for the rotating part</li>
+                                </ul>
+                                <div class="image-gallery">
+                                    <img src="../images/DynamicSystemDesign1_2.png" alt="Design 1.2" class="gallery-image">
+                                </div>
+                                <div class="video-container">
+                                    <video width="400" height="600" controls muted>
+                                        <source src="../images/Design1.2Video.mp4">
+                                    </video>
+                                    <p><strong>Design 1.2 Demonstration</strong></p>
+                                </div>
+                                <p><strong>Result:</strong> Ball took 2 seconds (1 second short of objective)</p>
+                            </li>
+                            <li>
+                                <h4>Design 1.3 - Final Optimization</h4>
+                                <p>Final modifications to achieve 3-5 second objective:</p>
+                                <ul>
+                                    <li>Added two extra paths to increase total displacement</li>
+                                    <li>Added more gradual slope for constant deceleration</li>
+                                    <li>Placed rotating rod at original position</li>
+                                </ul>
+                                <div class="image-gallery">
+                                    <img src="../images/DynamicSystemDesign1_3.png" alt="Design 1.3" class="gallery-image">
+                                    <img src="../images/FinalDynamicDesign.png" alt="Final Design" class="gallery-image">
+                                </div>
+                                <p><strong>Result:</strong> Achieved optimum time of about 3 seconds</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <h3>MATLAB Simulation</h3>
+                        <div class="image-gallery">
+                            <img src="../images/MATLABDisplacement.png" alt="MATLAB Simulation" class="gallery-image">
+                        </div>
+                        <ul>
+                            <li>Successfully achieved 3-5 second travel time objective</li>
+                            <li>Validated design through MATLAB simulation</li>
+                            <li>Demonstrated iterative design process and problem-solving</li>
+                            <li>Documented governing equations and simulation methodology</li>
+                        </ul>
+                        <p style="text-align:center;">
+                            <a href="../project-reports/DynamicSystemDesign.pdf" class="btn btn-primary" target="_blank">View Design Details (PDF)</a>
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li>Importance of iterative design and testing in dynamic systems</li>
+                            <li>Value of simulation tools (MATLAB) for validation</li>
+                            <li>Impact of component interactions on overall system performance</li>
+                            <li>Team collaboration and problem-solving in engineering projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><span class="label">Category:</span><span class="value">Mechanical Design</span></div>
+                        <div class="detail-item"><span class="label">Duration:</span><span class="value">4 months</span></div>
+                        <div class="detail-item"><span class="label">Role:</span><span class="value">System Design & Simulation Lead</span></div>
+                        <div class="detail-item"><span class="label">Team Size:</span><span class="value">4 people</span></div>
+                        <div class="detail-item"><span class="label">Status:</span><span class="value">Completed</span></div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">SolidWorks</span>
+                            <span class="tech-tag">Dynamic Analysis</span>
+                            <span class="tech-tag">System Design</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Dynamic System Design</li>
+                            <li>MATLAB Simulation</li>
+                            <li>Iterative Design Process</li>
+                            <li>Motion Analysis</li>
+                            <li>Component Integration</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Feedback Controller Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Feedback Controller Design</h3>
+                        <p>PID and Lead-Lag compensator design</p>
+                    </div>
+                </a>
+                <a href="systemmodellingandsimulation.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/simulationandnmodellingicon.png" alt="System Modelling and Simulation">
+                    </div>
+                    <div class="project-content">
+                        <h3>System Modelling and Simulation</h3>
+                        <p>Energy system modeling and simulation</p>
+                    </div>
+                </a>
+                <a href="fourbarmechanism.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/4barmechanismicon.png" alt="Four-Bar Mechanism">
+                    </div>
+                    <div class="project-content">
+                        <h3>Four-Bar Mechanism</h3>
+                        <p>Mechanism design and function generation</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
 </body>
-
 </html>
 

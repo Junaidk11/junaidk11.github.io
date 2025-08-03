@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .bg { fill: #2563eb; }
+      .text { fill: #ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 700; font-size: 14px; text-anchor: middle; dominant-baseline: central; }
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #3b82f6; }
+        .text { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="32" height="32" rx="6"/>
+  <text class="text" x="16" y="16">JJK</text>
+</svg>

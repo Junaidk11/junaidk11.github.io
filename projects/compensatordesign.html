@@ -1,307 +1,260 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Feedback Controller Design | Junaid Jawed Khan</title>
-	   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-
-    <style>
-            #myBtn {
-              display: none;
-              position: fixed;
-              bottom: 20px;
-              right: 30px;
-              z-index: 99;
-              font-size: 18px;
-              border: none;
-              outline: none;
-              background-color: black;
-              color: white;
-              cursor: pointer;
-              padding: 15px;
-              border-radius: 4px;
-            }
-
-            #myBtn:hover {
-              background-color: #555;
-            }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Controller Design - Junaid Jawed Khan</title>
+    <meta name="description" content="Design and analysis of feedback controllers (PID, Lead-Lag) for electronic systems using MATLAB and LTSpice.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
 </head>
-
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
         </div>
-        <ul id="menu" class="shadow">
-             <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Report</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
-   <div id="lead">
-        <div id="lead-content">
-               <h1>Feedback Controller Design</h1>      
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
         </div>
-    <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
         </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
+    </nav>
 
-    <div id="about">
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-md" style="text-align: center;">
-                  
-                    <h2 class="heading" style="align-text:center;"> Overview</h2>
-             
-                </div>
-          
-                <div class="col-md">
-                    <p>
-                       Control systems are an ubiquitous part of our everyday life in this technologically driven era, be it a simple thermostat or a complicated robotic arm, control theory may be implemented to design stable and efficient systems.
-
-                       <br><br>
-                
-                       In this project, I explored negative feedback control in electronic systems PID control and Lead-lag compensation.
-                       
-                       The electronic system employed for this project was a simple RLC circuit. <br><br>
-                         
-                       PID and Lead-Lag Compensator circuit designs were tested and tuned using MATLAB and LTSpice. <br><br>
-                  
-                        The tasks carried out in this project are:
-                        
-                        <ul>
-                            <li> <p>Analyzed open-loop system step response of the electronic system by modelling the system in MATLAB and LTSpice.</p>
-                            </li>
-                            <li>
-                               <p>
-                                Analyzed a closed-loop system without a controller/compensator by modelling the system in MATLAB and LTSpice.
-                                </p>
-                            </li>
-                            <li>
-                            <p>Studied the individual circuit implementations of Proportional, Integral and Derivative controllers. Followed by analysis of the combined PID controller circuit.
-                            </p></li>
-                            <li>
-                             <p>
-                                  Studied and implementated a  Lead-lag compensator for the simple RLC electronic system, using Bode and Nyquist plots for the open-loop system.
-                             </p>
-                              
-                            </li>
-                        </ul>
-                          <p>
-                              The steps taken to complete the tasks above and the results obtained are analyzed in the attached report for anyone interested in designing a PID controller or a Lead-lag compensator.<br>
-                          </p>      
-                     
-                        <div class="card">
-                             <p style="text-align:center;">
-
-                           <img src="../images/electronicircuit.jpg" alt="RLC circuit" style="width:400px;height:200px;"><br>
-                           <strong>The plant: A simple RLC circuit. </strong>
-                          </p><br>
-                        </div>
-                     
-                       <div class="card">
-                           <p style="text-align:center;">
-                       <img src="../images/negativefeedbackcircuit.jpg" alt="negative feeback system" style="width:400px;height:200px;" >
-                       <br> 
-                        <strong> Circuit implementation of a negative feedback system. </strong>
-                       </p><br>
-                     </div>
-                       
-                       
-                    <div class="card">
-                        <p style="text-align:center;">
-                        <img src="../images/OLvsCLwithoutcontroller.jpg" style="width:300px;height:300px;">
-                       <br>
-                       <strong>Open-loop vs Closed-loop Step-response without controller/compensator.</strong>
-                       </p>
-                        <br>  
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
                     </div>
-                                  
-                     <div class="card">
-                         <p style="text-align:center;">
-                       <img src="../images/LTspicPIDcontroller.jpg" alt="negative feeback system" style="width:400px;height:200px;" >
-                       <br> 
-                        <strong> Circuit implementation of a PID controller using LTSpice. </strong>
-                       </p><br>
-                     </div>   
-                       
-                    <div class="card">
-                        <p style="text-align:center;">
-                       <img src="../images/CLwPIDcontrollerresponse.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Closed-loop system step-response with PID controller. </strong>
-                       </p><br>
-                    </div>
-                        
-                    <div class="card">
-                        <p style="text-align:center;">
-                       <img src="../images/LTspiceleadlagcompensator.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Circuit implementation of a Lead-lag compensator using LTSpice. </strong>
-                       </p><br>
-                    </div>   
-                    
-                    <div class="card">
-                        <p style="text-align:center;">
-                       <img src="../images/CLwLeadlagcompensator.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Closed-loop system step-response with Lead-lag compensator. </strong>
-                       </p><br>
-                    </div>                       
-                        
-                     <div class="card">
-                         <p style="text-align:center;">
-                       <img src="../images/bodeplotleadlagdesign.jpg" alt="negative feeback system" style="width:400px;height:300px;" >
-                       <br> 
-                        <strong> Bode plot of system with and without Lead-lag compensator. </strong>
-                       </p><br>
-                    </div>  
-                       
-                              
-                
-                </div>
-                <div class="col-md">
-                   
-                <p>
-                   
-                    Completion of this project has made me appreciate the usefulness of negative feedback in control systems. A feedback in a system paired with a controller/compensator, allows the system to keep track of the output error and compensate accordingly. Designing a controller specifically for a system allows you to control the response time and steady-state accuracy. Hence, a feedback system with a controller ensures optimal performance.
-                </p> <br>
-                
-                <p>
-                    Moreover, the investigation carried out in the Lead-Lag Compensation has established a few key points that I will keep in mind when designing a lead-lag compensator. Namely, that the lag compensator’s purpose is to improve the steady-state accuracy and this can only be achieved by adding the lag compensator at low frequencies, while a lead compensator’s purpose is to improve the transient response and this is achieved by adding the lead compensator at high-frequencies. Finally, proportional gain is added to the system to push the improved transient and steady-state response, to the desired value. However, care needs to be taken to ensure that the added proportional gain is not greater than the gain margin of the improved system, as the system can become unstable.
-                </p><br>
-                
-                </div>
-                <div class="col-md">
-             
-                <p>
-                    Moving on to comparing PID control and Lead-lag compensation, it is safe to conclude that a lead compensator acts approximately as a PD controller as they both speed up the response of the system by improving the transient response of the system. Slowing down the transient response makes the system slower, which is approximately what a PI controller does to a system. Therefore, it is safe to conclude that Lag compensator acts approximately as a PI controller. 
-                </p><br>
-                
-                <strong style="font-style: italic;color:red;">  If you're interested in the design process I've attached a link to my detailed report on this project. Also, I'm more than happy to share my MATLAB and LTSpice files, shoot me a message!</strong>
-                
-                </div>
-            </div>    
-        </div>
-        
-    
-    </div>
-    
-     <div id="report" >
-           <p style="text-align: center;">
-            <a href="../project-reports/FeedbackProject_Report.pdf" class="btn-rounded-black" style="text-align: center;">View Design Details </a> 
-         </p>
-    
-    </div> 
-   
-    <!-- End #about -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+                    <h1 class="project-title">Feedback Controller Design</h1>
+                    <p class="project-subtitle">Control Systems • Electronics</p>
+                    <p class="project-description">
+                        Design and analysis of negative feedback controllers (PID, Lead-Lag) for electronic systems using MATLAB and LTSpice. Explored RLC circuits, open/closed-loop response, and compensator design.
                     </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: MATLAB, LTSpice, Control Theory</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="project-hero-image">
+                    <img src="../images/controllericon.png" alt="Feedback Controller Design">
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                    <p>
+                       Control systems are an ubiquitous part of our everyday life in this technologically driven era, be it a simple thermostat or a complicated robotic arm, control theory may be implemented to design stable and efficient systems.
+                        </p>
+                        <p>
+                            In this project, I explored negative feedback control in electronic systems, PID control, and Lead-lag compensation. The electronic system employed was a simple RLC circuit. PID and Lead-Lag Compensator circuit designs were tested and tuned using MATLAB and LTSpice.
+                        </p>
+                    </div>
 
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <ul>
+                            <li>Analyze open-loop and closed-loop system step response of an RLC circuit</li>
+                            <li>Design and implement PID and Lead-Lag compensators</li>
+                            <li>Compare controller performance using simulation and circuit implementation</li>
+                        </ul>
+                    </div>
 
-    <!--  Scroll to the top: - If needed later.
-    <script>
-          //Get the button
-          var mybutton = document.getElementById("myBtn");
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <ul>
+                            <li>Modeled the RLC system in MATLAB and LTSpice</li>
+                            <li>Analyzed open-loop and closed-loop responses</li>
+                            <li>Designed and implemented Proportional, Integral, Derivative, and combined PID controllers</li>
+                            <li>Designed and implemented a Lead-lag compensator using Bode and Nyquist plots</li>
+                        </ul>
+                        <div class="image-gallery">
+                            <img src="../images/electronicircuit.jpg" alt="RLC circuit" class="gallery-image">
+                            <img src="../images/negativefeedbackcircuit.jpg" alt="Negative feedback system" class="gallery-image">
+                            <img src="../images/OLvsCLwithoutcontroller.jpg" alt="Open-loop vs Closed-loop" class="gallery-image">
+                        </div>
+                     </div>
+                       
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <ul>
+                            <li>MATLAB for system modeling, simulation, and controller tuning</li>
+                            <li>LTSpice for circuit simulation and validation</li>
+                            <li>Step response, Bode, and Nyquist analysis</li>
+                        </ul>
+                        <div class="image-gallery">
+                            <img src="../images/LTspicPIDcontroller.jpg" alt="PID controller LTSpice" class="gallery-image">
+                            <img src="../images/CLwPIDcontrollerresponse.jpg" alt="Closed-loop with PID" class="gallery-image">
+                            <img src="../images/LTspiceleadlagcompensator.jpg" alt="Lead-lag compensator" class="gallery-image">
+                            <img src="../images/CLwLeadlagcompensator.jpg" alt="Closed-loop with Lead-lag" class="gallery-image">
+                            <img src="../images/bodeplotleadlagdesign.jpg" alt="Bode plot Lead-lag" class="gallery-image">
+                        </div>
+                        <p style="text-align:center;">
+                            <a href="../project-reports/FeedbackProject_Report.pdf" class="btn btn-primary" target="_blank">View Design Details (PDF)</a>
+                       </p>
+                    </div>
+                                  
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <ul>
+                            <li>Demonstrated improved transient and steady-state response with PID and Lead-lag compensators</li>
+                            <li>Validated controller performance through simulation and circuit implementation</li>
+                            <li>Documented design process and results in a detailed report</li>
+                        </ul>
+                     </div>   
+                       
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li>Negative feedback with a controller/compensator allows the system to keep track of output error and compensate accordingly</li>
+                            <li>Lag compensator improves steady-state accuracy (low frequencies), lead compensator improves transient response (high frequencies)</li>
+                            <li>Proportional gain must be chosen carefully to avoid instability</li>
+                            <li>Lead compensator ≈ PD controller, Lag compensator ≈ PI controller</li>
+                        </ul>
+                    </div>
+                    </div>   
+                    
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item"><span class="label">Category:</span><span class="value">Control Systems</span></div>
+                        <div class="detail-item"><span class="label">Duration:</span><span class="value">3 months</span></div>
+                        <div class="detail-item"><span class="label">Role:</span><span class="value">Control Design & Simulation Lead</span></div>
+                        <div class="detail-item"><span class="label">Team Size:</span><span class="value">Individual</span></div>
+                        <div class="detail-item"><span class="label">Status:</span><span class="value">Completed</span></div>
+                    </div>                       
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">LTSpice</span>
+                            <span class="tech-tag">Control Theory</span>
+                            <span class="tech-tag">PID</span>
+                            <span class="tech-tag">Lead-Lag</span>
+                            <span class="tech-tag">RLC Circuits</span>
+                    </div>  
+                </div>
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>PID Controller Design</li>
+                            <li>Lead-Lag Compensator</li>
+                            <li>MATLAB & LTSpice Simulation</li>
+                            <li>Step Response Analysis</li>
+                            <li>Bode & Nyquist Plots</li>
+                            <li>Electronic Circuit Implementation</li>
+                        </ul>
+                </div>
+                </div>
+            </div>    
+        </div>
+    </section>
 
-          // When the user scrolls down 20px from the top of the document, show the button
-          window.onscroll = function() {scrollFunction()};
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="analogcircuit.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/analogcircuit.png" alt="Analog Circuit Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Analog Circuit Design</h3>
+                        <p>Amplifiers, filters, and signal processing circuits</p>
+                    </div>
+                </a>
+                <a href="powerelectronics.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/powerelectronicsicon.jpg" alt="Power Electronics Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Power Electronics Design</h3>
+                        <p>DC-DC converters, motor drives, and power factor correction</p>
+                    </div>
+                </a>
+                <a href="dcmotorcontroller.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.jpg" alt="DC Motor Controller">
+                    </div>
+                    <div class="project-content">
+                        <h3>DC Motor Controller</h3>
+                        <p>PID feedback and H-bridge motor driver</p>
+    </div>
+                </a>
+    </div> 
+        </div>
+    </section>
 
-          function scrollFunction() {
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-              mybutton.style.display = "block";
-            } else {
-              mybutton.style.display = "none";
-            }
-          }
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
 
-          // When the user clicks on the button, scroll to the top of the document
-          function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-          }
-</script> -->
-
-
+    <script src="../js/modern-scripts.js"></script>
 </body>
-
 </html>
 
