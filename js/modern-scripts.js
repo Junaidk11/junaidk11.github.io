@@ -59,17 +59,6 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "CAN Network for Team Phantom",
-        description: "Implementation of CAN communication between Hercules Safety MCUs for Formula SAE vehicle control.",
-        image: "images/CanNetworkicone.jpg",
-        category: "embedded",
-        tags: ["C++", "CAN Bus", "Microcontrollers"],
-        link: "projects/cancommunication.html",
-        github: "https://github.com/Junaidk11/can_network",
-        featured: true
-    },
-    {
-        id: 3,
         title: "GPS Module Interface",
         description: "TM4C123GH6PM interfacing with Adafruit GPS for SFU Rocketry navigation system.",
         image: "images/gpsmoduleicon.png",
@@ -80,7 +69,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 4,
+        id: 3,
         title: "System Modelling & Simulation",
         description: "Dynamic system modeling and simulation for complex engineering systems analysis.",
         image: "images/simulationandnmodellingicon.png",
@@ -91,7 +80,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 5,
+        id: 4,
         title: "Industrial Control Technology",
         description: "Advanced industrial control systems implementation and optimization.",
         image: "images/industrialcontrolicon.png",
@@ -102,7 +91,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 6,
+        id: 5,
         title: "Machine Design",
         description: "Comprehensive machine design and analysis using CAD and simulation tools.",
         image: "images/machinedesignicon.png",
@@ -113,7 +102,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 7,
+        id: 6,
         title: "Four-Bar Mechanism",
         description: "Design and analysis of four-bar linkage mechanisms for mechanical systems.",
         image: "images/4barmechanismicon.png",
@@ -124,7 +113,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 8,
+        id: 7,
         title: "Dynamic System Design",
         description: "Dynamic system design and optimization for complex engineering applications.",
         image: "images/dynamicsystemsicon.png",
@@ -135,7 +124,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 9,
+        id: 8,
         title: "Forward & Inverse Kinematics",
         description: "Robotic arm kinematics analysis and implementation for motion control.",
         image: "images/inverseandforwardkinematicicon.png",
@@ -146,7 +135,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 10,
+        id: 9,
         title: "Inventory Management System",
         description: "Web-based inventory management application for Fraser International College.",
         image: "images/inventorymanagementappicon.png",
@@ -157,7 +146,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 11,
+        id: 10,
         title: "Analog Circuit Design",
         description: "Design and analysis of analog circuits including amplifiers, filters, and signal processing.",
         image: "images/analogcircuit.png",
@@ -168,7 +157,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 12,
+        id: 11,
         title: "DC Motor Controller",
         description: "PID-based DC motor control system with H-bridge driver and feedback control.",
         image: "images/controllericon.jpg",
@@ -179,7 +168,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 13,
+        id: 12,
         title: "External Flash Communication",
         description: "SPI-based external flash memory interface for data storage and retrieval.",
         image: "images/externalFlashicon.png",
@@ -190,7 +179,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 14,
+        id: 13,
         title: "Frame Stress Analysis",
         description: "Finite Element Analysis (FEA) and structural analysis of mechanical frames.",
         image: "images/streamlinerStressAnalysis.png",
@@ -201,7 +190,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 15,
+        id: 14,
         title: "Power Electronics Design",
         description: "DC-DC converters, motor drives, and power factor correction circuits.",
         image: "images/powerelectronicsicon.jpg",
@@ -212,7 +201,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 16,
+        id: 15,
         title: "Thermistor Expansion Circuit",
         description: "Temperature sensing and signal conditioning circuit with thermistor calibration.",
         image: "images/themistorExpansionIcon.png",
@@ -223,7 +212,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 17,
+        id: 16,
         title: "EEG Signal Processing",
         description: "Advanced EEG signal processing using EEGLAB for resting-wakeful state analysis.",
         image: "images/EEG-Project-Images/IndependentComponentAnalysis.png",
@@ -234,7 +223,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 18,
+        id: 17,
         title: "Data Structures & Algorithms",
         description: "Comprehensive implementations of data structures and algorithms in C/C++.",
         image: "images/controllericon.png",
@@ -245,7 +234,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 19,
+        id: 18,
         title: "CAN Network Communication",
         description: "Implementation of CAN communication between Hercules Safety MCUs.",
         image: "images/CanNetworkicone.jpg",
@@ -256,7 +245,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 20,
+        id: 19,
         title: "Digital Filter Design",
         description: "Implementation of Butterworth and Chebyshev digital filters.",
         image: "images/analogcircuit.png",
@@ -267,7 +256,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 21,
+        id: 20,
         title: "Modern CMake Project",
         description: "Comprehensive guide to modern CMake practices and build systems.",
         image: "images/project.jpg",
