@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Jawed Khan - Experience</title>
+    <meta name="description" content="Interactive CV and experience showcase of Junaid Jawed Khan, Mechatronic Systems Engineer">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/modern-styles.css">
+    <link rel="stylesheet" href="css/experience-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">JJK</a>
+            </div>
+                        <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="experience.html" class="nav-link active">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Cards -->
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="experience-grid">
+                <div class="experience-card current">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="card-badge">Current</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Embedded Software Developer</h3>
+                        <h4><a href="https://www.pde.com/" target="_blank">Pacific Design Engineering</a></h4>
+                        <p class="card-date">October 2021 - Present (3 years 11 months)</p>
+                        <p class="card-location">Burnaby, British Columbia, Canada</p>
+                        <div class="card-description">
+                            <ul>
+                                <li>Lead development of embedded firmware for client-facing IoT and real-time systems, delivering new features, performance improvements, and long-term maintainability</li>
+                                <li>Designed a scalable IoT test infrastructure using Docker Swarm and deployed it on AWS, enabling remote validation and high-performance testing of cloud-integrated devices</li>
+                                <li>Created custom command-line tools in Python and Go to interface with cloud services and simplify debugging, monitoring, and diagnostics</li>
+                                <li>Diagnosed and resolved critical firmware issues through low-level debugging, signal tracing, and performance profiling—enhancing system uptime and robustness</li>
+                                <li>Integrated embedded peripherals including SPI, I2C, UART, GPIO, and ADC/DACs, ensuring seamless hardware-software operation across multiple MCU architectures</li>
+                                <li>Collaborated with cross-functional teams including hardware, QA, and cloud developers to validate and refine product designs</li>
+                                <li>Practiced Agile/Scrum methodology, managing tasks via JIRA/Confluence, and supporting continuous integration pipelines</li>
+                            </ul>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-chip">C/C++</span>
+                            <span class="skill-chip">FreeRTOS</span>
+                            <span class="skill-chip">Docker Swarm</span>
+                            <span class="skill-chip">AWS</span>
+                            <span class="skill-chip">Python/Go</span>
+                            <span class="skill-chip">SPI/I2C/UART</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-signal"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>RF Physical Layer Development Engineer (Co-op)</h3>
+                        <h4><a href="https://tantalus.com/" target="_blank">Tantalus Systems</a></h4>
+                        <p class="card-date">January 2020 - August 2020 (8 months)</p>
+                        <p class="card-location">Burnaby, British Columbia, Canada</p>
+                        <div class="card-description">
+                            <ul>
+                                <li>Programmed low-level signal processing routines in C and RISC-V Assembly for 220 MHz RF transceivers in smart grid communication systems</li>
+                                <li>Designed and implemented a custom symbol timing and detection algorithm, boosting receiver sensitivity and reducing bit error rates under noisy channel conditions</li>
+                                <li>Validated DSP logic using hardware simulations and bitstream-level signal tracing with lab tools such as oscilloscopes and logic analyzers</li>
+                                <li>Collaborated with senior engineers to test and optimize transceiver firmware using hardware-in-the-loop (HIL) test environments</li>
+                                <li>Contributed to embedded Linux driver debugging and documented signal chain behavior across multiple firmware iterations</li>
+                            </ul>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-chip">RISC-V Assembly</span>
+                            <span class="skill-chip">DSP</span>
+                            <span class="skill-chip">RF Transceivers</span>
+                            <span class="skill-chip">Hardware-in-Loop</span>
+                            <span class="skill-chip">Signal Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Physics Lab Assistant</h3>
+                        <h4><a href="https://www.fraseric.ca/" target="_blank">Fraser International College</a></h4>
+                        <p class="card-date">May 2019 - December 2019 (8 months)</p>
+                        <p class="card-location">Burnaby, British Columbia, Canada</p>
+                        <div class="card-description">
+                            <ul>
+                                <li>Developed a custom PHP/MySQL lab inventory system, featuring real-time stock updates and automated low-quantity reordering, improving operational efficiency</li>
+                                <li>Instructed first-year engineering students in soldering through-hole and SMD components, supporting successful PCB assembly for final projects</li>
+                                <li>Mentored students in using LTSpice for circuit simulations and Eagle for PCB layout design, bridging theory with hands-on application</li>
+                                <li>Collaborated with lab supervisors to maintain equipment, improve student onboarding, and enhance lab session flow</li>
+                            </ul>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-chip">PHP/MySQL</span>
+                            <span class="skill-chip">PCB Assembly</span>
+                            <span class="skill-chip">LTSpice</span>
+                            <span class="skill-chip">Eagle CAD</span>
+                            <span class="skill-chip">Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Part-Time Tutor</h3>
+                        <h4><a href="https://www.tutordoctor.com/vancouver/" target="_blank">Tutor Doctor Vancouver</a></h4>
+                        <p class="card-date">March 2018 - September 2019 (1 year 7 months)</p>
+                        <p class="card-location">Surrey, British Columbia, Canada</p>
+                        <div class="card-description">
+                            <ul>
+                                <li>Delivered 1-on-1 tutoring in Physics and Mathematics to high school students, helping them strengthen core concepts and improve academic performance</li>
+                                <li>Adapted teaching strategies to suit individual learning styles, improving engagement and retention of theoretical content</li>
+                                <li>Cultivated strong student relationships built on trust and encouragement, often leading to long-term academic support</li>
+                                <li>Reinforced problem-solving skills by breaking down complex topics into manageable, real-world applications</li>
+                            </ul>
+                        </div>
+                        <div class="card-skills">
+                            <span class="skill-chip">Physics</span>
+                            <span class="skill-chip">Mathematics</span>
+                            <span class="skill-chip">Teaching</span>
+                            <span class="skill-chip">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Visualization -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>C/C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Go</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>RISC-V Assembly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-microchip"></i> Embedded Systems</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>FreeRTOS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>ARM Cortex</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>SPI/I2C/UART</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>ADC/DAC</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>GPIO</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Embedded Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>Docker Swarm</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>IoT Infrastructure</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-signal"></i> Signal Processing</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>DSP Algorithm Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Hardware-in-Loop Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Receiver Sensitivity Testing</span>
+                        </div>x
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Software</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <span>Oscilloscopes</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Logic Analyzers</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>JTAG Debuggers</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Atlassian Suite</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Eclipse-based IDEs</span>
+                        </div>
+                        <div class="skill-item">
+                            <span>Code Editors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-badge">Highest Degree</div>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor of Applied Science</h3>
+                        <p class="degree" style="font-weight: bold;">Mechatronics, Robotics, and Automation Engineering</p>
+                        <p class="school"><a href="https://www.sfu.ca/" target="_blank">Simon Fraser University</a></p>
+                        <p class="year">2017 - 2021</p>
+                        <div class="education-highlights">
+                            <span class="highlight">Embedded Systems</span>
+                            <span class="highlight">Control Theory</span>
+                            <span class="highlight">Hardware Design</span>
+                            <span class="highlight">Signal Processing</span>
+                            <span class="highlight">Robotics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <h3>University Transfer Program</h3>
+                        <p class="degree" style="font-weight: bold;">Mechatronics, Robotics, and Automation Engineering</p>
+                        <p class="school"><a href="https://www.fraseric.ca/" target="_blank">Fraser International College</a></p>
+                        <p class="year">2016 - 2017</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <h3>Edexcel Advance Level</h3>
+                        <p class="degree" style="font-weight: bold;">Science</p>
+                        <p class="school"><a href="https://www.slsm.edu.om/" target="_blank">Sri Lankan School Muscat</a></p>
+                        <p class="year">2000 - 2015</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Awards</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Honour Roll Award</h3>
+                        <p class="cert-level">Academic Excellence</p>
+                        <p class="cert-focus">Outstanding academic performance and achievement at Fraser International College</p>
+                    </div>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Oryx Award</h3>
+                        <p class="cert-level">Excellence Recognition</p>
+                        <p class="cert-focus">Recognition for outstanding contributions and achievements for the Sri Lankan School Muscat Basketball Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Junaid Jawed Khan. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Junaidk11" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modern-scripts.js"></script>
+    <script src="js/experience.js"></script>
+</body>
+</html> 
