@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures & Algorithms - Junaid Jawed Khan</title>
+    <meta name="description" content="Comprehensive implementations of data structures and algorithms in C/C++ with detailed explanations and examples.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Data Structures & Algorithms</h1>
+                    <p class="project-subtitle">Software Development • Computer Science</p>
+                    <p class="project-description">
+                        A complete collection of fundamental and advanced data structures and algorithms implemented in C and C++. 
+                        This project demonstrates strong programming fundamentals, algorithm design, and problem-solving skills 
+                        with detailed explanations, complexity analysis, and practical examples.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Ongoing: 2020-Present</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: C, C++, Data Structures, Algorithms</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/DataStructuresAndAlgorithm" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="#technical-details" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/dsaicon.png" alt="Data Structures & Algorithms">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project serves as a comprehensive reference for fundamental and advanced data structures and algorithms. 
+                            It includes implementations in both C and C++, with detailed documentation, complexity analysis, and practical 
+                            examples for each data structure and algorithm.
+                        </p>
+                        <p>
+                            The repository is actively maintained and updated with new implementations, making it a valuable resource 
+                            for learning, reference, and demonstrating strong programming fundamentals.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Many developers struggle with implementing efficient data structures and algorithms. The challenges include:
+                        </p>
+                        <ul>
+                            <li>Understanding the theoretical concepts and practical implementations</li>
+                            <li>Implementing efficient algorithms with optimal time and space complexity</li>
+                            <li>Choosing the right data structure for specific problem domains</li>
+                            <li>Debugging and optimizing complex algorithmic solutions</li>
+                            <li>Providing clear, well-documented code examples</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <h3>Data Structures</h3>
+                                <p>Implemented fundamental data structures including arrays, linked lists, stacks, queues, trees, and graphs with both iterative and recursive approaches.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Algorithms</h3>
+                                <p>Developed sorting, searching, graph traversal, and dynamic programming algorithms with detailed complexity analysis.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Documentation</h3>
+                                <p>Provided comprehensive documentation including usage examples, complexity analysis, and implementation notes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Data Structures Implemented</h3>
+                        <ul>
+                            <li><strong>Linear Structures:</strong> Arrays, Linked Lists (Singly, Doubly, Circular), Stacks, Queues</li>
+                            <li><strong>Tree Structures:</strong> Binary Trees, Binary Search Trees, AVL Trees, Heaps</li>
+                            <li><strong>Graph Structures:</strong> Adjacency Matrix, Adjacency List representations</li>
+                            <li><strong>Hash Tables:</strong> Open addressing and chaining implementations</li>
+                        </ul>
+
+                        <h3>Algorithms Implemented</h3>
+                        <ul>
+                            <li><strong>Sorting:</strong> Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort</li>
+                            <li><strong>Searching:</strong> Linear Search, Binary Search, Depth-First Search, Breadth-First Search</li>
+                            <li><strong>Graph Algorithms:</strong> Dijkstra's, Bellman-Ford, Floyd-Warshall, Topological Sort</li>
+                            <li><strong>Dynamic Programming:</strong> Fibonacci, Longest Common Subsequence, Knapsack Problem</li>
+                        </ul>
+
+                        <h3>Code Quality Features</h3>
+                        <ul>
+                            <li><strong>Modular Design:</strong> Separate files for each data structure/algorithm</li>
+                            <li><strong>Error Handling:</strong> Comprehensive input validation and error checking</li>
+                            <li><strong>Memory Management:</strong> Proper allocation and deallocation in C implementations</li>
+                            <li><strong>Testing:</strong> Unit tests and example programs for each implementation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results & Impact -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            This project has become a valuable resource for learning and reference, demonstrating strong programming 
+                            fundamentals and algorithmic thinking. Key achievements include:
+                        </p>
+                        <ul>
+                            <li>Comprehensive coverage of fundamental data structures and algorithms</li>
+                            <li>Clear, well-documented implementations in both C and C++</li>
+                            <li>Detailed complexity analysis for each algorithm</li>
+                            <li>Practical examples and use cases for each data structure</li>
+                            <li>Active maintenance and continuous improvements</li>
+                            <li>Used as reference material for programming interviews and coursework</li>
+                        </ul>
+                        <p>
+                            The project showcases strong software engineering practices, including code organization, documentation, 
+                            and testing methodologies.
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li><strong>Algorithm Design:</strong> Understanding trade-offs between time and space complexity</li>
+                            <li><strong>Code Organization:</strong> Importance of modular design and clear separation of concerns</li>
+                            <li><strong>Documentation:</strong> Clear documentation is essential for maintainable code</li>
+                            <li><strong>Testing:</strong> Comprehensive testing helps ensure correctness and reliability</li>
+                            <li><strong>Performance Optimization:</strong> Profiling and optimization techniques for algorithmic efficiency</li>
+                            <li><strong>Language Differences:</strong> Understanding C vs C++ implementation approaches</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Details -->
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">Ongoing (2020-Present)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Lead Developer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Active Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Data Structures</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Make</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>20+ data structure implementations</li>
+                            <li>30+ algorithm implementations</li>
+                            <li>Dual language support (C/C++)</li>
+                            <li>Comprehensive documentation</li>
+                            <li>Complexity analysis</li>
+                            <li>Unit tests and examples</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Structures Covered -->
+                    <div class="sidebar-card">
+                        <h3>Data Structures Covered</h3>
+                        <ul class="feature-list">
+                            <li>Arrays & Strings</li>
+                            <li>Linked Lists</li>
+                            <li>Stacks & Queues</li>
+                            <li>Trees & BST</li>
+                            <li>Heaps</li>
+                            <li>Graphs</li>
+                            <li>Hash Tables</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/cmakeicon.png" alt="Modern CMake Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Modern CMake Project</h3>
+                        <p>Comprehensive guide to modern CMake practices and build systems</p>
+                        <a href="modern-cmake.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/inventorymanagementappicon.png" alt="Inventory Management">
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Management System</h3>
+                        <p>Web-based application demonstrating software development skills</p>
+                        <a href="inventorymanagementapp.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/forwardinversekinematics.html" alt="Forward & Inverse Kinematics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Forward & Inverse Kinematics</h3>
+                        <p>Algorithmic solutions for robotic arm control and path planning</p>
+                        <a href="forwardinversekinematics.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Software Development Projects?</h2>
+                <p>Let's discuss how we can work together on your next software development or algorithmic problem-solving project.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html> 

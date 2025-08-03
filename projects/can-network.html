@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAN Network Communication - Junaid Jawed Khan</title>
+    <meta name="description" content="Implementation of CAN communication between two Hercules Safety MCUs - TMS570LS1224 and TMS570LS1227.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">CAN Network Communication</h1>
+                    <p class="project-subtitle">Embedded Systems • Automotive</p>
+                    <p class="project-description">
+                        Advanced implementation of Controller Area Network (CAN) communication between two Hercules Safety MCUs - 
+                        TMS570LS1224 and TMS570LS1227. This project demonstrates embedded systems expertise, real-time communication 
+                        protocols, and automotive-grade microcontroller programming.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2020</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: C++, CAN Bus, Hercules MCU</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/can_network" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                        <a href="#technical-details" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/CAN/TwoVCUs.jpg" alt="CAN Network Communication Setup - Two Hercules VCUs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project implements a complete CAN communication system between two Texas Instruments Hercules Safety MCUs. 
+                            The system demonstrates automotive-grade communication protocols, real-time data exchange, and robust error 
+                            handling mechanisms essential for safety-critical applications.
+                        </p>
+                        <p>
+                            The implementation includes both hardware and software components, showcasing expertise in embedded systems 
+                            design, microcontroller programming, and automotive communication standards.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Automotive and industrial systems require reliable, real-time communication between multiple microcontrollers. 
+                            The challenges include:
+                        </p>
+                        <ul>
+                            <li>Implementing robust CAN communication protocol</li>
+                            <li>Ensuring real-time data exchange with minimal latency</li>
+                            <li>Handling communication errors and network failures</li>
+                            <li>Managing multiple message priorities and arbitration</li>
+                            <li>Integrating with safety-critical automotive systems</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <h3>CAN Protocol Implementation</h3>
+                                <p>Implemented full CAN 2.0B protocol with message arbitration, error detection, and retransmission mechanisms.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Hardware Integration</h3>
+                                <p>Designed and integrated external CAN transceivers with proper signal conditioning and protection circuits.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Real-time Communication</h3>
+                                <p>Developed interrupt-driven communication system with priority-based message handling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Gallery -->
+                    <div class="content-section">
+                        <h2>Hardware Setup</h2>
+                        <p>The following images showcase the actual hardware components used in this CAN network implementation:</p>
+                        
+                        <div class="hardware-gallery">
+                            <div class="gallery-item">
+                                <img src="../images/CAN/CANNodeModules.png" alt="CAN Node Modules Overview">
+                                <h4>System Architecture</h4>
+                                <p>Complete CAN network topology showing both VCU nodes and communication links</p>
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img src="../images/CAN/VCULaunchpad.JPG" alt="Hercules VCU with Launchpad">
+                                <h4>Hercules VCU Setup</h4>
+                                <p>TMS570LS1227 Hercules Safety MCU mounted on development launchpad</p>
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img src="../images/CAN/MCP2551.JPG" alt="MCP2551 CAN Transceiver">
+                                <h4>CAN Transceiver</h4>
+                                <p>MCP2551 high-speed CAN transceiver providing physical layer communication</p>
+                            </div>
+                            
+                            <div class="gallery-item">
+                                <img src="../images/CAN/WithWithoutCANImage.png" alt="Network Comparison">
+                                <h4>Network Comparison</h4>
+                                <p>Comparison showing system architecture with and without CAN communication</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        <h3>Hardware Components</h3>
+                        <ul>
+                            <li><strong>Microcontrollers:</strong> TMS570LS1224 and TMS570LS1227 Hercules Safety MCUs</li>
+                            <li><strong>CAN Transceivers:</strong> MCP2551 high-speed CAN transceivers</li>
+                            <li><strong>Network Topology:</strong> Bus topology with termination resistors</li>
+                            <li><strong>Power Supply:</strong> Isolated power supplies for noise immunity</li>
+                        </ul>
+
+                        <h3>Software Architecture</h3>
+                        <ul>
+                            <li><strong>CAN Driver:</strong> Low-level CAN peripheral configuration and control</li>
+                            <li><strong>Message Handling:</strong> Interrupt-driven message reception and transmission</li>
+                            <li><strong>Error Management:</strong> Comprehensive error detection and recovery mechanisms</li>
+                            <li><strong>Application Layer:</strong> High-level message formatting and protocol implementation</li>
+                        </ul>
+
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Message Arbitration:</strong> Priority-based message transmission</li>
+                            <li><strong>Error Detection:</strong> CRC, bit stuffing, and frame validation</li>
+                            <li><strong>Retransmission:</strong> Automatic retransmission on communication errors</li>
+                            <li><strong>Real-time Performance:</strong> Sub-millisecond message latency</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results & Impact -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The project successfully demonstrated reliable CAN communication between two Hercules MCUs with the following achievements:
+                        </p>
+                        <ul>
+                            <li>Reliable communication at 500 kbps with zero message loss</li>
+                            <li>Real-time message exchange with < 1ms latency</li>
+                            <li>Robust error handling with automatic recovery</li>
+                            <li>Support for multiple message types and priorities</li>
+                            <li>Compliance with CAN 2.0B protocol specifications</li>
+                            <li>Ready for integration into automotive safety systems</li>
+                        </ul>
+                        <p>
+                            This implementation showcases advanced embedded systems skills and understanding of automotive communication protocols.
+                        </p>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <ul>
+                            <li><strong>Protocol Design:</strong> Importance of proper CAN protocol implementation for reliable communication</li>
+                            <li><strong>Hardware Integration:</strong> Critical role of proper signal conditioning and protection</li>
+                            <li><strong>Real-time Systems:</strong> Interrupt-driven architectures for time-critical applications</li>
+                            <li><strong>Error Handling:</strong> Comprehensive error detection and recovery mechanisms</li>
+                            <li><strong>Safety Standards:</strong> Understanding automotive safety requirements and standards</li>
+                            <li><strong>Testing:</strong> Importance of thorough testing in safety-critical systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Details -->
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">1 month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Embedded Systems Developer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">CAN Bus</span>
+                            <span class="tech-tag">Embedded Systems</span>
+                            <span class="tech-tag">Hercules MCU</span>
+                            <span class="tech-tag">Real-time Systems</span>
+                            <span class="tech-tag">Automotive Protocols</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>CAN 2.0B protocol implementation</li>
+                            <li>Real-time message exchange</li>
+                            <li>Error detection and recovery</li>
+                            <li>Priority-based arbitration</li>
+                            <li>Hardware fault tolerance</li>
+                            <li>Safety-critical design</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hardware Components -->
+                    <div class="sidebar-card">
+                        <h3>Hardware Components</h3>
+                        <ul class="feature-list">
+                            <li>TMS570LS1224 MCU</li>
+                            <li>TMS570LS1227 MCU</li>
+                            <li>MCP2551 CAN Transceivers</li>
+                            <li>CAN Bus Termination</li>
+                            <li>Power Supply Circuits</li>
+                            <li>Protection Circuits</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/externalFlashicon.png" alt="External Flash Communication">
+                    </div>
+                    <div class="project-content">
+                        <h3>External Flash Communication</h3>
+                        <p>SPI-based external flash memory communication and data storage</p>
+                        <a href="externalflashCommunication.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/gpsmoduleicon.png" alt="GPS Module Interface">
+                    </div>
+                    <div class="project-content">
+                        <h3>GPS Module Interface</h3>
+                        <p>UART-based GPS module communication and data parsing</p>
+                        <a href="gpsmodule.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.jpg" alt="DC Motor Controller">
+                    </div>
+                    <div class="project-content">
+                        <h3>DC Motor Controller</h3>
+                        <p>Embedded motor control system with feedback and communication</p>
+                        <a href="dcmotorcontroller.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Embedded Systems Projects?</h2>
+                <p>Let's discuss how we can work together on your next embedded systems or automotive communication project.</p>
+                <a href="../index.html#contact" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Scripts -->
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html> 

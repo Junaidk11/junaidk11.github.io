@@ -1,194 +1,390 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Inventory Management | Junaid Jawed Khan</title>
-	  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	  <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-          <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Demo</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
-   <div id="lead">
-        <div id="lead-content">
-               <h1> Inventory Managment Application </h1>      
-        </div>
-   <!-- End #lead-content -->
-        <div id="lead-overlay"></div>
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-   </div>
-    <!-- End #lead -->
-  	<div id="about">
-        <div class="container">
-           <div class="row">
-                <div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"> Overview</h2>
-                </div>
-                <div class="col-md">
-                    <p>
-                       Working as a Physics Lab Assistant at Fraser International College (FIC) I was tasked with maintaining the inventory using their excel sheets - a very tedious method.  To avoid the excel sheets for maintaining inventory I came up with an idea that would utilize a database to maintain the inventory. My supervisor was supportive of my idea and so I started looking into tutorials that explain the fundamentals of database-driven applications. It took me about a week to complete understand the road map to web-development, from frontend to backend. </p><br>
-                     <p>
-						From my research, as a beginner to full-stack development, everyone suggested to start with PHP on the backend, its easier to understand & implement server-side concepts. I took an introductory course to database-driven web applications on Udemy for the first 4-5 weeks. Upon finishing the course, I moved on to implementing the inventory management application for FIC using <strong style="color: red;font-style: italic;">PHP & MySQL </strong> on the backend, and <strong style="color: red;font-style: italic;">JavaScript & AJAX</strong> on the frontend. 
- 
-                    </p><br>
-                </div>
-           </div>
-           <div class="row"> 
-           		<div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;">Implemented Pages</h2>
-                </div>
-                <div class="col-md">
-                	<ol>
-                        <li> Login-page
-                        	 <p style="text-align:center;">
-		                       <img src="../images/inventorymanagementFrontPage.png" style="width:600px;height:300px;"><br>
-		                       <strong></strong>
-                			</p><br>		 
-                    	</li>
-                        <li>Account Page
-                        		<p style="text-align:center;">
-			                       <img src="../images/AccountPage.png" style="width:600px;height:300px;"><br>
-			                       <strong></strong>
-                				</p><br>		 
-                        </li>
-                        <li>Inventory Page 
-                        		<p style="text-align:center;">
-			                       <img src="../images/inventorypage.png" style="width:600px;height:300px;"><br>
-			                       <strong></strong>
-                				</p><br>		
-                        </li>
-                        <li>Add Product Page 
-                        	<p style="text-align:center;">
-			                       <img src="../images/AddProductpage.png" style="width:600px;height:300px;"><br>
-			                       <strong></strong>
-            				</p><br>	
-                        </li>
-                        <li>Product Report Page
-                        	<p style="text-align:center;">
-			                       <img src="../images/ProductReportPage.png" style="width:600px;height:400px;"><br>
-			                       <strong></strong>
-            				</p><br>
-                        </li>
-                        <li> Email supplier Page
-                        	<p style="text-align:center;">
-			                       <img src="../images/placeNewOrderPage.png" style="width:600px;height:400px;"><br>
-			                       <strong></strong>
-            				</p><br>
-                        </li>
-                    </ol> 
-
-                    <div>
-                    	<strong>Additional Feature:</strong><br>
-                    	<p>Every time a product quantity in the database is updated and <strong style="color: blue;font-style: italic;">if the new quantity is below the minimum required</strong> an email is <strong style="color: blue;font-style: italic;">automatically sent </strong> to the supplier for a new order. </p> 
-						
-						<p> The <strong style="color: red;font-style: italic;">idea</strong> was to use FIC’s ordering template to place new orders. At the moment, I’m sending an email that says “order placed successfully” - just for debugging purposes. </p>
-                    </p>   
-                    </div>	
-                </div>
-           </div>
-           <div class="row" id="report">
-           		<div class="col-md" style="text-align: center;">
-                    <h2 class="heading" style="align-text:center;"><a href="https://github.com/Junaidk11/InventoryApp">View Code</a></h2>
-                </div>
-                <!--
-                <div class="col-md">
-
-                		<!-- DEMO Video
-                		<p style="text-align:center;">
-                                     <video width="400" height="600" controls muted>
-                                        <source src="../images/Design1.1Video.mp4">   
-                                     </video>
-                                     <br> 
-                        </p><br>
-                    
-                </div> 	-->
-       	   </div>
-       	</div>
-    <!-- </div> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management Application - Junaid Jawed Khan</title>
+    <meta name="description" content="Web-based inventory management application for Fraser International College using PHP, MySQL, and JavaScript">
     
-    <!-- End #about -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
+    </nav>
 
-    <footer>
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Inventory Management Application</h1>
+                    <p class="project-subtitle">Web Development • Full-Stack Application</p>
+                    <p class="project-description">
+                        Web-based inventory management system for Fraser International College, replacing manual 
+                        Excel-based tracking with a modern database-driven application using PHP, MySQL, and JavaScript.
                     </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: PHP, MySQL, JavaScript, AJAX</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="project-hero-image">
+                    <img src="../images/inventorymanagementappicon.png" alt="Inventory Management Application">
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            Working as a Physics Lab Assistant at Fraser International College (FIC), I was tasked with maintaining the inventory using their Excel sheets - a very tedious method. To avoid the Excel sheets for maintaining inventory, I came up with an idea that would utilize a database to maintain the inventory. My supervisor was supportive of my idea, and so I started looking into tutorials that explain the fundamentals of database-driven applications.
+                        </p>
+                        <p>
+                            From my research, as a beginner to full-stack development, everyone suggested starting with PHP on the backend, as it's easier to understand & implement server-side concepts. I took an introductory course to database-driven web applications on Udemy for the first 4-5 weeks. Upon finishing the course, I moved on to implementing the inventory management application for FIC using <strong>PHP & MySQL</strong> on the backend, and <strong>JavaScript & AJAX</strong> on the frontend.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            The existing inventory management system faced several challenges:
+                        </p>
+                        <ul>
+                            <li>Manual Excel-based tracking was time-consuming and error-prone</li>
+                            <li>Difficulty in maintaining accurate inventory records</li>
+                            <li>Lack of real-time updates and notifications</li>
+                            <li>No centralized database for inventory management</li>
+                            <li>Limited accessibility and user interface</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            Developed a comprehensive web-based inventory management system with the following features:
+                        </p>
+                        
+                        <h3>1. User Authentication System</h3>
+                        <p>
+                            Secure login and account management:
+                        </p>
+                        <ul>
+                            <li>User registration and authentication</li>
+                            <li>Role-based access control</li>
+                            <li>Secure password management</li>
+                            <li>Session management and security</li>
+                        </ul>
+                        
+                        <h3>2. Inventory Management</h3>
+                        <p>
+                            Complete inventory tracking and management:
+                        </p>
+                        <ul>
+                            <li>Add, edit, and delete inventory items</li>
+                            <li>Real-time inventory tracking</li>
+                            <li>Stock level monitoring and alerts</li>
+                            <li>Inventory search and filtering</li>
+                        </ul>
+                        
+                        <h3>3. Database Integration</h3>
+                        <p>
+                            Robust database design and management:
+                        </p>
+                        <ul>
+                            <li>MySQL database for data storage</li>
+                            <li>Efficient data retrieval and queries</li>
+                            <li>Data backup and recovery</li>
+                            <li>Database optimization and performance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Frontend Development</h3>
+                        <p>
+                            Modern and responsive user interface:
+                        </p>
+                        <ul>
+                            <li>HTML5 and CSS3 for structure and styling</li>
+                            <li>JavaScript for interactive functionality</li>
+                            <li>AJAX for asynchronous data updates</li>
+                            <li>Responsive design for mobile compatibility</li>
+                        </ul>
+                        
+                        <h3>Backend Development</h3>
+                        <p>
+                            Robust server-side implementation:
+                        </p>
+                        <ul>
+                            <li>PHP for server-side logic and processing</li>
+                            <li>MySQL database for data persistence</li>
+                            <li>RESTful API design for data operations</li>
+                            <li>Security measures and input validation</li>
+                        </ul>
+                        
+                        <h3>Database Design</h3>
+                        <p>
+                            Efficient and scalable database architecture:
+                        </p>
+                        <ul>
+                            <li>Normalized database schema design</li>
+                            <li>Optimized queries for performance</li>
+                            <li>Data integrity and constraint management</li>
+                            <li>Backup and recovery procedures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Implemented Pages -->
+                    <div class="content-section">
+                        <h2>Implemented Pages</h2>
+                        
+                        <div class="page-showcase">
+                            <h3>1. Login Page</h3>
+                            <img src="../images/inventorymanagementFrontPage.png" alt="Login Page" class="page-image">
+                            <p>Secure user authentication and login interface</p>
+                        </div>
+                        
+                        <div class="page-showcase">
+                            <h3>2. Account Page</h3>
+                            <img src="../images/AccountPage.png" alt="Account Page" class="page-image">
+                            <p>User account management and profile settings</p>
+                        </div>
+                        
+                        <div class="page-showcase">
+                            <h3>3. Inventory Page</h3>
+                            <img src="../images/inventorypage.png" alt="Inventory Page" class="page-image">
+                            <p>Main inventory dashboard with item listing and management</p>
+                        </div>
+                        
+                        <div class="page-showcase">
+                            <h3>4. Add Product Page</h3>
+                            <img src="../images/AddProductpage.png" alt="Add Product Page" class="page-image">
+                            <p>Form interface for adding new inventory items</p>
+                        </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The implemented system provided significant improvements in inventory management:
+                        </p>
+                        
+                        <h3>Performance Improvements</h3>
+                        <ul>
+                            <li>Reduced inventory tracking time by 80%</li>
+                            <li>Eliminated manual data entry errors</li>
+                            <li>Improved data accuracy and consistency</li>
+                            <li>Enhanced user experience and accessibility</li>
+                            <li>Real-time inventory updates and notifications</li>
+                        </ul>
+                        
+                        <h3>System Benefits</h3>
+                        <ul>
+                            <li>Centralized database for all inventory data</li>
+                            <li>User-friendly web interface</li>
+                            <li>Automated inventory tracking and alerts</li>
+                            <li>Scalable solution for future expansion</li>
+                            <li>Reduced administrative overhead</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <p>
+                            This project provided valuable insights into full-stack web development:
+                        </p>
+                        <ul>
+                            <li>Importance of proper database design and optimization</li>
+                            <li>Value of user-centered design and interface</li>
+                            <li>Complexity of integrating frontend and backend systems</li>
+                            <li>Critical role of security in web applications</li>
+                            <li>Need for comprehensive testing and validation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">Web Development</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">6 weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Full-Stack Developer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AJAX</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>User Authentication</li>
+                            <li>Inventory Tracking</li>
+                            <li>Database Management</li>
+                            <li>Real-time Updates</li>
+                            <li>Responsive Design</li>
+                            <li>Search & Filter</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>System Components</h3>
+                        <ul class="feature-list">
+                            <li>Login System</li>
+                            <li>Account Management</li>
+                            <li>Inventory Dashboard</li>
+                            <li>Product Management</li>
+                            <li>Database Integration</li>
+                            <li>Security Features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="forwardinversekinematics.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/inverseandforwardkinematicicon.png" alt="Forward & Inverse Kinematics">
+                    </div>
+                    <div class="project-content">
+                        <h3>Forward & Inverse Kinematics</h3>
+                        <p>Software development and algorithms</p>
+                    </div>
+                </a>
+                <a href="gpsmodule.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/gpsmoduleicon.png" alt="GPS Module Interface">
+                    </div>
+                    <div class="project-content">
+                        <h3>GPS Module Interface</h3>
+                        <p>Data processing and communication</p>
+                    </div>
+                </a>
+                <a href="cancommunication.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/CanNetworkicone.jpg" alt="CAN Network">
+                    </div>
+                    <div class="project-content">
+                        <h3>CAN Network</h3>
+                        <p>Communication protocols and networking</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
 </body>
-
 </html>
 

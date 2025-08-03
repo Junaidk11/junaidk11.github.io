@@ -1,395 +1,183 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Junaid Jawed Khan</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junaid Jawed Khan - Mechatronic Systems Engineer</title>
+    <meta name="description" content="Personal portfolio of Junaid Jawed Khan, a Mechatronic Systems Engineer specializing in embedded systems, signal processing, and hardware design.">
+    <!-- Modern SVG favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/modern-styles.css">
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+    </nav>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Junaid Jawed Khan</h1>
-            <h2>Mechatronic Systems Engineer</h2>
-            <!--<a href="JunaidJawedKhanResume.pdf" class="btn-rounded-white">View Resume</a>  -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Junaid Jawed Khan</h1>
+                <h2 class="hero-subtitle">Mechatronic Systems Engineer Graduate</h2>
+                <p class="hero-description">
+                    Embedded Software Developer passionate about building reliable embedded systems.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="images/profilepicture-new.JPG" alt="Junaid Jawed Khan" class="profile-image">
+            </div>
         </div>
-        <!-- End #lead-content -->
-
-        <!-- Add the blue over-lay on the image -->
-        <div id="lead-overlay"> </div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
+    </section>
 
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-
-    <div id="about">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                    <link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                    <div class="card">
-                        <img src="images/profilepicture-new.JPG" alt="Junaid" style="height:450px;">
-                    </div>
-                    <div class="col-md-8 social">
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/Junaidk11" target="_blank"><i
-                                            class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i
-                                            class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                </div>
-                <div class="col-md-8">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
                     <p>
-                        Hello and Welcome! <br> <br>
-                    
-                        My name is Junaid Jawed Khan and I'm a Simon Fraser University Alumni, completed my Bachelor Of Applied Sciences in
-                        Mechatronic Systems
-                        Engineering in 2021. <br> <br>
-                        I completed my degree with practical exposure to hardware,
-                        software, and firmware engineering. My experiences with
-                        tackling challenging projects informs my mindful but competitive
-                        approach towards engineering solutions. I consider myself a 'forever student';
-                        eager to build on my academic foundations in hardware, software and firmware development
-                        and stay in tune with the latest developments in the embedded world through continued
-                        self-directed projects.
-                        <br><br>
+                        Hello! I'm a Simon Fraser University alumni with a Bachelor of Applied Sciences in 
+                        Mechatronic Systems Engineering (2021). I specialize in the intersection of hardware, 
+                        software, and firmware engineering, with a passion for developing innovative solutions 
+                        for complex engineering challenges.
                     </p>
-
                     <p>
-                        Currently, I'm working as an Embeded Software Developer for <a href="https://www.pde.com/">
-                            Pacific Design Engineering </a>, an engineering design firm in British Columbia, Canada.
-                    
-                        Outside of my full-time work obligations, I volunteer as an advisor on SFU's Formula SAE Design
-                        team, <a href="https://www.teamphantom.ca/"> Team Phantom</a>.
-                        I assist the Controls subteam of Team Phantom in bringing forward firmware solutions for the
-                        Vehicle Control Unit. Here is the link to the team's
-                        <a href="https://github.com/sfuphantom/vcu-fw"> firmware repository</a>.
-                    </p><br>
-
-                    <p>
-                        In my spare time, I enjoy playing basketball, working out and playing billiards. I also enjoy reading
-                        up on new technologies, programming languages and
-                        communication protocols.
-                    </p><br>
-                    <p>
-                        I use my website to summarize the projects that I've worked on. I try my best to keep it updated but it requires a
-                        significant amount of
-                        time and dedication to summarize key take-aways from projects that I've worked on for weeks/months - I'll try my
-                        best to keep it updated!
-                        With that said, I hope you find what you came here for. If not, I'm always an email away for any assistance.
+                        Currently working as an Embedded Software Developer at 
+                        <a href="https://www.pde.com/" target="_blank" class="link">Pacific Design Engineering</a>, 
+                        I bring practical solutions to challenging engineering problems in the field of IoT and embedded systems.
                     </p>
-                    <br>
-
-                    <p style="text-align: center; font-size: 50px;"> HAVE FUN READING!</p>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- End #about -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/controllericon.jpg" style="width:300px;height: 300px;" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Feedback Controller Design</h3>
-                        <a href="projects/compensatordesign.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-            <!--
-             <div class="project shadow-large">
-                 <div class="project-image">
-                     <img src="images/CanNetworkicone.jpg" style="width:300px;height:300px;transform: rotate(270deg);" />
-                 </div>
-                 <!-- End .project-image 
-                 <div class="project-info">
-                     <h3> CAN Network for <a href="https://teamphantom.ca/">Team Phantom</a> </h3>
-                     <p>
-                     </p>
-                     <a href="projects/cancommunication.html">View Project</a>
-                 </div>
-                 <!-- End .project-info 
-            </div>
-        
-           <div class="project shadow-large">
-                 <div class="project-image">
-                     <img src="images/gpsmoduleicon.png" style="width:300px;height:300px;" />
-                 </div>
-                 <!-- End .project-image 
-                 <div class="project-info">
-                     <h3> Interfacing TM4C123GH6PM with Adafruit GPS for <a href="https://www.sfurocketry.com/">SFU Rocketry</a></h3>
-                     <p>
-                     </p>
-                     <a href="projects/gpsmodule.html">View Project</a>
-                 </div>
-                 <!-- End .project-info
-            </div>
-        -->
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/simulationandnmodellingicon.png" style="width: 300px;height: 300px;">
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>System Modelling &amp; Simulation </h3>
-                        <a href="projects/systemmodellingandsimulation.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/industrialcontrolicon.png" style="width:300px;height:300px;">
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Industrial Control Technology </h3>
-                        <a href="projects/industrialcontroltechnology.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/machinedesignicon.png" style="width:300px;height:300px;">
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Machine Design </h3>
-                        <a href="projects/machinedesign.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/4barmechanismicon.png" style="width:300px;height:300px;" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Four-Bar Mechanism</h3>
-                        <p>
-                        </p>
-                        <a href="projects/fourbarmechanism.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/dynamicsystemsicon.png" style="width:300px;height:300px;" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Designing a Dynamic System </h3>
-                        <p>
-                        </p>
-                        <a href="projects/dynamicsystem.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/inverseandforwardkinematicicon.png" style="width:300px;height:300px;" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Forward &amp; Inverse Kinematics </h3>
-                        <p>
-                        </p>
-                        <a href="projects/forwardinversekinematics.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="project shadow-large" id="inventoryApp">
-                    <div class="project-image">
-                        <img src="images/inventorymanagementappicon.png" style="width:300px;height:300px;" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3> Inventory Management for <a href="https://www.fraseric.ca/">Fraser International
-                                College</a></h3>
-                        <p>
-                        </p>
-                        <a href="projects/inventorymanagementapp.html">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-            </div>
-
-            <!--           
-                <div class="project shadow-large">
-                 <div class="project-image">
-                     <img src="images/themistorExpansionIcon.png" style="width:300px;height:300px;" />
-                 </div>
-                 <!-- End .project-image 
-                 <div class="project-info">
-                     <h3> Interfacing TMS570LS1224 with a Thermistor Expansion Board for <a href="https://teamphantom.ca/">Team Phantom</a></h3>
-                     <p>
-                     </p>
-                     <a href="projects/thermistorexpansion.html">View Project</a>
-                 </div>
-                 <!-- End .project-info 
-                </div>
-                       
-                    <div class="project shadow-large">
-                 <div class="project-image">
-                     <img src="images/externalFlashicon.png" style="width:300px;height:300px;" />
-                 </div>
-                 <!-- End .project-image 
-                 <div class="project-info">
-                     <h3> Interfacing TM4C123GH6PM with Adestor External Flash for <a href="https://www.sfurocketry.com/">SFU Rocketry</a></h3>
-                     <p>
-                     </p>
-                     <a href="projects/externalflashCommunication.html">View Project</a>
-                 </div>
-                 <!-- End .project-info
-                </div>
-            -->
-
-
-        </div>
-        <!-- End .project -->
-    </div>
-
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>DSP</li>
-            <li>RISC-V Assembly</li>
-            <li>Code Composer Studio/Keil</li>
-            <li>Driver Development</li>
-            <li>FreeRTOS</li>
-            <li>Microcontrollers</li>
-            <li>MATLAB</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2022 <br> Junaid Jawed Khan
+                        I consider myself a 'forever student' - always eager to learn new technologies, 
+                        programming languages, and communication protocols. When I'm not coding or designing, 
+                        you'll find me playing basketball, working out, or reading up on the latest tech trends.
                     </p>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>3+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
                 </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="embedded">Embedded</button>
+                <button class="filter-btn" data-filter="signal">Signal Processing</button>
+                <button class="filter-btn" data-filter="signal-processing">DSP</button>
+                <button class="filter-btn" data-filter="hardware">Hardware</button>
+                <button class="filter-btn" data-filter="software">Software</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Junaidk11" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/junaidkhan.tmk@hotmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Junaid Jawed Khan. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Junaidk11" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- End footer -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/modern-scripts.js"></script>
 </body>
-
 </html>

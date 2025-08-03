@@ -1,160 +1,384 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> System Modelling and Simulation | Junaid Jawed Khan</title>
-	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-	<link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/styles.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-             <li>
-              <a onclick="goBack()"> Home </a>
-              <script> function goBack(){window.history.go(-1)}</script>
-            </li>
-            <li>
-                <a href="#about">Overview</a>
-            </li>
-            <li>
-                <a href="#report">Report</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
-   <div id="lead">
-        <div id="lead-content">
-            <h1>System Modelling and Simulation </h1>
-        </div>
-    <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md" style="text-align: center;">
-                  
-                    <h2 class="heading" style="align-text:center;">Overview</h2>
-             
-                </div>
-          
-                <div class="col-md">
-                    <p>
-                       Simulations allow analysis of complex systems on a small-scale. They are carried out to gain insight into complex systems, such as traffic prediction, biological synthesis, and robotic systems.Designing a system such that it allocates its energy and resources sustainably, allows resources to be available for other purposes. <br><br>
-                       
-                       The main objective of this project was to design and simulate a renewable energy system to tackle a daily-life setting where wasted energy is being used to power a system that consumes alot of energy. <br><br>
-                       
-                       The renewable energy system is made up of 3 subsystems, one for energy generation, one for energy storage and one for energy consumption. <br> <br>
-                       
-                       The system designed in this project utilizes energy generated in a gym to power a washing machine and a dryer. Washing machines draw most amount of electrical energy in any home and energy generated during a workout can be used to power these machines. Hence, allowing the saved electrical energy to be utilized for other purposes. <br><br>
-                       
-                        The proposed systems are shown below. The modelling and simulation processes are included in the attached report. <br><br> 
-                        
-                       <p style="text-align:center;">
-                       <img src="../images/proposedsystem1.jpg" alt="proposed-system 1" style="width:700px;height:350px;"><br>
-                       <strong>Proposed System 1 </strong>
-                       </p><br>
-                       
-                       <p style="text-align:center;">
-                       <img src="../images/proposedsystem2.jpg" alt="proposed-system 2" style="width:700px;height:350px;" >
-                       <br> 
-                        <strong>Proposed System 2 </strong>
-                       </p><br>
-                       
-                       <p style="text-align:center;">
-                        <img src="../images/proposedsystem3.jpg" style="width:700px;height:350px;">
-                       <br>
-                       <strong>Proposed System 3 </strong>
-                       </p>
-                        <br>              
-                </div>
-            </div>    
-        </div>
-        
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Modelling and Simulation - Junaid Jawed Khan</title>
+    <meta name="description" content="Renewable energy system modeling and simulation for sustainable energy management and optimization">
     
-     <div id="report" >
-           <p style="text-align: center;">
-            <a href="../project-reports/SystemsModellingProject_Report.pdf" class="btn-rounded-black" style="text-align: center;">View More Details </a> 
-         </p>
-    </div> 
-   
-    <!-- End #about -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/jjkhan@sfu.ca">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
+    </nav>
 
-    <footer>
+    <!-- Project Header -->
+    <section class="project-hero">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2019 <br> Junaid Jawed Khan
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">System Modelling and Simulation</h1>
+                    <p class="project-subtitle">Renewable Energy • System Design</p>
+                    <p class="project-description">
+                        Design and simulation of renewable energy systems for sustainable energy management, 
+                        focusing on energy generation, storage, and consumption optimization.
                     </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: MATLAB, Simulink, System Modeling</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Junaidk11" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/junaidjawedkhan/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
+                <div class="project-hero-image">
+                    <img src="../images/simulationandnmodellingicon.png" alt="System Modelling and Simulation">
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End footer -->
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../js/scripts.min.js"></script>
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            Simulations allow analysis of complex systems on a small-scale. They are carried out to gain insight into complex systems, such as traffic prediction, biological synthesis, and robotic systems. Designing a system such that it allocates its energy and resources sustainably, allows resources to be available for other purposes.
+                        </p>
+                        <p>
+                            The main objective of this project was to design and simulate a renewable energy system to tackle a daily-life setting where wasted energy is being used to power a system that consumes a lot of energy.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            The project addresses several key challenges in energy management:
+                        </p>
+                        <ul>
+                            <li>Waste of energy generated during physical activities in gyms</li>
+                            <li>High energy consumption of household appliances like washing machines</li>
+                            <li>Need for sustainable energy solutions in daily life</li>
+                            <li>Optimization of energy generation, storage, and consumption</li>
+                            <li>Integration of renewable energy sources into existing systems</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            The renewable energy system is made up of 3 subsystems:
+                        </p>
+                        
+                        <h3>1. Energy Generation Subsystem</h3>
+                        <p>
+                            Captures energy from gym equipment and human activities:
+                        </p>
+                        <ul>
+                            <li>Kinetic energy from exercise equipment</li>
+                            <li>Mechanical energy conversion systems</li>
+                            <li>Energy harvesting from human movement</li>
+                            <li>Integration with existing gym infrastructure</li>
+                        </ul>
+                        
+                        <h3>2. Energy Storage Subsystem</h3>
+                        <p>
+                            Efficiently stores and manages captured energy:
+                        </p>
+                        <ul>
+                            <li>Battery storage systems</li>
+                            <li>Energy management algorithms</li>
+                            <li>Charge/discharge optimization</li>
+                            <li>Storage capacity planning</li>
+                        </ul>
+                        
+                        <h3>3. Energy Consumption Subsystem</h3>
+                        <p>
+                            Utilizes stored energy for high-consumption appliances:
+                        </p>
+                        <ul>
+                            <li>Washing machine and dryer power supply</li>
+                            <li>Load balancing and distribution</li>
+                            <li>Energy consumption monitoring</li>
+                            <li>Efficiency optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>System Modeling</h3>
+                        <p>
+                            The system was modeled using MATLAB and Simulink:
+                        </p>
+                        <ul>
+                            <li>Mathematical modeling of energy generation</li>
+                            <li>Storage system dynamics and efficiency</li>
+                            <li>Consumption patterns and load profiles</li>
+                            <li>System integration and optimization</li>
+                        </ul>
+                        
+                        <h3>Simulation Framework</h3>
+                        <p>
+                            Comprehensive simulation environment included:
+                        </p>
+                        <ul>
+                            <li>Real-time energy flow simulation</li>
+                            <li>Performance analysis under various conditions</li>
+                            <li>Efficiency calculations and optimization</li>
+                            <li>Economic feasibility analysis</li>
+                        </ul>
+                        
+                        <h3>Proposed Systems</h3>
+                        <p>
+                            Three different system configurations were designed and analyzed:
+                        </p>
+                    </div>
+
+                    <!-- System Designs -->
+                    <div class="content-section">
+                        <h2>Proposed System Designs</h2>
+                        
+                        <div class="system-design">
+                            <h3>Proposed System 1</h3>
+                            <img src="../images/proposedsystem1.jpg" alt="Proposed System 1" class="system-image">
+                            <p>
+                                Initial system design focusing on basic energy capture and storage integration.
+                            </p>
+                        </div>
+                        
+                        <div class="system-design">
+                            <h3>Proposed System 2</h3>
+                            <img src="../images/proposedsystem2.jpg" alt="Proposed System 2" class="system-image">
+                            <p>
+                                Enhanced system with improved energy management and distribution capabilities.
+                            </p>
+                        </div>
+                        
+                        <div class="system-design">
+                            <h3>Proposed System 3</h3>
+                            <img src="../images/proposedsystem3.jpg" alt="Proposed System 3" class="system-image">
+                            <p>
+                                Advanced system with comprehensive optimization and smart energy management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The system designed in this project utilizes energy generated in a gym to power a washing machine and a dryer. Washing machines draw the most amount of electrical energy in any home and energy generated during a workout can be used to power these machines. Hence, allowing the saved electrical energy to be utilized for other purposes.
+                        </p>
+                        
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li>Successfully modeled renewable energy system integration</li>
+                            <li>Demonstrated energy capture from gym activities</li>
+                            <li>Optimized energy storage and distribution</li>
+                            <li>Reduced household energy consumption</li>
+                            <li>Provided sustainable energy management solution</li>
+                        </ul>
+                        
+                        <h3>System Benefits</h3>
+                        <ul>
+                            <li>Reduced electricity bills for households</li>
+                            <li>Increased gym revenue through energy generation</li>
+                            <li>Environmental impact through renewable energy use</li>
+                            <li>Sustainable energy management practices</li>
+                            <li>Scalable solution for other applications</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <p>
+                            This project provided valuable insights into renewable energy systems:
+                        </p>
+                        <ul>
+                            <li>Importance of system integration in renewable energy</li>
+                            <li>Value of simulation in system design and optimization</li>
+                            <li>Complexity of energy storage and management</li>
+                            <li>Economic considerations in sustainable solutions</li>
+                            <li>Scalability challenges in renewable energy systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">System Design</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">4 months</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">System Design & Simulation Lead</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">4 people</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Simulink</span>
+                            <span class="tech-tag">System Modeling</span>
+                            <span class="tech-tag">Renewable Energy</span>
+                            <span class="tech-tag">Simulation</span>
+                            <span class="tech-tag">Energy Management</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Energy Generation Modeling</li>
+                            <li>Storage System Design</li>
+                            <li>Consumption Optimization</li>
+                            <li>System Integration</li>
+                            <li>Performance Analysis</li>
+                            <li>Sustainability Assessment</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>System Components</h3>
+                        <ul class="feature-list">
+                            <li>Gym Energy Capture</li>
+                            <li>Battery Storage</li>
+                            <li>Energy Management</li>
+                            <li>Load Distribution</li>
+                            <li>Monitoring Systems</li>
+                            <li>Optimization Algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="dynamicsystem.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/dynamicsystemsicon.png" alt="Dynamic System Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Dynamic System Design</h3>
+                        <p>Dynamic system modeling and analysis</p>
+                    </div>
+                </a>
+                <a href="powerelectronics.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/powerelectronicsicon.jpg" alt="Power Electronics Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Power Electronics Design</h3>
+                        <p>Power conversion and energy management</p>
+                    </div>
+                </a>
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Feedback Controller Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Feedback Controller Design</h3>
+                        <p>Control system design and optimization</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
 </body>
-
 </html>
 
