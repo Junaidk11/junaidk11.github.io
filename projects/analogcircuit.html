@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Circuit Design - Junaid Jawed Khan</title>
+    <meta name="description" content="Analog circuit design and analysis including amplifiers, filters, and signal processing circuits">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Analog Circuit Design</h1>
+                    <p class="project-subtitle">Circuit Design • Signal Processing</p>
+                    <p class="project-description">
+                        Comprehensive analog circuit design and analysis project covering amplifiers, filters, 
+                        oscillators, and signal processing circuits with practical implementation and testing.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2021</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: Circuit Design, SPICE Simulation, PCB Design</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                        <a href="#results" class="btn btn-secondary">
+                            <i class="fas fa-chart-line"></i>
+                            View Results
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/analogcircuit.png" alt="Analog Circuit Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project focused on the design, analysis, and implementation of various analog circuits 
+                            essential for signal processing and electronic systems. The project covered fundamental 
+                            analog circuit concepts including amplifiers, filters, oscillators, and signal conditioning circuits.
+                        </p>
+                        <p>
+                            Each circuit was designed using theoretical analysis, simulated using SPICE tools, and 
+                            then prototyped and tested on breadboards and custom PCBs to validate the design.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            Analog circuit design presents several challenges that need to be addressed:
+                        </p>
+                        <ul>
+                            <li>Designing circuits with specific gain, bandwidth, and frequency response requirements</li>
+                            <li>Managing noise, distortion, and signal integrity in analog systems</li>
+                            <li>Implementing precise filtering and signal conditioning</li>
+                            <li>Ensuring stability and reliability in feedback systems</li>
+                            <li>Optimizing power consumption and efficiency</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            The solution involved designing and implementing several key analog circuits:
+                        </p>
+                        
+                        <h3>1. Operational Amplifier Circuits</h3>
+                        <p>
+                            Designed various op-amp configurations including:
+                        </p>
+                        <ul>
+                            <li>Inverting and non-inverting amplifiers</li>
+                            <li>Differential amplifiers and instrumentation amplifiers</li>
+                            <li>Summing amplifiers and integrators</li>
+                            <li>Active filters and oscillators</li>
+                        </ul>
+                        
+                        <h3>2. Active Filter Design</h3>
+                        <p>
+                            Implemented different filter types:
+                        </p>
+                        <ul>
+                            <li>Low-pass, high-pass, band-pass, and band-stop filters</li>
+                            <li>Butterworth, Chebyshev, and Bessel filter responses</li>
+                            <li>Cascaded filter stages for complex frequency responses</li>
+                            <li>Tunable filters with variable cutoff frequencies</li>
+                        </ul>
+                        
+                        <h3>3. Signal Conditioning Circuits</h3>
+                        <p>
+                            Developed circuits for signal processing:
+                        </p>
+                        <ul>
+                            <li>Voltage level shifters and scaling circuits</li>
+                            <li>Signal amplification and buffering</li>
+                            <li>Noise reduction and filtering</li>
+                            <li>Signal conversion and interface circuits</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Design Methodology</h3>
+                        <p>
+                            The design process followed a systematic approach:
+                        </p>
+                        <ol>
+                            <li><strong>Requirements Analysis:</strong> Define circuit specifications and performance criteria</li>
+                            <li><strong>Theoretical Design:</strong> Calculate component values and circuit parameters</li>
+                            <li><strong>Simulation:</strong> Use SPICE tools to verify design performance</li>
+                            <li><strong>Prototyping:</strong> Build and test circuits on breadboards</li>
+                            <li><strong>PCB Design:</strong> Create custom printed circuit boards</li>
+                            <li><strong>Testing:</strong> Validate performance with real measurements</li>
+                        </ol>
+                        
+                        <h3>Key Circuit Designs</h3>
+                        
+                        <h4>1. Instrumentation Amplifier</h4>
+                        <p>
+                            Designed a three-op-amp instrumentation amplifier with:
+                        </p>
+                        <ul>
+                            <li>High common-mode rejection ratio (CMRR > 80dB)</li>
+                            <li>Adjustable gain from 1 to 1000</li>
+                            <li>Low noise and high input impedance</li>
+                            <li>Differential input capability</li>
+                        </ul>
+                        
+                        <h4>2. Active Low-Pass Filter</h4>
+                        <p>
+                            Implemented a 4th-order Butterworth low-pass filter with:
+                        </p>
+                        <ul>
+                            <li>Cutoff frequency of 1kHz</li>
+                            <li>Roll-off rate of -24dB/octave</li>
+                            <li>Flat passband response</li>
+                            <li>Minimal phase distortion</li>
+                        </ul>
+                        
+                        <h4>3. Wien Bridge Oscillator</h4>
+                        <p>
+                            Built a sine wave oscillator featuring:
+                        </p>
+                        <ul>
+                            <li>Frequency range of 10Hz to 100kHz</li>
+                            <li>Low distortion output (< 1% THD)</li>
+                            <li>Automatic gain control</li>
+                            <li>Stable frequency output</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section" id="results">
+                        <h2>Results & Impact</h2>
+                        <p>
+                            The project successfully demonstrated various analog circuit implementations:
+                        </p>
+                        
+                        <h3>Performance Achievements</h3>
+                        <ul>
+                            <li>Achieved gain accuracy within ±2% of theoretical values</li>
+                            <li>Implemented filters with stopband attenuation > 40dB</li>
+                            <li>Designed oscillators with frequency stability < ±0.1%</li>
+                            <li>Reduced noise levels by 60% in signal conditioning circuits</li>
+                            <li>Maintained signal integrity with minimal distortion</li>
+                        </ul>
+                        
+                        <h3>Practical Applications</h3>
+                        <p>
+                            The developed circuits have applications in:
+                        </p>
+                        <ul>
+                            <li>Audio signal processing and amplification</li>
+                            <li>Sensor signal conditioning and interfacing</li>
+                            <li>Communication systems and filters</li>
+                            <li>Test and measurement equipment</li>
+                            <li>Industrial control and automation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <p>
+                            This project provided valuable insights into analog circuit design:
+                        </p>
+                        <ul>
+                            <li>Importance of proper component selection and tolerance analysis</li>
+                            <li>Critical role of PCB layout in circuit performance</li>
+                            <li>Value of simulation tools in predicting circuit behavior</li>
+                            <li>Complexity of noise management in analog systems</li>
+                            <li>Need for comprehensive testing and validation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">Circuit Design</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">2 weeks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Circuit Designer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">Individual</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Circuit Design</span>
+                            <span class="tech-tag">SPICE Simulation</span>
+                            <span class="tech-tag">PCB Design</span>
+                            <span class="tech-tag">Op-Amps</span>
+                            <span class="tech-tag">Active Filters</span>
+                            <span class="tech-tag">Signal Processing</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Operational Amplifier Circuits</li>
+                            <li>Active Filter Design</li>
+                            <li>Signal Conditioning</li>
+                            <li>Oscillator Circuits</li>
+                            <li>Instrumentation Amplifiers</li>
+                            <li>Noise Reduction</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Tools & Equipment</h3>
+                        <ul class="feature-list">
+                            <li>LTspice for Simulation</li>
+                            <li>PCB Design Software</li>
+                            <li>Oscilloscope & Function Generator</li>
+                            <li>Multimeter & Power Supply</li>
+                            <li>Breadboard & Components</li>
+                            <li>Spectrum Analyzer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="powerelectronics.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/powerelectronicsicon.jpg" alt="Power Electronics Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Power Electronics Design</h3>
+                        <p>Power conversion and control circuits</p>
+                    </div>
+                </a>
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Feedback Controller Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Feedback Controller Design</h3>
+                        <p>Control system design and analysis</p>
+                    </div>
+                </a>
+                <a href="dcmotorcontroller.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.jpg" alt="DC Motor Controller">
+                    </div>
+                    <div class="project-content">
+                        <h3>DC Motor Controller</h3>
+                        <p>Motor control and feedback systems</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html>
