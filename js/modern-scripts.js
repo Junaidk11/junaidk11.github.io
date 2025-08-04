@@ -563,4 +563,49 @@ function initDateTime() {
     
     // Update every second
     setInterval(updateDateTime, 1000);
-} 
+}
+
+// Copy email function
+function copyEmail() {
+    const email = 'junaidjawedk@outlook.com';
+    const statusElement = document.getElementById('copy-status');
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+            statusElement.textContent = 'Email copied to clipboard!';
+            statusElement.style.color = '#22c55e';
+            setTimeout(() => {
+                statusElement.textContent = 'Click to copy email address';
+                statusElement.style.color = '';
+            }, 2000);
+        }).catch(() => {
+            fallbackCopyEmail(email, statusElement);
+        });
+    } else {
+        fallbackCopyEmail(email, statusElement);
+    }
+}
+
+function fallbackCopyEmail(email, statusElement) {
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+        document.execCommand('copy');
+        statusElement.textContent = 'Email copied to clipboard!';
+        statusElement.style.color = '#22c55e';
+        setTimeout(() => {
+            statusElement.textContent = 'Click to copy email address';
+            statusElement.style.color = '';
+        }, 2000);
+    } catch (err) {
+        statusElement.textContent = 'Copy failed - please select manually';
+        statusElement.style.color = '#ef4444';
+        setTimeout(() => {
+            statusElement.textContent = 'Click to copy email address';
+            statusElement.style.color = '';
+        }, 3000);
+    }
+    document.body.removeChild(textArea);
+}
