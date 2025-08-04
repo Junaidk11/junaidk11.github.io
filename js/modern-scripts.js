@@ -202,17 +202,6 @@ const projectsData = [
     },
     {
         id: 15,
-        title: "Thermistor Expansion Circuit",
-        description: "Temperature sensing and signal conditioning circuit with thermistor calibration.",
-        image: "images/themistorExpansionIcon.png",
-        category: "hardware",
-        tags: ["Temperature Sensing", "Signal Conditioning", "Calibration"],
-        link: "projects/thermistorexpansion.html",
-        github: null,
-        featured: true
-    },
-    {
-        id: 16,
         title: "EEG Signal Processing",
         description: "Advanced EEG signal processing using EEGLAB for resting-wakeful state analysis.",
         image: "images/EEG-Project-Images/IndependentComponentAnalysis.png",
@@ -223,7 +212,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 17,
+        id: 16,
         title: "Data Structures & Algorithms",
         description: "Comprehensive implementations of data structures and algorithms in C/C++.",
         image: "images/controllericon.png",
@@ -234,7 +223,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 18,
+        id: 17,
         title: "CAN Network Communication",
         description: "Implementation of CAN communication between Hercules Safety MCUs.",
         image: "images/CanNetworkicone.jpg",
@@ -245,7 +234,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 19,
+        id: 18,
         title: "Digital Filter Design",
         description: "Implementation of Butterworth and Chebyshev digital filters.",
         image: "images/analogcircuit.png",
@@ -256,7 +245,7 @@ const projectsData = [
         featured: true
     },
     {
-        id: 20,
+        id: 19,
         title: "Modern CMake Project",
         description: "Comprehensive guide to modern CMake practices and build systems.",
         image: "images/project.jpg",
@@ -574,4 +563,49 @@ function initDateTime() {
     
     // Update every second
     setInterval(updateDateTime, 1000);
-} 
+}
+
+// Copy email function
+function copyEmail() {
+    const email = 'junaidjawedk@outlook.com';
+    const statusElement = document.getElementById('copy-status');
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+            statusElement.textContent = 'Email copied to clipboard!';
+            statusElement.style.color = '#22c55e';
+            setTimeout(() => {
+                statusElement.textContent = 'Click to copy email address';
+                statusElement.style.color = '';
+            }, 2000);
+        }).catch(() => {
+            fallbackCopyEmail(email, statusElement);
+        });
+    } else {
+        fallbackCopyEmail(email, statusElement);
+    }
+}
+
+function fallbackCopyEmail(email, statusElement) {
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+        document.execCommand('copy');
+        statusElement.textContent = 'Email copied to clipboard!';
+        statusElement.style.color = '#22c55e';
+        setTimeout(() => {
+            statusElement.textContent = 'Click to copy email address';
+            statusElement.style.color = '';
+        }, 2000);
+    } catch (err) {
+        statusElement.textContent = 'Copy failed - please select manually';
+        statusElement.style.color = '#ef4444';
+        setTimeout(() => {
+            statusElement.textContent = 'Click to copy email address';
+            statusElement.style.color = '';
+        }, 3000);
+    }
+    document.body.removeChild(textArea);
+}
