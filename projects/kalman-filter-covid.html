@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Kalman Filter - Junaid Jawed Khan</title>
+    
+    <meta name="description" content="Discrete-time Kalman filter implementation for COVID-19 case estimation using real BCCDC data and MATLAB">
+
+    <!-- Modern SVG favicon -->
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">COVID-19 Kalman Filter</h1>
+                    <p class="project-subtitle">Signal Processing • Academic Project</p>
+                    <p class="project-description">
+                        A discrete-time Kalman filter implementation for estimating and predicting COVID-19 cases using real epidemiological data from the BC Centre for Disease Control, demonstrating advanced signal processing and statistical estimation techniques.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: December 2020</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: MATLAB, Signal Processing, Statistics</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Junaidk11/simple_kalman_filter" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                        <a href="https://github.com/Junaidk11/simple_kalman_filter/blob/master/kalman_filter_report.pdf" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            Technical Report
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/simulationandnmodellingicon.png" alt="Kalman Filter COVID-19 Project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This project implements a discrete-time Kalman filter for estimating and predicting COVID-19 case numbers using real epidemiological data. The implementation demonstrates the application of advanced signal processing and statistical estimation techniques to public health data analysis.
+                        </p>
+                        <p>
+                            The project utilizes actual COVID-19 data from the BC Centre for Disease Control (BCCDC) to validate the filter's performance in tracking disease progression and making short-term predictions. Multiple filter variants were developed and compared to optimize performance for different scenarios.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Problem Statement</h2>
+                        <p>
+                            During the COVID-19 pandemic, accurate estimation and prediction of case numbers became crucial for public health decision-making. Traditional epidemiological models often struggle with:
+                        </p>
+                        <ul>
+                            <li><strong>Noisy data:</strong> Daily case reports contain measurement noise and reporting delays</li>
+                            <li><strong>State estimation:</strong> Difficulty in estimating the true underlying infection rate from observed data</li>
+                            <li><strong>Real-time tracking:</strong> Need for algorithms that can update estimates as new data becomes available</li>
+                            <li><strong>Uncertainty quantification:</strong> Providing confidence intervals for predictions</li>
+                        </ul>
+                        <p>
+                            The challenge was to develop a robust filtering algorithm that could handle these issues while providing reliable estimates and short-term forecasts.
+                        </p>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Solution</h2>
+                        <p>
+                            The solution employs a discrete-time Kalman filter approach with the following key components:
+                        </p>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <h4><i class="fas fa-wave-square"></i> State Space Modeling</h4>
+                                <p>Developed a state-space representation of COVID-19 dynamics with process and measurement noise models</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-filter"></i> Kalman Filtering</h4>
+                                <p>Implemented recursive estimation algorithm for optimal state estimation under Gaussian noise assumptions</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-chart-line"></i> Pandemic Modeling</h4>
+                                <p>Incorporated epidemiological growth models to capture disease transmission dynamics</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4><i class="fas fa-database"></i> Real Data Integration</h4>
+                                <p>Validated the approach using actual BCCDC COVID-19 case data for British Columbia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Details -->
+                    <div class="content-section">
+                        <h2>Technical Implementation</h2>
+                        <h3>Core Algorithm Components</h3>
+                        <p>
+                            The implementation consists of several key MATLAB functions:
+                        </p>
+                        
+                        <h4>1. Kalman Filter Variants</h4>
+                        <ul>
+                            <li><strong>kalmanFilter.m:</strong> Basic discrete-time Kalman filter implementation</li>
+                            <li><strong>kalmanFilter2.m:</strong> Enhanced version with improved noise modeling</li>
+                            <li><strong>kalmanFilter3.m:</strong> Advanced variant with adaptive parameters</li>
+                        </ul>
+
+                        <h4>2. Pandemic Model</h4>
+                        <ul>
+                            <li><strong>panmodel.m:</strong> Epidemiological growth model incorporating exponential and logistic growth phases</li>
+                            <li>State variables include infection rate, growth rate, and measurement bias</li>
+                            <li>Process noise accounts for model uncertainties and external factors</li>
+                        </ul>
+
+                        <h4>3. Mathematical Framework</h4>
+                        <p>The discrete-time system is modeled as:</p>
+                        <div class="code-block">
+                            <pre><code>x(k+1) = F*x(k) + w(k)    % State evolution
+y(k) = H*x(k) + v(k)      % Measurement model
+
+Where:
+- x(k): State vector (infection parameters)
+- F: State transition matrix
+- H: Measurement matrix  
+- w(k): Process noise (Q covariance)
+- v(k): Measurement noise (R covariance)</code></pre>
+                        </div>
+
+                        <h4>4. Algorithm Steps</h4>
+                        <ol>
+                            <li><strong>Prediction:</strong> Forecast next state using system dynamics</li>
+                            <li><strong>Update:</strong> Correct prediction using new measurement</li>
+                            <li><strong>Covariance Update:</strong> Update uncertainty estimates</li>
+                            <li><strong>Parameter Adaptation:</strong> Adjust filter parameters based on performance</li>
+                        </ol>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="content-section">
+                        <h2>Results & Performance</h2>
+                        <p>
+                            The Kalman filter implementation demonstrated significant improvements over raw data analysis:
+                        </p>
+                        
+                        <h3>Key Achievements</h3>
+                        <ul>
+                            <li><strong>Noise Reduction:</strong> Successfully filtered measurement noise from daily case reports</li>
+                            <li><strong>Trend Identification:</strong> Accurately tracked underlying infection trends despite data irregularities</li>
+                            <li><strong>Prediction Capability:</strong> Provided reliable 7-14 day forecasts with confidence intervals</li>
+                            <li><strong>Real-time Processing:</strong> Algorithm efficiently processes new data points as they become available</li>
+                        </ul>
+
+                        <h3>Validation Results</h3>
+                        <p>
+                            Using BCCDC data from early pandemic phases, the filter showed:
+                        </p>
+                        <ul>
+                            <li>Reduced mean squared error compared to simple moving averages</li>
+                            <li>Better capture of exponential growth phases</li>
+                            <li>Improved detection of trend changes and inflection points</li>
+                            <li>Robust performance across different noise levels</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lessons Learned -->
+                    <div class="content-section">
+                        <h2>Lessons Learned</h2>
+                        <h3>Technical Insights</h3>
+                        <ul>
+                            <li><strong>Parameter Tuning:</strong> Proper selection of process and measurement noise covariances is critical for optimal performance</li>
+                            <li><strong>Model Selection:</strong> Different epidemiological phases require different state-space models</li>
+                            <li><strong>Data Quality:</strong> Filter performance is highly dependent on data consistency and reporting practices</li>
+                        </ul>
+
+                        <h3>Mathematical Understanding</h3>
+                        <ul>
+                            <li>Gained deep understanding of recursive estimation theory</li>
+                            <li>Learned the importance of observability and controllability in system design</li>
+                            <li>Developed appreciation for the trade-offs between model complexity and computational efficiency</li>
+                        </ul>
+
+                        <h3>Practical Applications</h3>
+                        <ul>
+                            <li>Kalman filters are powerful tools for real-time state estimation problems</li>
+                            <li>Public health applications require careful consideration of reporting delays and data quality</li>
+                            <li>Multiple model variants allow for comprehensive performance evaluation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Future Work -->
+                    <div class="content-section">
+                        <h2>Future Enhancements</h2>
+                        <p>Potential improvements and extensions to this work include:</p>
+                        <ul>
+                            <li><strong>Extended Kalman Filter:</strong> Handle nonlinear epidemiological models</li>
+                            <li><strong>Multi-variate Analysis:</strong> Incorporate multiple data streams (hospitalizations, deaths, testing rates)</li>
+                            <li><strong>Adaptive Filtering:</strong> Real-time parameter estimation and model selection</li>
+                            <li><strong>Spatial Modeling:</strong> Extend to multi-region analysis with geographic coupling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Category:</span>
+                            <span class="value">Signal Processing</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">1 month</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Role:</span>
+                            <span class="value">Lead Developer</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Academic Context:</span>
+                            <span class="value">Course Project</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data Source:</span>
+                            <span class="value">BC Centre for Disease Control</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Kalman Filtering</span>
+                            <span class="tech-tag">Signal Processing</span>
+                            <span class="tech-tag">Statistics</span>
+                            <span class="tech-tag">State Estimation</span>
+                            <span class="tech-tag">Epidemiology</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <ul class="feature-list">
+                            <li>Discrete-time Kalman filter</li>
+                            <li>Multiple filter variants</li>
+                            <li>Real COVID-19 data</li>
+                            <li>Noise reduction & smoothing</li>
+                            <li>Trend prediction</li>
+                            <li>Uncertainty quantification</li>
+                            <li>Interactive MATLAB Live Script</li>
+                            <li>Comprehensive documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Mathematical Concepts</h3>
+                        <ul class="feature-list">
+                            <li>State-space modeling</li>
+                            <li>Recursive estimation</li>
+                            <li>Gaussian noise models</li>
+                            <li>Covariance matrices</li>
+                            <li>Optimal filtering theory</li>
+                            <li>Statistical inference</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Project Files</h3>
+                        <ul class="feature-list">
+                            <li>3 Kalman filter variants</li>
+                            <li>Pandemic model implementation</li>
+                            <li>Real BCCDC dataset</li>
+                            <li>Technical report (PDF)</li>
+                            <li>MATLAB Live Script</li>
+                            <li>Documentation & README</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <a href="compensatordesign.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Control Systems Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>PID & Lead-Lag Controller Design</h3>
+                        <p>Advanced control system design using MATLAB and LTSpice simulation</p>
+                    </div>
+                </a>
+                <a href="digital-filter-design.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/simulationandnmodellingicon.png" alt="Digital Filter Design">
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Filter Design</h3>
+                        <p>Advanced digital signal processing and filter design techniques</p>
+                    </div>
+                </a>
+                <a href="eeglab-dsp.html" class="project-card">
+                    <div class="project-image">
+                        <img src="../images/simulationandnmodellingicon.png" alt="EEG Signal Processing">
+                    </div>
+                    <div class="project-content">
+                        <h3>EEG Signal Processing</h3>
+                        <p>Brain signal analysis using EEGLAB and advanced DSP techniques</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html>
