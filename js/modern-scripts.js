@@ -204,7 +204,7 @@ const projectsData = [
         id: 15,
         title: "EEG Signal Processing",
         description: "Advanced EEG signal processing using EEGLAB for resting-wakeful state analysis.",
-        image: "images/EEG-Project-Images/IndependentComponentAnalysis.png",
+        image: "images/eeg-signal-processing-icon.svg",
         category: "signal-processing",
         tags: ["MATLAB", "EEGLAB", "Signal Processing", "EEG"],
         link: "projects/eeglab-dsp.html",
