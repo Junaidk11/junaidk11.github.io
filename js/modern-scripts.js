@@ -215,7 +215,7 @@ const projectsData = [
         id: 16,
         title: "Data Structures & Algorithms",
         description: "Comprehensive implementations of data structures and algorithms in C/C++.",
-        image: "images/controllericon.png",
+        image: "images/data-structures-icon.svg",
         category: "software",
         tags: ["C++", "C", "Data Structures", "Algorithms"],
         link: "projects/datastructures-algorithms.html",
