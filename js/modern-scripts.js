@@ -270,7 +270,7 @@ const projectsData = [
         id: 21,
         title: "Vehicle Detection using YOLOv5",
         description: "Computer vision project implementing YOLOv5 for real-time vehicle detection and classification of BMW, Ford, and Toyota vehicles using Google Colab.",
-        image: "images/project.jpg",
+        image: "images/yolo-vehicle-detection-icon.svg",
         category: "software",
         tags: ["Python", "YOLOv5", "Computer Vision", "Machine Learning", "Google Colab", "PyTorch"],
         link: "projects/vehicle-detection-yolo.html",
