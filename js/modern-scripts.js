@@ -259,7 +259,7 @@ const projectsData = [
         id: 20,
         title: "COVID-19 Kalman Filter",
         description: "Discrete-time Kalman filter for COVID-19 case estimation using real BCCDC epidemiological data.",
-        image: "images/simulationandnmodellingicon.png",
+        image: "images/kalman-filter-covid-icon.svg",
         category: "signal",
         tags: ["MATLAB", "Kalman Filter", "Signal Processing", "COVID-19", "Statistics"],
         link: "projects/kalman-filter-covid.html",
