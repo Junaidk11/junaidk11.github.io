@@ -237,7 +237,7 @@ const projectsData = [
         id: 18,
         title: "Digital Filter Design",
         description: "Implementation of Butterworth and Chebyshev digital filters.",
-        image: "images/analogcircuit.png",
+        image: "images/digital-filter-design-icon.svg",
         category: "signal-processing",
         tags: ["C", "Digital Filters", "DSP", "Signal Processing"],
         link: "projects/digital-filter-design.html",
