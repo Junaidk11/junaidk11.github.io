@@ -248,7 +248,7 @@ const projectsData = [
         id: 19,
         title: "Modern CMake Project",
         description: "Comprehensive guide to modern CMake practices and build systems.",
-        image: "images/project.jpg",
+        image: "images/modern-cmake-icon.svg",
         category: "software",
         tags: ["CMake", "C++", "Build Systems", "Modern C++"],
         link: "projects/modern-cmake.html",
