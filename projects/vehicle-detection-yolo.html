@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Detection using YOLO v5 - Junaid Jawed Khan</title>
+    
+<meta name="description" content="Computer vision project implementing YOLOv5 for real-time vehicle detection and classification of BMW, Ford, and Toyota vehicles.">
+
+    <!-- Modern SVG favicon -->
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/modern-styles.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">JJK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="../experience.html" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="datetime-widget">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <div class="project-hero-text">
+                    <div class="breadcrumb">
+                        <a href="../index.html" class="breadcrumb-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Portfolio
+                        </a>
+                    </div>
+                    <h1 class="project-title">Vehicle Detection using YOLO v5</h1>
+                    <p class="project-subtitle">Computer Vision • Machine Learning • Deep Learning</p>
+                    <p class="project-description">
+                        Comprehensive research project implementing YOLOv5 (You Only Look Once) for multi-class vehicle detection 
+                        and classification. The system identifies and classifies 15 different vehicle categories including brands 
+                        (BMW, Ford, Toyota, etc.) and types (Coupe, Sedan, SUV, Truck) using deep learning techniques and 
+                        custom-trained models with Google Colab integration and extensive performance analysis.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Completed: 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-code"></i>
+                            <span>Technologies: Python, YOLOv5, Google Colab, PyTorch</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team: Junaid Jawed Khan & Pevisha Joshi</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Course: ENSC 424 - Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#technical-details" class="btn btn-primary">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                        <a href="#demo-video" class="btn btn-secondary">
+                            <i class="fas fa-play"></i> View Demo
+                        </a>
+                        <a href="#code-implementation" class="btn btn-secondary">
+                            <i class="fas fa-code"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="project-hero-image">
+                    <img src="../images/yolo-vehicle-detection-icon.png" alt="Vehicle Detection using YOLOv5" 
+                         onerror="this.src='../images/project.jpg'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <!-- Overview Section -->
+                    <div class="content-section">
+                        <h2>Overview</h2>
+                        <p>
+                            This comprehensive research project demonstrates the implementation of YOLOv5 (You Only Look Once) 
+                            for multi-class vehicle detection and classification. The project focuses on creating a robust system capable 
+                            of identifying and classifying 15 distinct vehicle categories including vehicle brands (BMW, Ford, Toyota, 
+                            Chevrolet, Honda, Mercedes, etc.) and vehicle types (Coupe, Sedan, SUV, Truck).
+                        </p>
+                        <p>
+                            The project showcases end-to-end machine learning pipeline development, from comprehensive dataset preparation 
+                            and model training to extensive performance evaluation across multiple YOLOv5 variants. Using state-of-the-art 
+                            deep learning techniques with rigorous analysis of confidence thresholds, image sizes, and loss functions, 
+                            the research provides valuable insights into object detection optimization.
+                        </p>
+                        <p>
+                            <strong>Key Achievement:</strong> Successfully trained custom YOLOv5 models achieving 0.8 mAP (mean Average Precision) 
+                            across all variants, with comprehensive comparative analysis demonstrating superior performance of YOLOv5 Large 
+                            for loss function optimization.
+                        </p>
+                    </div>
+
+                    <!-- Problem Statement -->
+                    <div class="content-section">
+                        <h2>Research Objectives & Problem Statement</h2>
+                        <p>
+                            This research project aimed to address the complexity of multi-class vehicle detection and classification 
+                            using state-of-the-art deep learning techniques. The primary objectives included:
+                        </p>
+                        <ul>
+                            <li><strong>Technical Understanding:</strong> Comprehend different Deep Learning Networks and their application in object classification and detection</li>
+                            <li><strong>Algorithm Mastery:</strong> Learn and understand the algorithms and models used in developing object detection technologies</li>
+                            <li><strong>Application Analysis:</strong> Understand the practical applications of object detection across various platforms and industries</li>
+                            <li><strong>Performance Optimization:</strong> Conduct comprehensive analysis of model variants, confidence thresholds, and training parameters</li>
+                        </ul>
+                        
+                        <h3>Technical Challenges Addressed</h3>
+                        <ul>
+                            <li>Multi-class detection across 15 different vehicle categories (brands and types)</li>
+                            <li>Optimization of YOLOv5 variants (Small, Medium, Large, X-Large) for custom dataset</li>
+                            <li>Analysis of confidence threshold effects on detection accuracy</li>
+                            <li>Comparative study of different image sizes (416×416 vs 640×640) on model performance</li>
+                            <li>Loss function analysis (classification, localization, and confidence losses)</li>
+                            <li>Training vs validation performance evaluation to prevent overfitting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Solution -->
+                    <div class="content-section">
+                        <h2>Comprehensive Solution Architecture</h2>
+                        <div class="solution-grid">
+                            <div class="solution-item">
+                                <h3>Multi-Variant YOLOv5 Implementation</h3>
+                                <p>Implemented and compared four YOLOv5 variants (Small, Medium, Large, X-Large) with custom configuration for 15-class vehicle detection, leveraging PyTorch framework for optimal performance.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Comprehensive Dataset Development</h3>
+                                <p>Created extensive custom dataset with 1000+ images across 15 vehicle categories (brands: BMW, Ford, Toyota, Chevrolet, Honda, Mercedes, etc.; types: Coupe, Sedan, SUV, Truck) using labelImg.py for precise bounding box annotation.</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Advanced Training Methodology</h3>
+                                <p>Developed sophisticated training pipeline with Google Colab GPU acceleration, systematic train/validation/test splits (70%/20%/10%), and comprehensive hyperparameter optimization including epochs (300-1000), image sizes (416×416, 640×640), and confidence thresholds (0.5-0.9).</p>
+                            </div>
+                            <div class="solution-item">
+                                <h3>Rigorous Performance Analysis</h3>
+                                <p>Conducted extensive comparative analysis across model variants, confidence thresholds, image sizes, and loss functions (classification, localization, confidence) with detailed mAP evaluation and overfitting prevention strategies.</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Dataset Composition</h3>
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <div>
+                                    <strong>Vehicle Brands:</strong><br>
+                                    Acura, BMW, Chevrolet, Ford, Honda, Infinity, Lexus, Mercedes, Nissan, Subaru, Toyota
+                                </div>
+                                <div>
+                                    <strong>Vehicle Types:</strong><br>
+                                    Coupe, Sedan, SUV, Truck
+                                </div>
+                                <div>
+                                    <strong>Dataset Size:</strong><br>
+                                    ~150 images per class<br>
+                                    Total: 1000+ images
+                                </div>
+                                <div>
+                                    <strong>Annotation:</strong><br>
+                                    Dual labeling per image<br>
+                                    (Brand + Type classification)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Implementation -->
+                    <div class="content-section" id="technical-details">
+                        <h2>Technical Implementation</h2>
+                        
+                        <h3>Architecture & Model Design</h3>
+                        <ul>
+                            <li><strong>YOLOv5 Framework:</strong> Implemented YOLOv5s architecture with custom model configuration</li>
+                            <li><strong>Custom Configuration:</strong> Modified YOLOv5s YAML configuration for 3-class vehicle detection</li>
+                            <li><strong>Google Colab Integration:</strong> Cloud-based training environment with GPU acceleration</li>
+                            <li><strong>Transfer Learning:</strong> Leveraged pre-trained COCO weights for faster convergence</li>
+                        </ul>
+
+                        <h3>Comprehensive Dataset Preparation</h3>
+                        <ul>
+                            <li><strong>15 Vehicle Categories:</strong> Multi-class detection including brands (Acura, BMW, Chevrolet, Ford, Honda, Infinity, Lexus, Mercedes, Nissan, Subaru, Toyota) and types (Coupe, Sedan, SUV, Truck)</li>
+                            <li><strong>Systematic Data Organization:</strong> 1000+ images divided into Train (70%), Validation (20%), and Test (10%) sets for robust evaluation</li>
+                            <li><strong>Professional Annotation:</strong> Dual-label annotation using labelImg.py with precise bounding box coordinates for both brand and vehicle type identification</li>
+                            <li><strong>Quality Assurance:</strong> Roboflow integration for dataset sanitization, auto-detection of missing labels, and out-of-bound label correction</li>
+                            <li><strong>Data Format & Storage:</strong> Organized ZIP archives with systematic file structure optimized for Google Colab training environment</li>
+                        </ul>
+
+                        <h3>Advanced Training Methodology</h3>
+                        <ul>
+                            <li><strong>Multi-Variant Training:</strong> Comprehensive comparison of YOLOv5s, YOLOv5m, YOLOv5l, and YOLOv5x architectures</li>
+                            <li><strong>Hyperparameter Optimization:</strong> Systematic evaluation of 300 vs 1000 epochs, image sizes (416×416 vs 640×640), batch size 16</li>
+                            <li><strong>Confidence Threshold Analysis:</strong> Testing constant (0.5) vs varying (0.5-0.9) confidence thresholds for optimal detection accuracy</li>
+                            <li><strong>Transfer Learning Comparison:</strong> Training models both from scratch and with COCO pre-trained weights</li>
+                            <li><strong>Cloud Infrastructure:</strong> Google Colab Pro with Tesla K80/T4 GPU acceleration and Google Drive integration</li>
+                            <li><strong>Loss Function Analysis:</strong> Detailed monitoring of classification, localization, and confidence losses across all model variants</li>
+                            <li><strong>Overfitting Prevention:</strong> Systematic training vs validation performance evaluation to ensure model generalization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Demo Video Section -->
+                    <div class="content-section" id="demo-video">
+                        <h2>Project Demonstration</h2>
+                        <p>
+                            The project includes comprehensive demonstration materials showcasing the YOLOv5 model's 
+                            vehicle detection capabilities and the complete development process.
+                        </p>
+                        <div class="demo-materials" style="margin: 2rem 0;">
+                            <div class="demo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border: 2px dashed #dee2e6; text-align: center;">
+                                    <i class="fas fa-video" style="font-size: 2rem; color: #6c757d; margin-bottom: 1rem;"></i>
+                                    <h4 style="color: #495057; margin-bottom: 0.5rem;">Final Presentation</h4>
+                                    <small style="color: #6c757d;">ENSC424_FinalProjectPresentation.mp4</small>
+                                </div>
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border: 2px dashed #dee2e6; text-align: center;">
+                                    <i class="fas fa-play-circle" style="font-size: 2rem; color: #6c757d; margin-bottom: 1rem;"></i>
+                                    <h4 style="color: #495057; margin-bottom: 0.5rem;">Demo Video</h4>
+                                    <small style="color: #6c757d;">Demo-ENSC424.mp4</small>
+                                </div>
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border: 2px dashed #dee2e6; text-align: center;">
+                                    <i class="fas fa-file-powerpoint" style="font-size: 2rem; color: #6c757d; margin-bottom: 1rem;"></i>
+                                    <h4 style="color: #495057; margin-bottom: 0.5rem;">Project Presentation</h4>
+                                    <small style="color: #6c757d;">ENSC 424 Presentation.pptx</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Implementation Section -->
+                    <div class="content-section" id="code-implementation">
+                        <h2>Code Implementation</h2>
+                        <p>
+                            Key code snippets from the YOLOv5 implementation that demonstrate the technical approach and implementation details.
+                        </p>
+                        
+                        <h3>Environment Setup & Dependencies</h3>
+                        <div class="code-block" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace;">
+                            <pre style="margin: 0; color: #495057;"><code># Google Colab setup with GPU acceleration
+from google.colab import drive
+drive.mount('/content/gdrive')
+
+# Install YOLOv5 dependencies
+!pip install -qr yolov5/requirements.txt
+
+import torch
+from IPython.display import Image, clear_output
+from utils.google_utils import gdrive_download
+
+print('Setup complete. Using torch %s %s' % 
+      (torch.__version__, 
+       torch.cuda.get_device_properties(0) if torch.cuda.is_available() else 'CPU'))</code></pre>
+                        </div>
+
+                        <h3>Dataset Configuration</h3>
+                        <div class="code-block" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace;">
+                            <pre style="margin: 0; color: #495057;"><code># Load dataset configuration and define number of classes
+import yaml
+with open("data.yaml", 'r') as stream:
+    num_classes = str(yaml.safe_load(stream)['nc'])
+
+# Copy datasets from Google Drive
+!gsutil -m cp -r /gdrive/Yolov5datasets_640/test ./
+!gsutil -m cp -r /gdrive/Yolov5datasets_640/train ./
+!gsutil -m cp -r /gdrive/Yolov5datasets_640/valid ./
+!gsutil -m cp -r /gdrive/Yolov5datasets_640/data.yaml ./</code></pre>
+                        </div>
+
+                        <h3>Model Training Command</h3>
+                        <div class="code-block" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace;">
+                            <pre style="margin: 0; color: #495057;"><code># Training YOLOv5 with custom configuration
+!python train.py --img 416 --batch 16 --epochs 100 \
+                 --data '../data.yaml' \
+                 --cfg ./models/custom_yolov5s.yaml \
+                 --weights '' \
+                 --name yolov5s_results \
+                 --cache
+
+# Alternative: Training with pre-trained weights
+!python train.py --img 640 --batch 16 --epochs 300 \
+                 --data '../data.yaml' \
+                 --cfg ./models/custom_yolov5s.yaml \
+                 --weights yolov5s.pt \
+                 --name yolov5s_results \
+                 --cache</code></pre>
+                        </div>
+
+                        <h3>Model Inference & Testing</h3>
+                        <div class="code-block" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1.5rem; margin: 1rem 0; font-family: 'Courier New', monospace;">
+                            <pre style="margin: 0; color: #495057;"><code># Run inference on test dataset
+!python detect.py --weights runs/train/yolov5s_results/weights/best.pt \
+                  --img 640 \
+                  --conf 0.4 \
+                  --source ../test/images
+
+# Display inference results
+import glob
+from IPython.display import Image, display
+
+for imageName in glob.glob('/content/yolov5/detect/exp/*.jpg'):
+    display(Image(filename=imageName))
+    print("\n")</code></pre>
+                        </div>
+
+                        <div class="code-access" style="margin: 2rem 0; padding: 1.5rem; background: #e3f2fd; border-radius: 10px;">
+                            <h4 style="color: #1976d2; margin-bottom: 1rem; text-align: center;">
+                                <i class="fas fa-download"></i> Project Implementation
+                            </h4>
+                            <p style="color: #424242; margin-bottom: 1.5rem; text-align: center;">Access the complete YOLOv5 implementation with interactive documentation</p>
+                            <div style="text-align: center;">
+                                <a href="../project-files/vehicle-detection-yolo/ENSC-424.ipynb" class="btn btn-primary" download style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 12px 24px;">
+                                    <i class="fas fa-book"></i> Download Jupyter Notebook
+                                </a>
+                            </div>
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small style="color: #666;">
+                                    <strong>Interactive Development:</strong> Complete YOLOv5 implementation with step-by-step execution, 
+                                    documentation, and Google Colab integration<br><br>
+                                    <em>Tip: View online at 
+                                    <a href="https://nbviewer.jupyter.org/" target="_blank" style="color: #1976d2;">nbviewer.jupyter.org</a> 
+                                    by uploading the downloaded file</em>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results & Performance -->
+                    <div class="content-section" id="results">
+                        <h2>Comprehensive Results & Performance Analysis</h2>
+                        
+                        <h3>🎯 Key Performance Achievements</h3>
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                                <div>
+                                    <h3 style="color: white; font-size: 2.5rem; margin: 0;">0.8</h3>
+                                    <p style="margin: 0.5rem 0;">mAP Achieved</p>
+                                    <small>Across all YOLOv5 variants</small>
+                                </div>
+                                <div>
+                                    <h3 style="color: white; font-size: 2.5rem; margin: 0;">15</h3>
+                                    <p style="margin: 0.5rem 0;">Vehicle Classes</p>
+                                    <small>Brands + Types detection</small>
+                                </div>
+                                <div>
+                                    <h3 style="color: white; font-size: 2.5rem; margin: 0;">4</h3>
+                                    <p style="margin: 0.5rem 0;">Model Variants</p>
+                                    <small>Comprehensive comparison</small>
+                                </div>
+                                <div>
+                                    <h3 style="color: white; font-size: 2.5rem; margin: 0;"><7h</h3>
+                                    <p style="margin: 0.5rem 0;">Training Time</p>
+                                    <small>Even for largest models</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>📊 Detailed Performance Analysis</h3>
+                        
+                        <h4>1. Model Variant Comparison</h4>
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                            <ul>
+                                <li><strong>Constant Confidence (0.5):</strong> All YOLOv5 variants achieved ~0.8 mAP with YOLOv5s requiring more epochs to reach convergence</li>
+                                <li><strong>Varying Confidence (0.5-0.9):</strong> YOLOv5s surprisingly outperformed larger variants, suggesting optimal training for this dataset size</li>
+                                <li><strong>Loss Function Optimization:</strong> YOLOv5 Large demonstrated superior performance in minimizing classification, localization, and confidence losses</li>
+                        </ul>
+                        </div>
+
+                        <h4>2. Image Size Impact Analysis</h4>
+                        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                            <ul>
+                                <li><strong>416×416 vs 640×640:</strong> Both achieved 0.8 mAP, demonstrating model robustness across input sizes</li>
+                                <li><strong>Localization Performance:</strong> Larger images (640×640) showed better localization loss minimization</li>
+                                <li><strong>Training Efficiency:</strong> No significant difference in classification and confidence losses between image sizes</li>
+                            </ul>
+                        </div>
+
+                        <h4>3. Training vs Validation Performance</h4>
+                        <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                            <ul>
+                                <li><strong>Generalization Success:</strong> Validation accuracy exceeded training accuracy across all variants</li>
+                                <li><strong>Overfitting Prevention:</strong> No evidence of memorization; all loss components decreased on validation data</li>
+                                <li><strong>Data Augmentation Impact:</strong> Training set augmentation contributed to higher training loss, indicating robust learning</li>
+                            </ul>
+                        </div>
+
+                        <h4>4. Transfer Learning vs Training from Scratch</h4>
+                        <div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                            <ul>
+                                <li><strong>Pre-trained Weights Advantage:</strong> Models trained with COCO pre-trained weights showed superior detection confidence</li>
+                                <li><strong>Detection Quality:</strong> Enhanced capability to detect fine details like car logos on rims</li>
+                                <li><strong>Training Efficiency:</strong> Faster convergence and better final performance with transfer learning</li>
+                        </ul>
+                        </div>
+
+                        <h3>🏆 Research Contributions</h3>
+                        <ul>
+                            <li><strong>Comprehensive Benchmark:</strong> First systematic comparison of all YOLOv5 variants on multi-class vehicle detection</li>
+                            <li><strong>Optimal Configuration Discovery:</strong> YOLOv5s optimal for datasets of this size; YOLOv5l best for loss optimization</li>
+                            <li><strong>Training Methodology:</strong> Validated 300-epoch training sufficiency for custom vehicle datasets</li>
+                            <li><strong>Confidence Threshold Insights:</strong> Demonstrated that varying confidence thresholds can improve smaller model performance</li>
+                            <li><strong>Infrastructure Guidelines:</strong> Proved Google Colab viability for academic deep learning projects</li>
+                        </ul>
+                    </div>
+
+                    <!-- Applications & Future Work -->
+                    <div class="content-section">
+                        <h2>Applications & Future Enhancements</h2>
+                        
+                        <h3>Potential Applications</h3>
+                        <ul>
+                            <li><strong>Traffic Monitoring:</strong> Automated vehicle counting and classification for traffic analysis</li>
+                            <li><strong>Smart Parking:</strong> Vehicle type-based parking allocation and management</li>
+                            <li><strong>Security Systems:</strong> Vehicle identification for access control and surveillance</li>
+                            <li><strong>Autonomous Driving:</strong> Object detection component for self-driving vehicle systems</li>
+                        </ul>
+
+                        <h3>Future Enhancements</h3>
+                        <ul>
+                            <li>Expansion to additional vehicle categories and manufacturers</li>
+                            <li>Integration with license plate recognition systems</li>
+                            <li>Implementation of YOLO v5/v8 for improved performance</li>
+                            <li>Edge deployment optimization for mobile and embedded systems</li>
+                            <li>Multi-camera tracking and vehicle trajectory analysis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Documentation -->
+                    <div class="content-section">
+                        <h2>Research Methodology & Technical Documentation</h2>
+                        
+                        <h3>🔬 Comprehensive Research Framework</h3>
+                        <p>
+                            This project represents a thorough academic investigation into YOLOv5 optimization for multi-class vehicle detection. 
+                            The research methodology encompassed theoretical understanding of CNNs, YOLO architecture, and extensive empirical analysis 
+                            across multiple model configurations and training parameters.
+                        </p>
+
+                        <h3>📚 Deep Learning Theoretical Foundation</h3>
+                        
+                        <h4>🧠 Convolutional Neural Networks (CNNs)</h4>
+                        <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <p><strong>Biological Inspiration:</strong> CNNs are inspired by the visual cortex organization, mimicking how our brain processes visual information by extracting different features from images. Just as our brain distinguishes between objects by analyzing surface textures and features, CNNs learn to identify patterns through systematic feature extraction.</p>
+                            
+                            <!-- CNN Pipeline Visualization -->
+                            <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                                <h6 style="text-align: center; margin-bottom: 1rem; color: #495057;">CNN Processing Pipeline</h6>
+                                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                                    <!-- Input Image -->
+                                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #4CAF50, #8BC34A); margin: 0 auto; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem;">Input<br>Image</div>
+                                        <p style="margin: 0.3rem 0 0 0; font-size: 0.7rem; color: #666;">RGB/Grayscale</p>
+                                    </div>
+                                    
+                                    <div style="color: #666; font-size: 1.2rem;">→</div>
+                                    
+                                    <!-- Convolution -->
+                                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #2196F3, #1976D2); margin: 0 auto; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem;">Conv<br>Filters</div>
+                                        <p style="margin: 0.3rem 0 0 0; font-size: 0.7rem; color: #666;">Feature Maps</p>
+                                    </div>
+                                    
+                                    <div style="color: #666; font-size: 1.2rem;">→</div>
+                                    
+                                    <!-- ReLU -->
+                                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #FF9800, #F57C00); margin: 0 auto; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem;">ReLU<br>f(x)=max(0,x)</div>
+                                        <p style="margin: 0.3rem 0 0 0; font-size: 0.7rem; color: #666;">Non-linearity</p>
+                                    </div>
+                                    
+                                    <div style="color: #666; font-size: 1.2rem;">→</div>
+                                    
+                                    <!-- Pooling -->
+                                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #9C27B0, #7B1FA2); margin: 0 auto; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem;">Pool<br>Max/Avg</div>
+                                        <p style="margin: 0.3rem 0 0 0; font-size: 0.7rem; color: #666;">Downsampling</p>
+                                    </div>
+                                    
+                                    <div style="color: #666; font-size: 1.2rem;">→</div>
+                                    
+                                    <!-- Output -->
+                                    <div style="text-align: center; flex: 1; min-width: 100px;">
+                                        <div style="width: 60px; height: 60px; background: linear-gradient(45deg, #607D8B, #455A64); margin: 0 auto; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem;">Feature<br>Vector</div>
+                                        <p style="margin: 0.3rem 0 0 0; font-size: 0.7rem; color: #666;">Representation</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: #666;">
+                                    <em>Each operation transforms and refines the input for better feature recognition</em>
+                                </div>
+                            </div>
+                            
+                            <h5>Core CNN Operations (Sequential Pipeline):</h5>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #007bff;">
+                                    <h6 style="color: #007bff; margin-bottom: 1rem;">1. Convolution Operation</h6>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li><strong>Purpose:</strong> Feature extraction from 2D/3D images</li>
+                                        <li><strong>Mechanism:</strong> Filters slide across image to produce feature maps</li>
+                                        <li><strong>Parameters:</strong>
+                                            <ul>
+                                                <li><em>Depth:</em> Number of filters used</li>
+                                                <li><em>Stride:</em> Pixel movement step size</li>
+                                                <li><em>Zero-Padding:</em> Border handling for corner feature extraction</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #28a745;">
+                                    <h6 style="color: #28a745; margin-bottom: 1rem;">2. ReLU Activation</h6>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li><strong>Function:</strong> Replaces negative pixels with zero</li>
+                                        <li><strong>Purpose:</strong> Introduces non-linearity for real-world data modeling</li>
+                                        <li><strong>Advantage:</strong> Better generalization vs other activation functions</li>
+                                        <li><strong>Optimization:</strong> Enables easier gradient descent training</li>
+                                        <li><strong>Problem Solved:</strong> Without activation, networks produce only linear outputs (limited complexity)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #dc3545;">
+                                    <h6 style="color: #dc3545; margin-bottom: 1rem;">3. Pooling Operation</h6>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li><strong>Method:</strong> Calculates Average or Max in sliding windows</li>
+                                        <li><strong>Dimensionality Reduction:</strong> Reduces input image size</li>
+                                        <li><strong>Overfitting Control:</strong> Removes less important parameters</li>
+                                        <li><strong>Generalization:</strong> Prevents model restriction to training dataset</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>🎯 YOLO Algorithm Architecture</h4>
+                        <div style="background: #e3f2fd; padding: 2rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                                <div>
+                                    <h5>Core Concept: "You Only Look Once"</h5>
+                                    <p><strong>Revolutionary Approach:</strong> Unlike traditional methods that examine images multiple times, YOLO processes the entire image in a single pass, making it extremely fast for real-time applications.</p>
+                                    
+                                    <h6>Architecture Overview:</h6>
+                                    <ul>
+                                        <li><strong>Network Type:</strong> Fully-Convolutional Neural Network</li>
+                                        <li><strong>Structure:</strong> 24 convolutional layers + 2 fully-connected layers</li>
+                                        <li><strong>Detection:</strong> 24 conv layers handle object detection</li>
+                                        <li><strong>Classification:</strong> 2 FC layers manage class prediction</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h5>Grid-Based Detection System</h5>
+                                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                                        <p><strong>Process:</strong></p>
+                                        <ol>
+                                            <li>Input image (N×N) divided into M×M grid cells</li>
+                                            <li>Each grid assigned fixed number of bounding boxes</li>
+                                            <li>Grid responsible for objects whose center falls within it</li>
+                                            <li>Output: Tensor with object information for each grid cell</li>
+                                        </ol>
+                                        
+                                        <p><strong>Prediction Vector per Grid:</strong><br>
+                                        <code>Y = [pc, bx, by, bw, bh, c1, c2, c3, ...]</code></p>
+                                        <ul style="font-size: 0.9rem;">
+                                            <li><em>pc:</em> Confidence score</li>
+                                            <li><em>bx, by:</em> Box center coordinates (relative to grid)</li>
+                                            <li><em>bw, bh:</em> Box width/height (relative to image)</li>
+                                            <li><em>c1, c2, c3:</em> Class probabilities</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- YOLO Workflow Visualization -->
+                            <div style="margin-top: 2rem;">
+                                <h5>📊 YOLO Workflow Visualization</h5>
+                                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                                        <!-- Input Image -->
+                                        <div style="text-align: center; flex: 1; min-width: 120px;">
+                                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #4CAF50, #8BC34A); margin: 0 auto; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.9rem;">Input<br>Image<br>N×N</div>
+                                            <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #666;">Original Image</p>
+                                        </div>
+                                        
+                                        <!-- Arrow -->
+                                        <div style="flex: 0 0 auto; color: #666; font-size: 1.5rem;">→</div>
+                                        
+                                        <!-- Grid Division -->
+                                        <div style="text-align: center; flex: 1; min-width: 120px;">
+                                            <div style="width: 80px; height: 80px; background: #FFF; margin: 0 auto; border: 2px solid #2196F3; border-radius: 8px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 2px; padding: 4px;">
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #2196F3; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                                <div style="background: #E3F2FD; border-radius: 2px;"></div>
+                                            </div>
+                                            <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #666;">M×M Grid<br>Division</p>
+                                        </div>
+                                        
+                                        <!-- Arrow -->
+                                        <div style="flex: 0 0 auto; color: #666; font-size: 1.5rem;">→</div>
+                                        
+                                        <!-- CNN Processing -->
+                                        <div style="text-align: center; flex: 1; min-width: 120px;">
+                                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #FF9800, #F57C00); margin: 0 auto; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.8rem; flex-direction: column;">
+                                                <div>24 Conv</div>
+                                                <div>+</div>
+                                                <div>2 FC</div>
+                                            </div>
+                                            <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #666;">CNN<br>Processing</p>
+                                        </div>
+                                        
+                                        <!-- Arrow -->
+                                        <div style="flex: 0 0 auto; color: #666; font-size: 1.5rem;">→</div>
+                                        
+                                        <!-- Output Tensor -->
+                                        <div style="text-align: center; flex: 1; min-width: 120px;">
+                                            <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #9C27B0, #7B1FA2); margin: 0 auto; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.7rem; flex-direction: column;">
+                                                <div>M×M×</div>
+                                                <div>(B×[5+C])</div>
+                                                <div>Tensor</div>
+                                            </div>
+                                            <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem; color: #666;">Output<br>Predictions</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                        <p style="margin: 0; font-size: 0.9rem; color: #495057;"><strong>Example Configuration:</strong> 7×7×30 tensor (2 bounding boxes, 20 classes)<br>
+                                        <strong>Formula:</strong> M×M×(B×[5+C]) where M=7, B=2, C=20 → 7×7×(2×[5+20]) = 7×7×50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>📊 Key Performance Metrics</h4>
+                        <div style="background: #fff3e0; padding: 2rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                                <div>
+                                    <h6>Intersection over Union (IoU)</h6>
+                                    <p><strong>Formula:</strong> IoU = Area of Overlap / Area of Union</p>
+                                    <ul>
+                                        <li><strong>Range:</strong> [0, 1] - closer to 1 = better prediction</li>
+                                        <li><strong>Threshold:</strong> IoU > 0.5 considered good prediction</li>
+                                        <li><strong>Usage:</strong> Measures bounding box accuracy</li>
+                                    </ul>
+                                    
+                                    <!-- IoU Visualization -->
+                                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                        <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                                            <div style="text-align: center;">
+                                                <div style="position: relative; width: 60px; height: 60px; margin: 0 auto;">
+                                                    <!-- Ground Truth Box (Green) -->
+                                                    <div style="position: absolute; top: 5px; left: 5px; width: 40px; height: 40px; border: 3px solid #4CAF50; background: rgba(76, 175, 80, 0.2); border-radius: 4px;"></div>
+                                                    <!-- Prediction Box (Red) -->
+                                                    <div style="position: absolute; top: 15px; left: 15px; width: 40px; height: 40px; border: 3px solid #F44336; background: rgba(244, 67, 54, 0.2); border-radius: 4px;"></div>
+                                                </div>
+                                                <p style="margin: 0.5rem 0 0 0; font-size: 0.7rem;">Good IoU > 0.5</p>
+                                            </div>
+                                            
+                                            <div style="text-align: center;">
+                                                <div style="position: relative; width: 60px; height: 60px; margin: 0 auto;">
+                                                    <!-- Ground Truth Box (Green) -->
+                                                    <div style="position: absolute; top: 5px; left: 5px; width: 40px; height: 40px; border: 3px solid #4CAF50; background: rgba(76, 175, 80, 0.2); border-radius: 4px;"></div>
+                                                    <!-- Prediction Box (Red) - Poor overlap -->
+                                                    <div style="position: absolute; top: 25px; left: 25px; width: 40px; height: 40px; border: 3px solid #F44336; background: rgba(244, 67, 54, 0.2); border-radius: 4px;"></div>
+                                                </div>
+                                                <p style="margin: 0.5rem 0 0 0; font-size: 0.7rem;">Poor IoU < 0.5</p>
+                                            </div>
+                                        </div>
+                                        <div style="text-align: center; margin-top: 0.5rem;">
+                                            <small style="color: #666;">
+                                                <span style="color: #4CAF50;">■</span> Ground Truth &nbsp;&nbsp;
+                                                <span style="color: #F44336;">■</span> Prediction
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h6>Non-Max Suppression</h6>
+                                    <p>Prevents multiple detections of same object:</p>
+                                    <ul>
+                                        <li>Selects prediction with highest IoU</li>
+                                        <li>Removes nearby boxes below IoU threshold</li>
+                                        <li>Repeats until all boxes processed</li>
+                                        <li>YOLO threshold: 0.25 IoU</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h6>Mean Average Precision (mAP)</h6>
+                                    <ul>
+                                        <li><strong>Precision:</strong> Accuracy of positive predictions</li>
+                                        <li><strong>Recall:</strong> Ability to find all positive instances</li>
+                                        <li><strong>AP:</strong> Weighted mean of precisions at recall thresholds</li>
+                                        <li><strong>mAP:</strong> Average of AP across all classes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>🚀 YOLOv5 Architecture & Innovations</h4>
+                        <div style="background: #e8f5e8; padding: 2rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div>
+                                    <h5>YOLOv5 Evolution (2020)</h5>
+                                    <ul>
+                                        <li><strong>Framework:</strong> First YOLO built entirely in PyTorch (vs Darknet)</li>
+                                        <li><strong>Developer:</strong> Glenn Jocher</li>
+                                        <li><strong>Based on:</strong> YOLOv3 with significant improvements</li>
+                                        <li><strong>Status:</strong> Continuous development with daily updates</li>
+                                        <li><strong>Architecture:</strong> 191 layers total across 3 components</li>
+                                    </ul>
+                                    
+                                    <h6>Three-Stage Architecture:</h6>
+                                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                        <ol>
+                                            <li><strong>Backbone:</strong> Cross-Partial Networks for feature extraction</li>
+                                            <li><strong>Neck:</strong> Path Aggregation Networks for feature fusion</li>
+                                            <li><strong>Head:</strong> 3 anchor boxes per grid cell for prediction</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h5>Advanced Features</h5>
+                                    <h6>Multi-Scale Detection:</h6>
+                                    <p>For 416×416 input, YOLOv5 makes predictions on:</p>
+                                    <ul>
+                                        <li><strong>13×13 grid:</strong> Large object detection</li>
+                                        <li><strong>26×26 grid:</strong> Medium object detection</li>
+                                        <li><strong>52×52 grid:</strong> Small object detection</li>
+                                    </ul>
+                                    
+                                    <h6>Activation Functions:</h6>
+                                    <ul>
+                                        <li><strong>Hidden Layers:</strong> Leaky ReLU (solves "dying ReLU" problem)</li>
+                                        <li><strong>Output Layer:</strong> Sigmoid (vs Softmax in earlier versions)</li>
+                                        <li><strong>Advantage:</strong> Non-mutually exclusive classes (e.g., "Woman" + "Person")</li>
+                                    </ul>
+                                    
+                                    <h6>Data Augmentation:</h6>
+                                    <ul>
+                                        <li><strong>Scaling:</strong> Image size variations</li>
+                                        <li><strong>Color Space:</strong> HSV adjustments</li>
+                                        <li><strong>Mosaic:</strong> Novel 4-image combination technique</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4>🔧 Model Variants & Loss Function</h4>
+                        <div style="background: #f3e5f5; padding: 2rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div>
+                                    <h5>YOLOv5 Model Variants</h5>
+                                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                                        <table style="width: 100%; border-collapse: collapse;">
+                                            <tr style="background: #f8f9fa;">
+                                                <th style="padding: 0.5rem; border: 1px solid #dee2e6;">Model</th>
+                                                <th style="padding: 0.5rem; border: 1px solid #dee2e6;">Parameters</th>
+                                                <th style="padding: 0.5rem; border: 1px solid #dee2e6;">Size</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">YOLOv5s</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">7M</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">Small</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">YOLOv5m</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">21M</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">Medium</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">YOLOv5l</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">47M</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">Large</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">YOLOv5x</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">87M</td>
+                                                <td style="padding: 0.5rem; border: 1px solid #dee2e6;">X-Large</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h5>Compound Loss Function</h5>
+                                    <p><strong>Optimization Algorithm:</strong> Stochastic Gradient Descent</p>
+                                    <div style="background: white; padding: 1rem; border-radius: 8px;">
+                                        <p><strong>Three Loss Components:</strong></p>
+                                        <ol>
+                                            <li><strong>Classification Loss:</strong><br>
+                                                Difference between ground truth and predicted class probabilities</li>
+                                            <li><strong>Localization Loss:</strong><br>
+                                                Error between predicted and ground truth bounding boxes</li>
+                                            <li><strong>Confidence Loss:</strong><br>
+                                                Difference in box confidence scores</li>
+                                        </ol>
+                                        <p><em>Final Loss = Sum of all three error components</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>🎯 Experimental Design</h3>
+                        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <h4>Systematic Evaluation Framework:</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                                <div>
+                                    <strong>Model Variants:</strong><br>
+                                    • YOLOv5s (Small) - 7M parameters<br>
+                                    • YOLOv5m (Medium) - 21M parameters<br>
+                                    • YOLOv5l (Large) - 47M parameters<br>
+                                    • YOLOv5x (X-Large) - 87M parameters
+                                </div>
+                                <div>
+                                    <strong>Training Configurations:</strong><br>
+                                    • Epochs: 300 vs 1000<br>
+                                    • Image sizes: 416×416 vs 640×640<br>
+                                    • Confidence: 0.5 vs 0.5-0.9 varying<br>
+                                    • Transfer learning: scratch vs pre-trained
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>📊 Dataset Development & Analysis</h3>
+                        
+                        <div class="dataset-overview" style="margin: 2rem 0;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #007bff;">
+                                    <h4 style="color: #007bff; margin-bottom: 1rem;">
+                                        <i class="fas fa-car"></i> BMW Coupe Dataset
+                                    </h4>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li>Dataset Size: ~136MB (compressed)</li>
+                                        <li>Image Format: Various resolutions</li>
+                                        <li>Annotation Type: Bounding box coordinates</li>
+                                        <li>Vehicle Orientation: Multiple angles and perspectives</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #28a745;">
+                                    <h4 style="color: #28a745; margin-bottom: 1rem;">
+                                        <i class="fas fa-car"></i> Ford Sedan Dataset
+                                    </h4>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li>Dataset Size: ~53MB (compressed)</li>
+                                        <li>Focus: Sedan body type characteristics</li>
+                                        <li>Lighting Conditions: Varied environmental settings</li>
+                                        <li>Background Diversity: Urban and highway scenarios</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #dc3545;">
+                                    <h4 style="color: #dc3545; margin-bottom: 1rem;">
+                                        <i class="fas fa-car"></i> Toyota SUV Dataset
+                                    </h4>
+                                    <ul style="margin: 0; color: #495057;">
+                                        <li>Dataset Size: ~105MB (compressed)</li>
+                                        <li>Vehicle Type: Sport Utility Vehicle classification</li>
+                                        <li>Scale Variation: Multiple vehicle sizes and distances</li>
+                                        <li>Occlusion Handling: Partially visible vehicles included</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Model Architecture and Configuration</h3>
+                        <p>
+                            The YOLOv5 implementation was customized specifically for three-class vehicle detection, 
+                            leveraging the architecture's efficiency for real-time applications:
+                        </p>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <h4 style="color: #495057; margin-bottom: 1rem;">Model Specifications</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div>
+                                    <strong>Architecture:</strong> YOLOv5s (Small variant)<br>
+                                    <strong>Input Resolution:</strong> 416×416 / 640×640 pixels<br>
+                                    <strong>Classes:</strong> 3 (BMW Coupe, Ford Sedan, Toyota SUV)
+                                </div>
+                                <div>
+                                    <strong>Training Framework:</strong> PyTorch<br>
+                                    <strong>Optimization:</strong> AdamW optimizer<br>
+                                    <strong>Data Augmentation:</strong> Mosaic, MixUp, HSV adjustments
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Training Methodology</h3>
+                        <p>
+                            The training process employed transfer learning principles, starting with COCO pre-trained weights 
+                            and fine-tuning for vehicle-specific detection:
+                        </p>
+                        
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <h4 style="color: white; margin-bottom: 1rem;">Training Configuration</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <div>
+                                    <strong>Epochs:</strong> 100-300<br>
+                                    <strong>Batch Size:</strong> 16<br>
+                                    <strong>Learning Rate:</strong> 0.01 (initial)
+                                </div>
+                                <div>
+                                    <strong>Image Size:</strong> 416px / 640px<br>
+                                    <strong>Validation Split:</strong> 20%<br>
+                                    <strong>Hardware:</strong> Google Colab GPU
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h3>Performance Evaluation</h3>
+                        <p>
+                            Model performance was evaluated using standard object detection metrics, with particular attention 
+                            to precision, recall, and mean Average Precision (mAP) across vehicle classes:
+                        </p>
+                        
+                        <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <h4 style="color: #155724; margin-bottom: 1rem;">Evaluation Metrics</h4>
+                            <ul style="margin: 0; color: #155724;">
+                                <li><strong>Precision:</strong> Measure of detection accuracy (true positives / (true positives + false positives))</li>
+                                <li><strong>Recall:</strong> Measure of detection completeness (true positives / (true positives + false negatives))</li>
+                                <li><strong>mAP@0.5:</strong> Mean Average Precision at IoU threshold of 0.5</li>
+                                <li><strong>Inference Speed:</strong> Real-time performance evaluation on test hardware</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Research Conclusions -->
+                    <div class="content-section">
+                        <h2>🎓 Research Conclusions & Academic Contributions</h2>
+                        
+                        <h3>Key Research Findings</h3>
+                        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                            <ul style="margin: 0; color: #1565c0;">
+                                <li><strong>Model Selection Insights:</strong> YOLOv5s optimal for medium-sized datasets (~1000 images), while YOLOv5l superior for loss function optimization</li>
+                                <li><strong>Training Efficiency:</strong> 300 epochs sufficient for convergence on custom vehicle datasets; faster training compared to YOLOv4</li>
+                                <li><strong>Confidence Threshold Strategy:</strong> Varying confidence (0.5-0.9) can improve smaller model performance beyond static thresholds</li>
+                                <li><strong>Transfer Learning Impact:</strong> COCO pre-trained weights significantly enhance detection quality and training efficiency</li>
+                                <li><strong>Infrastructure Validation:</strong> Google Colab proven viable for academic deep learning research (with session management considerations)</li>
+                            </ul>
+                        </div>
+
+                        <h3>Academic Impact & Learning Outcomes</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #28a745;">
+                                <h4 style="color: #28a745;">Technical Mastery</h4>
+                                <ul style="margin: 0; color: #495057;">
+                                    <li>Deep understanding of CNN architectures and object detection</li>
+                                    <li>Hands-on experience with state-of-the-art YOLO implementations</li>
+                                    <li>Comprehensive knowledge of performance evaluation metrics</li>
+                                    <li>Practical experience with cloud-based ML infrastructure</li>
+                                </ul>
+                            </div>
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #dc3545;">
+                                <h4 style="color: #dc3545;">Research Methodology</h4>
+                                <ul style="margin: 0; color: #495057;">
+                                    <li>Systematic experimental design and hypothesis testing</li>
+                                    <li>Comprehensive comparative analysis across model variants</li>
+                                    <li>Statistical validation of performance improvements</li>
+                                    <li>Academic-quality documentation and presentation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3>Lessons Learned & Best Practices</h3>
+                        <ul>
+                            <li><strong>Data Quality Foundation:</strong> High-quality, systematically annotated datasets are fundamental to model success</li>
+                            <li><strong>Systematic Evaluation:</strong> Comprehensive comparison across model variants reveals optimal configurations for specific use cases</li>
+                            <li><strong>Transfer Learning Strategy:</strong> Pre-trained models provide significant advantages in both training speed and final performance</li>
+                            <li><strong>Infrastructure Planning:</strong> Cloud-based training requires careful session management and data persistence strategies</li>
+                            <li><strong>Academic Rigor:</strong> Thorough documentation, presentation materials, and reproducible methodology essential for research credibility</li>
+                            <li><strong>Collaborative Excellence:</strong> Clear role definition and regular communication critical for successful group research projects</li>
+                        </ul>
+
+                        <h3>Contribution Summary</h3>
+                        <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+                            <p style="margin: 0; color: #155724;">
+                                <strong>Junaid Jawed Khan:</strong> Object Detection theory, YOLO architecture, data collection, labeling, testing, and comprehensive performance analysis<br><br>
+                                <strong>Pevisha Joshi:</strong> YOLOv5 implementation, data labeling, code setup, model training, testing, and comparative analysis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <!-- Project Details -->
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="label">Duration:</span>
+                            <span class="value">4 months</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Team Size:</span>
+                            <span class="value">2 Members</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Type:</span>
+                            <span class="value">Group Project</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="value">Completed</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Course:</span>
+                            <span class="value">ENSC 424</span>
+                        </div>
+                    </div>
+
+                    <!-- Technologies Used -->
+                    <div class="sidebar-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLOv5</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Google Colab</span>
+                            <span class="tech-tag">Google Drive</span>
+                            <span class="tech-tag">TensorBoard</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="sidebar-card">
+                        <h3>Research Achievements</h3>
+                        <ul class="feature-list">
+                            <li>4 YOLOv5 Variant Comparison</li>
+                            <li>0.8 mAP Performance</li>
+                            <li>15-Class Multi-Detection</li>
+                            <li>Loss Function Analysis</li>
+                            <li>Confidence Threshold Study</li>
+                            <li>Transfer Learning Evaluation</li>
+                            <li>Overfitting Prevention</li>
+                            <li>Academic Publication Quality</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project Resources -->
+                    <div class="sidebar-card">
+                        <h3>Project Resources</h3>
+                        <ul class="feature-list">
+                            <li>Interactive Jupyter Notebook</li>
+                            <li>Complete Dataset Collection</li>
+                            <li>Technical Documentation</li>
+                            <li>Trained Model Weights</li>
+                            <li>Visual Examples & Results</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dataset Information -->
+                    <div class="sidebar-card">
+                        <h3>15 Vehicle Categories</h3>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Brands (11):</strong><br>
+                            <small>Acura, BMW, Chevrolet, Ford, Honda, Infinity, Lexus, Mercedes, Nissan, Subaru, Toyota</small>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Types (4):</strong><br>
+                            <small>Coupe, Sedan, SUV, Truck</small>
+                        </div>
+                        <ul class="feature-list">
+                            <li>1000+ Total Images</li>
+                            <li>~150 Images per Class</li>
+                            <li>70/20/10 Train/Val/Test Split</li>
+                            <li>Dual-Label Annotation</li>
+                            <li>Professional Quality Control</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools & Environment -->
+                    <div class="sidebar-card">
+                        <h3>Development Environment</h3>
+                        <ul class="feature-list">
+                            <li>Google Colab Pro</li>
+                            <li>GPU Acceleration (Tesla K80/T4)</li>
+                            <li>Google Drive Integration</li>
+                            <li>TensorBoard Monitoring</li>
+                            <li>Cloud-based Training</li>
+                            <li>Collaborative Development</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/EEG-Project-Images/IndependentComponentAnalysis.png" alt="EEG Signal Processing">
+                    </div>
+                    <div class="project-content">
+                        <h3>EEG Signal Processing</h3>
+                        <p>Advanced EEG signal processing using EEGLAB for resting-wakeful state analysis</p>
+                        <a href="eeglab-dsp.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/simulationandnmodellingicon.png" alt="Kalman Filter">
+                    </div>
+                    <div class="project-content">
+                        <h3>COVID-19 Kalman Filter</h3>
+                        <p>Discrete-time Kalman filter for COVID-19 case estimation</p>
+                        <a href="kalman-filter-covid.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../images/controllericon.png" alt="Data Structures">
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Structures & Algorithms</h3>
+                        <p>Comprehensive implementations in C/C++</p>
+                        <a href="datastructures-algorithms.html" class="btn btn-secondary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss how I can help bring your ideas to life.</p>
+                <a href="../index.html#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../js/modern-scripts.js"></script>
+</body>
+</html>
+

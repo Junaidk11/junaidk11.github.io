@@ -265,6 +265,17 @@ const projectsData = [
         link: "projects/kalman-filter-covid.html",
         github: "https://github.com/Junaidk11/simple_kalman_filter",
         featured: true
+    },
+    {
+        id: 21,
+        title: "Vehicle Detection using YOLOv5",
+        description: "Computer vision project implementing YOLOv5 for real-time vehicle detection and classification of BMW, Ford, and Toyota vehicles using Google Colab.",
+        image: "images/project.jpg",
+        category: "software",
+        tags: ["Python", "YOLOv5", "Computer Vision", "Machine Learning", "Google Colab", "PyTorch"],
+        link: "projects/vehicle-detection-yolo.html",
+        github: null,
+        featured: true
     }
 ];
 
