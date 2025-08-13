@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="motorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="controllerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hbridgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="encoderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- DC Motor -->
+  <g transform="translate(140, 100)">
+    <!-- Motor housing -->
+    <circle cx="0" cy="0" r="18" fill="url(#motorGradient)" stroke="#2980b9" stroke-width="2"/>
+    <circle cx="0" cy="0" r="12" fill="#34495e"/>
+    
+    <!-- Motor shaft -->
+    <rect x="18" y="-2" width="15" height="4" fill="#95a5a6"/>
+    
+    <!-- Motor terminals -->
+    <rect x="-20" y="-3" width="4" height="6" fill="#e74c3c"/>
+    <text x="-18" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">+</text>
+    <text x="-18" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">-</text>
+    
+    <!-- Rotor visualization -->
+    <g opacity="0.7">
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#ecf0f1" stroke-width="2"/>
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#ecf0f1" stroke-width="2"/>
+    </g>
+    
+    <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#3498db" font-weight="bold">DC MOTOR</text>
+  </g>
+  
+  <!-- H-Bridge Driver -->
+  <g transform="translate(100, 100)">
+    <rect x="-15" y="-15" width="30" height="30" fill="url(#hbridgeGradient)" stroke="#e67e22" stroke-width="2"/>
+    
+    <!-- H-Bridge switches (MOSFETs) -->
+    <g stroke="#2c3e50" stroke-width="1" fill="#34495e">
+      <rect x="-12" y="-12" width="6" height="6"/>
+      <rect x="6" y="-12" width="6" height="6"/>
+      <rect x="-12" y="6" width="6" height="6"/>
+      <rect x="6" y="6" width="6" height="6"/>
+    </g>
+    
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">H</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#f39c12" font-weight="bold">H-BRIDGE</text>
+  </g>
+  
+  <!-- PID Controller -->
+  <g transform="translate(60, 60)">
+    <rect x="-20" y="-10" width="40" height="20" rx="3" fill="url(#controllerGradient)" stroke="#c0392b" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">PID</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">CONTROLLER</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">FEEDBACK</text>
+  </g>
+  
+  <!-- Encoder -->
+  <g transform="translate(140, 140)">
+    <circle cx="0" cy="0" r="10" fill="url(#encoderGradient)" stroke="#229954" stroke-width="2"/>
+    
+    <!-- Encoder disc -->
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#2c3e50" stroke-width="1"/>
+    <g stroke="#2c3e50" stroke-width="1">
+      <line x1="-4" y1="0" x2="4" y2="0"/>
+      <line x1="0" y1="-4" x2="0" y2="4"/>
+      <line x1="-3" y1="-3" x2="3" y2="3"/>
+      <line x1="-3" y1="3" x2="3" y2="-3"/>
+    </g>
+    
+    <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#27ae60" font-weight="bold">ENCODER</text>
+  </g>
+  
+  <!-- PWM Signal -->
+  <g transform="translate(80, 100)">
+    <text x="0" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#9b59b6" font-weight="bold">PWM</text>
+    <!-- PWM waveform -->
+    <g stroke="#9b59b6" stroke-width="2" fill="none">
+      <path d="M -8,0 L -8,-5 L -4,-5 L -4,0 L 0,0 L 0,-5 L 4,-5 L 4,0 L 8,0"/>
+    </g>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6">SIGNAL</text>
+  </g>
+  
+  <!-- Speed Control -->
+  <g transform="translate(40, 100)">
+    <circle cx="0" cy="0" r="8" fill="rgba(52, 152, 219, 0.3)" stroke="#3498db" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db" font-weight="bold">RPM</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">CTRL</text>
+  </g>
+  
+  <!-- Direction Control -->
+  <g transform="translate(40, 120)">
+    <rect x="-8" y="-4" width="16" height="8" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="2"/>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c" font-weight="bold">DIR</text>
+  </g>
+  
+  <!-- Control signals -->
+  <g stroke="#95a5a6" stroke-width="2" fill="none">
+    <!-- From PID to H-Bridge -->
+    <line x1="70" y1="70" x2="90" y2="90"/>
+    <polygon points="90,90 87,87 87,93" fill="#95a5a6"/>
+    
+    <!-- From H-Bridge to Motor -->
+    <line x1="115" y1="100" x2="122" y2="100"/>
+    <polygon points="122,100 119,97 119,103" fill="#95a5a6"/>
+    
+    <!-- Encoder feedback -->
+    <path d="M 140,130 Q 160,120 170,100 Q 180,80 160,60 Q 140,40 100,50 Q 80,55 70,60"/>
+    <polygon points="70,60 73,57 73,63" fill="#95a5a6"/>
+  </g>
+  
+  <!-- Power supply -->
+  <g transform="translate(40, 40)">
+    <rect x="-8" y="-6" width="16" height="12" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white" font-weight="bold">12V</text>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">POWER</text>
+  </g>
+  
+  <!-- System specifications -->
+  <g>
+    <!-- Voltage rating -->
+    <g transform="translate(30, 160)">
+      <circle cx="0" cy="0" r="8" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60" font-weight="bold">12V</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">MAX</text>
+    </g>
+    
+    <!-- Current rating -->
+    <g transform="translate(70, 160)">
+      <circle cx="0" cy="0" r="8" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c" font-weight="bold">5A</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">MAX</text>
+    </g>
+    
+    <!-- Frequency -->
+    <g transform="translate(110, 160)">
+      <circle cx="0" cy="0" r="8" fill="rgba(155, 89, 182, 0.3)" stroke="#9b59b6" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6" font-weight="bold">1kHz</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6">PWM</text>
+    </g>
+    
+    <!-- Resolution -->
+    <g transform="translate(150, 160)">
+      <circle cx="0" cy="0" r="8" fill="rgba(241, 196, 15, 0.3)" stroke="#f1c40f" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f" font-weight="bold">8bit</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f">RES</text>
+    </g>
+  </g>
+  
+  <!-- Control loop indicator -->
+  <g transform="translate(100, 40)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f1c40f" font-weight="bold">CLOSED LOOP</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#f39c12">CONTROL SYSTEM</text>
+  </g>
+  
+  <!-- Error signal -->
+  <g transform="translate(50, 80)">
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <text x="0" y="-10" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">e(t)</text>
+    <line x1="-4" y1="0" x2="4" y2="0" stroke="#e74c3c" stroke-width="1"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#e74c3c" stroke-width="1"/>
+  </g>
+  
+  <!-- Motor direction arrows -->
+  <g transform="translate(170, 80)">
+    <!-- Forward direction -->
+    <path d="M 0,0 A 8,8 0 0,1 8,8" stroke="#27ae60" stroke-width="2" fill="none"/>
+    <polygon points="8,8 6,5 10,6" fill="#27ae60"/>
+    <text x="12" y="4" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">FWD</text>
+    
+    <!-- Reverse direction -->
+    <path d="M 0,15 A 8,8 0 0,0 8,7" stroke="#e74c3c" stroke-width="2" fill="none"/>
+    <polygon points="0,15 2,12 -2,13" fill="#e74c3c"/>
+    <text x="-15" y="12" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">REV</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">DC MOTOR</text>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">CONTROLLER</text>
+</svg>
