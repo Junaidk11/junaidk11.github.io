@@ -226,7 +226,7 @@ const projectsData = [
         id: 17,
         title: "CAN Network Communication",
         description: "Implementation of CAN communication between Hercules Safety MCUs.",
-        image: "images/CanNetworkicone.jpg",
+        image: "images/can-network-icon.svg",
         category: "hardware",
         tags: ["C++", "CAN Bus", "Embedded Systems", "MCU"],
         link: "projects/can-network.html",
