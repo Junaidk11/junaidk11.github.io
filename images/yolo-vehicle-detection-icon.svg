@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#2c3e50" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- Car silhouette -->
+  <g transform="translate(100, 100)">
+    <!-- Car body -->
+    <rect x="-40" y="-15" width="80" height="25" rx="5" fill="#3498db"/>
+    
+    <!-- Car roof -->
+    <rect x="-25" y="-25" width="50" height="15" rx="3" fill="#2980b9"/>
+    
+    <!-- Wheels -->
+    <circle cx="-25" cy="15" r="8" fill="#34495e"/>
+    <circle cx="25" cy="15" r="8" fill="#34495e"/>
+    
+    <!-- Wheel centers -->
+    <circle cx="-25" cy="15" r="3" fill="#7f8c8d"/>
+    <circle cx="25" cy="15" r="3" fill="#7f8c8d"/>
+    
+    <!-- Detection bounding box -->
+    <rect x="-45" y="-30" width="90" height="55" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <!-- Detection label -->
+    <rect x="-45" y="-45" width="35" height="12" fill="#e74c3c"/>
+    <text x="-42" y="-36" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">VEHICLE</text>
+    
+    <!-- Confidence score -->
+    <text x="-5" y="-36" font-family="Arial, sans-serif" font-size="7" fill="#e74c3c" font-weight="bold">0.95</text>
+  </g>
+  
+  <!-- YOLO text -->
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1" font-weight="bold">YOLOv5</text>
+</svg>

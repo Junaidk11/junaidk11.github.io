@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="webGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="databaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="phpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="inventoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Web browser interface -->
+  <g transform="translate(100, 60)">
+    <rect x="-50" y="-25" width="100" height="50" rx="3" fill="url(#webGradient)" stroke="#2980b9" stroke-width="2"/>
+    
+    <!-- Browser header -->
+    <rect x="-50" y="-25" width="100" height="12" fill="#34495e"/>
+    <circle cx="-42" cy="-19" r="2" fill="#e74c3c"/>
+    <circle cx="-35" cy="-19" r="2" fill="#f39c12"/>
+    <circle cx="-28" cy="-19" r="2" fill="#27ae60"/>
+    
+    <!-- Address bar -->
+    <rect x="-20" y="-22" width="60" height="6" fill="white" rx="1"/>
+    <text x="10" y="-17" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#7f8c8d">inventory.fic.ca</text>
+    
+    <!-- Web content -->
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">INVENTORY</text>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">MANAGEMENT</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">WEB APPLICATION</text>
+  </g>
+  
+  <!-- Database -->
+  <g transform="translate(100, 140)">
+    <ellipse cx="0" cy="0" rx="25" ry="8" fill="url(#databaseGradient)" stroke="#c0392b" stroke-width="2"/>
+    <ellipse cx="0" cy="-5" rx="25" ry="8" fill="none" stroke="#c0392b" stroke-width="2"/>
+    <ellipse cx="0" cy="-10" rx="25" ry="8" fill="none" stroke="#c0392b" stroke-width="2"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e74c3c" font-weight="bold">MySQL</text>
+    <text x="0" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c">DATABASE</text>
+  </g>
+  
+  <!-- PHP backend -->
+  <g transform="translate(50, 100)">
+    <circle cx="0" cy="0" r="15" fill="url(#phpGradient)" stroke="#8e44ad" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">PHP</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">BACKEND</text>
+  </g>
+  
+  <!-- JavaScript frontend -->
+  <g transform="translate(150, 100)">
+    <rect x="-12" y="-8" width="24" height="16" rx="2" fill="#f1c40f" stroke="#f39c12" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">JS</text>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">AJAX</text>
+  </g>
+  
+  <!-- Inventory items representation -->
+  <g>
+    <!-- Item boxes -->
+    <g transform="translate(40, 40)">
+      <rect x="0" y="0" width="8" height="8" fill="url(#inventoryGradient)" stroke="#e67e22" stroke-width="1"/>
+      <text x="4" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">1</text>
+      <text x="4" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">ITEM</text>
+    </g>
+    
+    <g transform="translate(160, 40)">
+      <rect x="0" y="0" width="8" height="8" fill="url(#inventoryGradient)" stroke="#e67e22" stroke-width="1"/>
+      <text x="4" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">2</text>
+      <text x="4" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">ITEM</text>
+    </g>
+    
+    <g transform="translate(30, 160)">
+      <rect x="0" y="0" width="8" height="8" fill="url(#inventoryGradient)" stroke="#e67e22" stroke-width="1"/>
+      <text x="4" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">3</text>
+      <text x="4" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">ITEM</text>
+    </g>
+    
+    <g transform="translate(170, 160)">
+      <rect x="0" y="0" width="8" height="8" fill="url(#inventoryGradient)" stroke="#e67e22" stroke-width="1"/>
+      <text x="4" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">4</text>
+      <text x="4" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">ITEM</text>
+    </g>
+  </g>
+  
+  <!-- Data flow connections -->
+  <g stroke="#95a5a6" stroke-width="2" fill="none">
+    <!-- Frontend to Backend -->
+    <path d="M 135,100 Q 125,100 65,100"/>
+    <polygon points="65,100 68,97 68,103" fill="#95a5a6"/>
+    
+    <!-- Backend to Database -->
+    <path d="M 50,115 Q 60,125 75,132"/>
+    <polygon points="75,132 72,129 72,135" fill="#95a5a6"/>
+    
+    <!-- Database to Backend -->
+    <path d="M 75,125 Q 60,115 50,108"/>
+    <polygon points="50,108 53,111 53,105" fill="#95a5a6"/>
+    
+    <!-- Backend to Frontend -->
+    <path d="M 65,100 Q 125,100 135,100"/>
+    <polygon points="135,100 132,97 132,103" fill="#95a5a6"/>
+  </g>
+  
+  <!-- User authentication -->
+  <g transform="translate(100, 25)">
+    <circle cx="0" cy="0" r="8" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+    <circle cx="0" cy="-2" r="2" fill="#27ae60"/>
+    <path d="M -3,2 Q 0,4 3,2" stroke="#27ae60" stroke-width="1" fill="none"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60">LOGIN</text>
+  </g>
+  
+  <!-- CRUD operations -->
+  <g>
+    <!-- Create -->
+    <g transform="translate(30, 80)">
+      <circle cx="0" cy="0" r="6" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="1"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#27ae60" font-weight="bold">+</text>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">ADD</text>
+    </g>
+    
+    <!-- Read -->
+    <g transform="translate(30, 100)">
+      <circle cx="0" cy="0" r="6" fill="rgba(52, 152, 219, 0.3)" stroke="#3498db" stroke-width="1"/>
+      <circle cx="0" cy="0" r="2" fill="#3498db"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">VIEW</text>
+    </g>
+    
+    <!-- Update -->
+    <g transform="translate(30, 120)">
+      <circle cx="0" cy="0" r="6" fill="rgba(241, 196, 15, 0.3)" stroke="#f1c40f" stroke-width="1"/>
+      <path d="M -2,-2 L 2,2 M -2,2 L 2,-2" stroke="#f1c40f" stroke-width="1"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f">EDIT</text>
+    </g>
+    
+    <!-- Delete -->
+    <g transform="translate(30, 140)">
+      <circle cx="0" cy="0" r="6" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="1"/>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c" font-weight="bold">×</text>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">DEL</text>
+    </g>
+  </g>
+  
+  <!-- Excel replacement indicator -->
+  <g transform="translate(170, 40)">
+    <rect x="-8" y="-6" width="16" height="12" fill="#95a5a6" stroke="#7f8c8d" stroke-width="1"/>
+    <line x1="-6" y1="-4" x2="6" y2="4" stroke="#e74c3c" stroke-width="2"/>
+    <line x1="-6" y1="4" x2="6" y2="-4" stroke="#e74c3c" stroke-width="2"/>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#95a5a6">NO EXCEL</text>
+  </g>
+  
+  <!-- Fraser International College -->
+  <g transform="translate(170, 80)">
+    <rect x="-15" y="-6" width="30" height="12" rx="2" fill="rgba(52, 73, 94, 0.8)" stroke="#34495e" stroke-width="1"/>
+    <text x="0" y="-1" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#ecf0f1" font-weight="bold">FIC</text>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#ecf0f1">PHYSICS LAB</text>
+  </g>
+  
+  <!-- Real-time updates -->
+  <g transform="translate(170, 120)">
+    <circle cx="0" cy="0" r="8" fill="rgba(155, 89, 182, 0.3)" stroke="#9b59b6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="3" fill="#9b59b6"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#9b59b6" stroke-width="1" opacity="0.5"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6">REAL-TIME</text>
+  </g>
+  
+  <!-- Search functionality -->
+  <g transform="translate(40, 25)">
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#3498db" stroke-width="2"/>
+    <line x1="4" y1="4" x2="8" y2="8" stroke="#3498db" stroke-width="2"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">SEARCH</text>
+  </g>
+  
+  <!-- Efficiency improvement -->
+  <g transform="translate(160, 25)">
+    <circle cx="0" cy="0" r="8" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60" font-weight="bold">80%</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">FASTER</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">INVENTORY</text>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">MANAGEMENT</text>
+</svg>
