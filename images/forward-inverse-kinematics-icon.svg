@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="robotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="jointGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="endEffectorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Robotic arm base -->
+  <g transform="translate(60, 130)">
+    <rect x="-15" y="-8" width="30" height="16" rx="2" fill="#34495e" stroke="#2c3e50" stroke-width="2"/>
+    <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ecf0f1" font-weight="bold">BASE</text>
+  </g>
+  
+  <!-- AL5D Robotic Arm (5-axis) -->
+  <g>
+    <!-- Link 1 (Base rotation) -->
+    <g transform="translate(60, 130)">
+      <circle cx="0" cy="-8" r="4" fill="url(#jointGradient)" stroke="#c0392b" stroke-width="2"/>
+      <line x1="0" y1="-8" x2="20" y2="-35" stroke="url(#robotGradient)" stroke-width="4"/>
+      <text x="25" y="-30" font-family="Arial, sans-serif" font-size="5" fill="#3498db">θ₁</text>
+    </g>
+    
+    <!-- Link 2 (Shoulder) -->
+    <g transform="translate(80, 95)">
+      <circle cx="0" cy="0" r="4" fill="url(#jointGradient)" stroke="#c0392b" stroke-width="2"/>
+      <line x1="0" y1="0" x2="25" y2="-15" stroke="url(#robotGradient)" stroke-width="4"/>
+      <text x="30" y="-10" font-family="Arial, sans-serif" font-size="5" fill="#3498db">θ₂</text>
+    </g>
+    
+    <!-- Link 3 (Elbow) -->
+    <g transform="translate(105, 80)">
+      <circle cx="0" cy="0" r="4" fill="url(#jointGradient)" stroke="#c0392b" stroke-width="2"/>
+      <line x1="0" y1="0" x2="20" y2="-10" stroke="url(#robotGradient)" stroke-width="4"/>
+      <text x="25" y="-5" font-family="Arial, sans-serif" font-size="5" fill="#3498db">θ₃</text>
+    </g>
+    
+    <!-- Link 4 (Wrist) -->
+    <g transform="translate(125, 70)">
+      <circle cx="0" cy="0" r="4" fill="url(#jointGradient)" stroke="#c0392b" stroke-width="2"/>
+      <line x1="0" y1="0" x2="15" y2="-5" stroke="url(#robotGradient)" stroke-width="4"/>
+      <text x="20" y="0" font-family="Arial, sans-serif" font-size="5" fill="#3498db">θ₄</text>
+    </g>
+    
+    <!-- Link 5 (Gripper rotation) -->
+    <g transform="translate(140, 65)">
+      <circle cx="0" cy="0" r="4" fill="url(#jointGradient)" stroke="#c0392b" stroke-width="2"/>
+      <text x="8" y="0" font-family="Arial, sans-serif" font-size="5" fill="#3498db">θ₅</text>
+    </g>
+  </g>
+  
+  <!-- End-effector (gripper) -->
+  <g transform="translate(140, 65)">
+    <!-- Gripper jaws -->
+    <line x1="4" y1="-3" x2="10" y2="-5" stroke="url(#endEffectorGradient)" stroke-width="3"/>
+    <line x1="4" y1="3" x2="10" y2="5" stroke="url(#endEffectorGradient)" stroke-width="3"/>
+    <text x="15" y="0" font-family="Arial, sans-serif" font-size="5" fill="#f39c12" font-weight="bold">GRIPPER</text>
+  </g>
+  
+  <!-- Lego blocks in π configuration -->
+  <g>
+    <!-- Block 1 (left vertical) -->
+    <g transform="translate(160, 80)">
+      <rect x="0" y="0" width="6" height="12" fill="url(#blockGradient)" stroke="#229954" stroke-width="1"/>
+      <circle cx="3" cy="3" r="1" fill="white"/>
+      <circle cx="3" cy="9" r="1" fill="white"/>
+      <text x="8" y="6" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">1</text>
+    </g>
+    
+    <!-- Block 2 (horizontal top) -->
+    <g transform="translate(160, 74)">
+      <rect x="0" y="0" width="18" height="6" fill="url(#blockGradient)" stroke="#229954" stroke-width="1"/>
+      <circle cx="3" cy="3" r="1" fill="white"/>
+      <circle cx="9" cy="3" r="1" fill="white"/>
+      <circle cx="15" cy="3" r="1" fill="white"/>
+      <text x="9" y="12" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">2</text>
+    </g>
+    
+    <!-- Block 3 (right vertical) -->
+    <g transform="translate(172, 80)">
+      <rect x="0" y="0" width="6" height="12" fill="url(#blockGradient)" stroke="#229954" stroke-width="1"/>
+      <circle cx="3" cy="3" r="1" fill="white"/>
+      <circle cx="3" cy="9" r="1" fill="white"/>
+      <text x="8" y="6" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">3</text>
+    </g>
+  </g>
+  
+  <!-- Pi symbol -->
+  <g transform="translate(169, 100)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#27ae60" font-weight="bold">π</text>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60">CONFIG</text>
+  </g>
+  
+  <!-- Forward Kinematics -->
+  <g transform="translate(40, 40)">
+    <rect x="-20" y="-8" width="40" height="16" rx="2" fill="rgba(52, 152, 219, 0.8)" stroke="#3498db" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">FORWARD</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">KINEMATICS</text>
+  </g>
+  
+  <!-- Inverse Kinematics -->
+  <g transform="translate(160, 40)">
+    <rect x="-20" y="-8" width="40" height="16" rx="2" fill="rgba(231, 76, 60, 0.8)" stroke="#e74c3c" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">INVERSE</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">KINEMATICS</text>
+  </g>
+  
+  <!-- Equations representation -->
+  <g>
+    <!-- Forward kinematics equation -->
+    <g transform="translate(40, 60)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#3498db" font-weight="bold">P = f(θ)</text>
+      <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">Joint → Position</text>
+    </g>
+    
+    <!-- Inverse kinematics equation -->
+    <g transform="translate(160, 60)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">θ = f⁻¹(P)</text>
+      <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">Position → Joint</text>
+    </g>
+  </g>
+  
+  <!-- MATLAB implementation -->
+  <g transform="translate(100, 150)">
+    <rect x="-25" y="-8" width="50" height="16" rx="2" fill="rgba(155, 89, 182, 0.8)" stroke="#9b59b6" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">MATLAB</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">IMPLEMENTATION</text>
+  </g>
+  
+  <!-- SSC-32 Controller -->
+  <g transform="translate(30, 120)">
+    <rect x="-12" y="-6" width="24" height="12" rx="2" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+    <text x="0" y="-1" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#ecf0f1" font-weight="bold">SSC-32</text>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#ecf0f1">SERVO</text>
+  </g>
+  
+  <!-- Coordinate system -->
+  <g transform="translate(30, 80)">
+    <!-- X axis -->
+    <line x1="0" y1="0" x2="15" y2="0" stroke="#e74c3c" stroke-width="2"/>
+    <polygon points="15,0 12,-2 12,2" fill="#e74c3c"/>
+    <text x="18" y="3" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c">X</text>
+    
+    <!-- Y axis -->
+    <line x1="0" y1="0" x2="0" y2="-15" stroke="#27ae60" stroke-width="2"/>
+    <polygon points="0,-15 -2,-12 2,-12" fill="#27ae60"/>
+    <text x="3" y="-12" font-family="Arial, sans-serif" font-size="5" fill="#27ae60">Y</text>
+    
+    <!-- Z axis -->
+    <line x1="0" y1="0" x2="-8" y2="-8" stroke="#3498db" stroke-width="2"/>
+    <polygon points="-8,-8 -6,-6 -6,-10" fill="#3498db"/>
+    <text x="-12" y="-5" font-family="Arial, sans-serif" font-size="5" fill="#3498db">Z</text>
+  </g>
+  
+  <!-- DH Parameters -->
+  <g transform="translate(100, 120)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#f1c40f" font-weight="bold">D-H PARAMS</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">Denavit-Hartenberg</text>
+  </g>
+  
+  <!-- Motion arrows -->
+  <g>
+    <!-- Forward direction -->
+    <g transform="translate(70, 50)">
+      <line x1="0" y1="0" x2="20" y2="0" stroke="#3498db" stroke-width="2"/>
+      <polygon points="20,0 17,-2 17,2" fill="#3498db"/>
+    </g>
+    
+    <!-- Inverse direction -->
+    <g transform="translate(130, 50)">
+      <line x1="20" y1="0" x2="0" y2="0" stroke="#e74c3c" stroke-width="2"/>
+      <polygon points="0,0 3,-2 3,2" fill="#e74c3c"/>
+    </g>
+  </g>
+  
+  <!-- Motor encoder values -->
+  <g transform="translate(170, 120)">
+    <circle cx="0" cy="0" r="8" fill="rgba(241, 196, 15, 0.3)" stroke="#f1c40f" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#f1c40f" font-weight="bold">ENC</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f">VAL</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">KINEMATICS</text>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">ROBOTICS</text>
+</svg>

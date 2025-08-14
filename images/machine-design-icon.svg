@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chassisGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#95a5a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f8c8d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="electricGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="feaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wheelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Motorcycle chassis structure -->
+  <g transform="translate(100, 100)">
+    <!-- Main frame -->
+    <path d="M -40,10 L -20,-10 L 20,-10 L 40,10 L 30,20 L -30,20 Z" 
+          fill="url(#chassisGradient)" stroke="#7f8c8d" stroke-width="2"/>
+    
+    <!-- Front fork -->
+    <path d="M -35,-10 L -45,-25 L -42,-30 L -32,-15" 
+          fill="url(#chassisGradient)" stroke="#7f8c8d" stroke-width="2"/>
+    
+    <!-- Rear swing arm -->
+    <path d="M 35,10 L 50,15 L 48,20 L 33,15" 
+          fill="url(#chassisGradient)" stroke="#7f8c8d" stroke-width="2"/>
+    
+    <!-- Seat -->
+    <ellipse cx="0" cy="-5" rx="15" ry="5" fill="#2c3e50"/>
+  </g>
+  
+  <!-- Wheels -->
+  <g>
+    <!-- Front wheel -->
+    <g transform="translate(55, 125)">
+      <circle cx="0" cy="0" r="12" fill="url(#wheelGradient)" stroke="#2c3e50" stroke-width="2"/>
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#95a5a6" stroke-width="1"/>
+      <circle cx="0" cy="0" r="4" fill="#7f8c8d"/>
+      <!-- Spokes -->
+      <g stroke="#95a5a6" stroke-width="1">
+        <line x1="0" y1="-8" x2="0" y2="8"/>
+        <line x1="-6" y1="-6" x2="6" y2="6"/>
+        <line x1="-8" y1="0" x2="8" y2="0"/>
+        <line x1="-6" y1="6" x2="6" y2="-6"/>
+      </g>
+    </g>
+    
+    <!-- Rear wheel -->
+    <g transform="translate(145, 125)">
+      <circle cx="0" cy="0" r="12" fill="url(#wheelGradient)" stroke="#2c3e50" stroke-width="2"/>
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#95a5a6" stroke-width="1"/>
+      <circle cx="0" cy="0" r="4" fill="#7f8c8d"/>
+      <!-- Spokes -->
+      <g stroke="#95a5a6" stroke-width="1">
+        <line x1="0" y1="-8" x2="0" y2="8"/>
+        <line x1="-6" y1="-6" x2="6" y2="6"/>
+        <line x1="-8" y1="0" x2="8" y2="0"/>
+        <line x1="-6" y1="6" x2="6" y2="-6"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Electric motor -->
+  <g transform="translate(130, 100)">
+    <circle cx="0" cy="0" r="8" fill="url(#electricGradient)" stroke="#2980b9" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">E</text>
+    <text x="0" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db">MOTOR</text>
+  </g>
+  
+  <!-- Battery pack -->
+  <g transform="translate(100, 120)">
+    <rect x="-15" y="-5" width="30" height="10" rx="2" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <text x="0" y="2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">BATTERY</text>
+  </g>
+  
+  <!-- FEA stress analysis visualization -->
+  <g transform="translate(100, 60)">
+    <text x="0" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e74c3c" font-weight="bold">FEA ANALYSIS</text>
+    
+    <!-- Stress color map -->
+    <rect x="-25" y="-5" width="50" height="10" fill="url(#feaGradient)" rx="2"/>
+    
+    <!-- Stress indicators -->
+    <g>
+      <circle cx="-15" cy="0" r="2" fill="#27ae60"/>
+      <circle cx="-5" cy="0" r="2" fill="#f39c12"/>
+      <circle cx="5" cy="0" r="2" fill="#e67e22"/>
+      <circle cx="15" cy="0" r="2" fill="#e74c3c"/>
+    </g>
+    
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c">STRESS DISTRIBUTION</text>
+  </g>
+  
+  <!-- CAD design representation -->
+  <g transform="translate(50, 60)">
+    <rect x="-12" y="-8" width="24" height="16" rx="2" fill="rgba(52, 152, 219, 0.8)" stroke="#3498db" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">CAD</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">DESIGN</text>
+    
+    <!-- CAD wireframe -->
+    <g stroke="#3498db" stroke-width="1" fill="none" opacity="0.5">
+      <rect x="-8" y="-4" width="16" height="8"/>
+      <line x1="-8" y1="-4" x2="8" y2="4"/>
+      <line x1="8" y1="-4" x2="-8" y2="4"/>
+    </g>
+  </g>
+  
+  <!-- SolidWorks logo/representation -->
+  <g transform="translate(150, 60)">
+    <rect x="-12" y="-8" width="24" height="16" rx="2" fill="rgba(231, 76, 60, 0.8)" stroke="#e74c3c" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">SW</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">SIMULATION</text>
+  </g>
+  
+  <!-- Transmission system -->
+  <g transform="translate(110, 140)">
+    <!-- Chain drive -->
+    <ellipse cx="0" cy="0" rx="8" ry="3" fill="none" stroke="#95a5a6" stroke-width="1" stroke-dasharray="2,1"/>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#95a5a6">TRANSMISSION</text>
+  </g>
+  
+  <!-- EleCycle branding -->
+  <g transform="translate(100, 30)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f1c40f" font-weight="bold">EleCycle</text>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#f39c12">ELECTRIC MOTORCYCLE</text>
+  </g>
+  
+  <!-- Performance specs -->
+  <g transform="translate(40, 140)">
+    <circle cx="0" cy="0" r="8" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60" font-weight="bold">2</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">SEAT</text>
+  </g>
+  
+  <!-- Urban environment indicator -->
+  <g transform="translate(160, 140)">
+    <circle cx="0" cy="0" r="8" fill="rgba(52, 152, 219, 0.3)" stroke="#3498db" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db" font-weight="bold">ECO</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">URBAN</text>
+  </g>
+  
+  <!-- Fatigue analysis indicator -->
+  <g transform="translate(70, 140)">
+    <path d="M -6,0 Q 0,-4 6,0 Q 0,4 -6,0" fill="rgba(155, 89, 182, 0.3)" stroke="#9b59b6" stroke-width="1"/>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6">FATIGUE</text>
+  </g>
+  
+  <!-- Handlebars -->
+  <g transform="translate(55, 85)">
+    <path d="M -8,0 Q 0,-5 8,0" stroke="#7f8c8d" stroke-width="3" fill="none"/>
+    <circle cx="-8" cy="0" r="2" fill="#95a5a6"/>
+    <circle cx="8" cy="0" r="2" fill="#95a5a6"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">MACHINE</text>
+  <text x="100" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">DESIGN</text>
+</svg>

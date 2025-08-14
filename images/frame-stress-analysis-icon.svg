@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#95a5a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7f8c8d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#f1c40f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="feaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="forceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Frame Structure (center) -->
+  <g transform="translate(100, 100)">
+    <!-- Main frame beams -->
+    <rect x="-30" y="-25" width="60" height="8" rx="2" fill="url(#frameGradient)" stroke="#7f8c8d" stroke-width="1"/>
+    <rect x="-30" y="17" width="60" height="8" rx="2" fill="url(#frameGradient)" stroke="#7f8c8d" stroke-width="1"/>
+    <rect x="-30" y="-25" width="8" height="50" rx="2" fill="url(#frameGradient)" stroke="#7f8c8d" stroke-width="1"/>
+    <rect x="22" y="-25" width="8" height="50" rx="2" fill="url(#frameGradient)" stroke="#7f8c8d" stroke-width="1"/>
+    
+    <!-- Diagonal braces -->
+    <line x1="-22" y1="-17" x2="22" y2="17" stroke="url(#frameGradient)" stroke-width="4"/>
+    <line x1="22" y1="-17" x2="-22" y2="17" stroke="url(#frameGradient)" stroke-width="4"/>
+    
+    <!-- Connection joints -->
+    <circle cx="-26" cy="-21" r="3" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+    <circle cx="26" cy="-21" r="3" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+    <circle cx="-26" cy="21" r="3" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+    <circle cx="26" cy="21" r="3" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+  </g>
+  
+  <!-- Stress Distribution Visualization (overlay on frame) -->
+  <g transform="translate(100, 90)" opacity="0.8">
+    <!-- Stress concentrations (red-yellow-green gradient) -->
+    <ellipse cx="-26" cy="-11" rx="8" ry="6" fill="url(#stressGradient)" opacity="0.7"/>
+    <ellipse cx="26" cy="-11" rx="8" ry="6" fill="url(#stressGradient)" opacity="0.7"/>
+    <ellipse cx="-26" cy="31" rx="8" ry="6" fill="url(#stressGradient)" opacity="0.7"/>
+    <ellipse cx="26" cy="31" rx="8" ry="6" fill="url(#stressGradient)" opacity="0.7"/>
+  </g>
+  
+  <!-- Applied Forces (arrows) -->
+  <g transform="translate(100, 60)">
+    <!-- Downward force -->
+    <polygon points="0,-15 -4,-8 -2,-8 -2,0 2,0 2,-8 4,-8" fill="url(#forceGradient)"/>
+    <text x="0" y="-20" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#9b59b6" font-weight="bold">F</text>
+  </g>
+  
+  <!-- FEA Mesh Representation (top-left) -->
+  <g transform="translate(55, 55)">
+    <!-- Mesh elements -->
+    <g stroke="#3498db" stroke-width="1" fill="none">
+      <polygon points="0,0 10,0 5,8"/>
+      <polygon points="10,0 20,0 15,8"/>
+      <polygon points="5,8 15,8 10,16"/>
+      <polygon points="0,0 5,8 -5,8"/>
+      <polygon points="15,8 20,0 25,8"/>
+    </g>
+    <text x="10" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#3498db" font-weight="bold">FEA MESH</text>
+  </g>
+  
+  <!-- Stress Scale (right side) -->
+  <g transform="translate(155, 80)">
+    <rect x="0" y="0" width="8" height="40" fill="url(#stressGradient)" stroke="#7f8c8d" stroke-width="1"/>
+    
+    <!-- Scale markers -->
+    <g font-family="Arial, sans-serif" font-size="6" fill="#ecf0f1">
+      <text x="12" y="5">Max</text>
+      <text x="12" y="22">Med</text>
+      <text x="12" y="38">Min</text>
+    </g>
+    
+    <text x="4" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e74c3c" font-weight="bold">STRESS</text>
+    <text x="4" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#bdc3c7">Von Mises</text>
+  </g>
+  
+  <!-- Displacement Visualization (bottom-left) -->
+  <g transform="translate(50, 140)">
+    <!-- Deformed shape outline -->
+    <path d="M 0,0 Q 5,-3 10,0 Q 15,3 20,0" stroke="#1abc9c" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+    <path d="M 0,0 L 20,0" stroke="#95a5a6" stroke-width="1"/>
+    
+    <text x="10" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1abc9c" font-weight="bold">DEFORMATION</text>
+    <text x="10" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#bdc3c7">Exaggerated</text>
+  </g>
+  
+  <!-- Analysis Results (bottom-right) -->
+  <g transform="translate(135, 140)">
+    <rect x="0" y="0" width="25" height="16" rx="2" fill="rgba(52, 73, 94, 0.8)" stroke="#3498db" stroke-width="1"/>
+    <text x="12.5" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#3498db" font-weight="bold">σ = 250 MPa</text>
+    <text x="12.5" y="13" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db">SF = 2.5</text>
+  </g>
+  
+  <!-- Support Conditions (bottom) -->
+  <g transform="translate(70, 130)">
+    <!-- Fixed support -->
+    <g stroke="#7f8c8d" stroke-width="2" fill="#7f8c8d">
+      <line x1="0" y1="0" x2="0" y2="8"/>
+      <polygon points="-3,8 0,12 3,8"/>
+    </g>
+  </g>
+  
+  <g transform="translate(130, 130)">
+    <!-- Pin support -->
+    <g stroke="#7f8c8d" stroke-width="2" fill="none">
+      <circle cx="0" cy="4" r="4"/>
+      <line x1="0" y1="8" x2="0" y2="12"/>
+    </g>
+  </g>
+  
+  <!-- CAD/Software Indicators (top) -->
+  <g transform="translate(100, 30)">
+    <text x="-15" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e67e22" font-weight="bold">CAD</text>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#3498db" font-weight="bold">FEA</text>
+    <text x="15" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#27ae60" font-weight="bold">SIM</text>
+  </g>
+  
+  <!-- Material Properties Indicator -->
+  <g transform="translate(100, 165)">
+    <rect x="-20" y="0" width="40" height="12" rx="2" fill="rgba(52, 73, 94, 0.8)" stroke="#95a5a6" stroke-width="1"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ecf0f1" font-weight="bold">E = 200 GPa</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">FRAME STRESS</text>
+  <text x="100" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">ANALYSIS</text>
+</svg>

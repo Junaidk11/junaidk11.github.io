@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="eegGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="alphaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1abc9c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="icaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spectrumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Brain Outline (center-top) -->
+  <g transform="translate(100, 70)">
+    <!-- Simplified brain shape -->
+    <path d="M -20,-15 Q -25,-20 -15,-25 Q 0,-30 15,-25 Q 25,-20 20,-15 Q 22,-10 18,-5 Q 15,0 10,0 Q 5,5 0,3 Q -5,5 -10,0 Q -15,0 -18,-5 Q -22,-10 -20,-15 Z" 
+          fill="url(#brainGradient)" stroke="#c0392b" stroke-width="1"/>
+    
+    <!-- Brain regions -->
+    <circle cx="-8" cy="-8" r="3" fill="#e67e22" opacity="0.7"/>
+    <circle cx="8" cy="-8" r="3" fill="#e67e22" opacity="0.7"/>
+    <circle cx="0" cy="0" r="4" fill="#f1c40f" opacity="0.7"/>
+    
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e74c3c" font-weight="bold">BRAIN ACTIVITY</text>
+  </g>
+  
+  <!-- EEG Electrodes -->
+  <g transform="translate(100, 70)">
+    <!-- Electrode positions (simplified 10-20 system) -->
+    <circle cx="-15" cy="-12" r="2" fill="url(#eegGradient)" stroke="#2980b9" stroke-width="1"/>
+    <circle cx="0" cy="-18" r="2" fill="url(#eegGradient)" stroke="#2980b9" stroke-width="1"/>
+    <circle cx="15" cy="-12" r="2" fill="url(#eegGradient)" stroke="#2980b9" stroke-width="1"/>
+    <circle cx="-12" cy="0" r="2" fill="url(#eegGradient)" stroke="#2980b9" stroke-width="1"/>
+    <circle cx="12" cy="0" r="2" fill="url(#eegGradient)" stroke="#2980b9" stroke-width="1"/>
+    
+    <!-- Electrode labels -->
+    <text x="-15" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">C3</text>
+    <text x="0" y="-14" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">Cz</text>
+    <text x="15" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">C4</text>
+  </g>
+  
+  <!-- Raw EEG Signal (left side) -->
+  <g transform="translate(50, 110)">
+    <text x="0" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#3498db" font-weight="bold">RAW EEG</text>
+    
+    <!-- Noisy EEG signal -->
+    <path d="M -15,0 L -12,3 L -9,-2 L -6,5 L -3,-4 L 0,6 L 3,-3 L 6,4 L 9,-1 L 12,2 L 15,-1" 
+          stroke="url(#eegGradient)" stroke-width="2" fill="none"/>
+    <!-- Noise overlay -->
+    <path d="M -15,0 L -14,1 L -13,-1 L -12,2 L -11,-2 L -10,1 L -9,-1 L -8,2 L -7,-1 L -6,1 L -5,-2 L -4,1 L -3,-1 L -2,2 L -1,-1 L 0,1 L 1,-2 L 2,1 L 3,-1 L 4,2 L 5,-1 L 6,1 L 7,-2 L 8,1 L 9,-1 L 10,2 L 11,-1 L 12,1 L 13,-2 L 14,1 L 15,-1" 
+          stroke="#e74c3c" stroke-width="1" fill="none" opacity="0.6"/>
+    
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#bdc3c7">Artifacts + Noise</text>
+  </g>
+  
+  <!-- ICA Processing (center) -->
+  <g transform="translate(100, 110)">
+    <rect x="-15" y="-8" width="30" height="16" rx="3" fill="url(#icaGradient)" stroke="#e67e22" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">ICA</text>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">PROCESSING</text>
+    
+    <!-- Processing arrows -->
+    <polygon points="-25,0 -18,-3 -18,3" fill="#95a5a6"/>
+    <polygon points="18,0 25,-3 25,3" fill="#95a5a6"/>
+  </g>
+  
+  <!-- Processed Signal (right side) -->
+  <g transform="translate(150, 110)">
+    <text x="0" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#1abc9c" font-weight="bold">CLEAN EEG</text>
+    
+    <!-- Clean EEG signal -->
+    <path d="M -15,0 Q -7,4 0,0 Q 7,-4 15,0" 
+          stroke="url(#alphaGradient)" stroke-width="3" fill="none"/>
+    
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#bdc3c7">Artifact-free</text>
+  </g>
+  
+  <!-- Power Spectral Density (bottom-left) -->
+  <g transform="translate(60, 150)">
+    <text x="0" y="-12" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#9b59b6" font-weight="bold">POWER SPECTRUM</text>
+    
+    <!-- Frequency bands -->
+    <rect x="-15" y="0" width="4" height="8" fill="#e74c3c"/>
+    <rect x="-8" y="0" width="4" height="12" fill="#f39c12"/>
+    <rect x="-1" y="0" width="4" height="15" fill="#27ae60"/>
+    <rect x="6" y="0" width="4" height="6" fill="#3498db"/>
+    <rect x="13" y="0" width="4" height="3" fill="#9b59b6"/>
+    
+    <!-- Band labels -->
+    <text x="-13" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">δ</text>
+    <text x="-6" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">θ</text>
+    <text x="1" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">α</text>
+    <text x="8" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">β</text>
+    <text x="15" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#9b59b6">γ</text>
+  </g>
+  
+  <!-- Eyes Open/Closed States (bottom-right) -->
+  <g transform="translate(140, 150)">
+    <text x="0" y="-12" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ecf0f1" font-weight="bold">STATES</text>
+    
+    <!-- Eyes closed -->
+    <g transform="translate(-8, 0)">
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#27ae60" stroke-width="2"/>
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="#27ae60" stroke-width="2"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">CLOSED</text>
+    </g>
+    
+    <!-- Eyes open -->
+    <g transform="translate(8, 0)">
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#3498db" stroke-width="2"/>
+      <circle cx="0" cy="0" r="2" fill="#3498db"/>
+      <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">OPEN</text>
+    </g>
+  </g>
+  
+  <!-- Alpha Wave Emphasis -->
+  <g transform="translate(100, 130)">
+    <path d="M -20,0 Q -15,-5 -10,0 Q -5,5 0,0 Q 5,-5 10,0 Q 15,5 20,0" 
+          stroke="url(#alphaGradient)" stroke-width="2" fill="none"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#1abc9c" font-weight="bold">α WAVES (8-13 Hz)</text>
+  </g>
+  
+  <!-- EEGLAB Logo Reference -->
+  <g transform="translate(100, 35)">
+    <rect x="-15" y="-6" width="30" height="12" rx="2" fill="rgba(52, 73, 94, 0.8)" stroke="#3498db" stroke-width="1"/>
+    <text x="0" y="-1" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#3498db" font-weight="bold">EEGLAB</text>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">MATLAB</text>
+  </g>
+  
+  <!-- Statistical Analysis -->
+  <g transform="translate(50, 50)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#f39c12" font-weight="bold">STATISTICS</text>
+    <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">p &lt; 0.05</text>
+  </g>
+  
+  <!-- Topographic Mapping -->
+  <g transform="translate(150, 50)">
+    <circle cx="0" cy="0" r="8" fill="rgba(52, 73, 94, 0.8)" stroke="#27ae60" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#27ae60" opacity="0.6"/>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60">TOPOGRAPHY</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">EEG SIGNAL</text>
+  <text x="100" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">PROCESSING</text>
+</svg>

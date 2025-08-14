@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mcuGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="memoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#1a252f" stroke-width="2"/>
+  
+  <!-- Microcontroller (MCU) -->
+  <g transform="translate(60, 100)">
+    <rect x="-20" y="-15" width="40" height="30" rx="2" fill="url(#mcuGradient)" stroke="#2980b9" stroke-width="2"/>
+    
+    <!-- MCU pins -->
+    <g stroke="#bdc3c7" stroke-width="1">
+      <!-- Left side pins -->
+      <line x1="-22" y1="-10" x2="-20" y2="-10"/>
+      <line x1="-22" y1="-5" x2="-20" y2="-5"/>
+      <line x1="-22" y1="0" x2="-20" y2="0"/>
+      <line x1="-22" y1="5" x2="-20" y2="5"/>
+      <line x1="-22" y1="10" x2="-20" y2="10"/>
+      
+      <!-- Right side pins -->
+      <line x1="20" y1="-10" x2="22" y2="-10"/>
+      <line x1="20" y1="-5" x2="22" y2="-5"/>
+      <line x1="20" y1="0" x2="22" y2="0"/>
+      <line x1="20" y1="5" x2="22" y2="5"/>
+      <line x1="20" y1="10" x2="22" y2="10"/>
+      
+      <!-- Top pins -->
+      <line x1="-10" y1="-17" x2="-10" y2="-15"/>
+      <line x1="-5" y1="-17" x2="-5" y2="-15"/>
+      <line x1="0" y1="-17" x2="0" y2="-15"/>
+      <line x1="5" y1="-17" x2="5" y2="-15"/>
+      <line x1="10" y1="-17" x2="10" y2="-15"/>
+      
+      <!-- Bottom pins -->
+      <line x1="-10" y1="15" x2="-10" y2="17"/>
+      <line x1="-5" y1="15" x2="-5" y2="17"/>
+      <line x1="0" y1="15" x2="0" y2="17"/>
+      <line x1="5" y1="15" x2="5" y2="17"/>
+      <line x1="10" y1="15" x2="10" y2="17"/>
+    </g>
+    
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">MCU</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">TM4C123</text>
+    <text x="0" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#3498db" font-weight="bold">CONTROLLER</text>
+  </g>
+  
+  <!-- External Flash Memory -->
+  <g transform="translate(140, 100)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="url(#flashGradient)" stroke="#c0392b" stroke-width="2"/>
+    
+    <!-- Flash memory pins (8-pin package) -->
+    <g stroke="#bdc3c7" stroke-width="1">
+      <!-- Left side pins -->
+      <line x1="-17" y1="-6" x2="-15" y2="-6"/>
+      <line x1="-17" y1="-2" x2="-15" y2="-2"/>
+      <line x1="-17" y1="2" x2="-15" y2="2"/>
+      <line x1="-17" y1="6" x2="-15" y2="6"/>
+      
+      <!-- Right side pins -->
+      <line x1="15" y1="-6" x2="17" y2="-6"/>
+      <line x1="15" y1="-2" x2="17" y2="-2"/>
+      <line x1="15" y1="2" x2="17" y2="2"/>
+      <line x1="15" y1="6" x2="17" y2="6"/>
+    </g>
+    
+    <!-- Pin 1 indicator -->
+    <circle cx="-10" cy="-6" r="1" fill="white"/>
+    
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white" font-weight="bold">FLASH</text>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">MEMORY</text>
+    <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#e74c3c" font-weight="bold">EXTERNAL</text>
+  </g>
+  
+  <!-- SPI Communication Lines -->
+  <g>
+    <!-- SPI Bus lines -->
+    <g stroke="url(#spiGradient)" stroke-width="2">
+      <!-- SCLK -->
+      <line x1="80" y1="90" x2="125" y2="94"/>
+      <!-- MOSI -->
+      <line x1="80" y1="95" x2="125" y2="98"/>
+      <!-- MISO -->
+      <line x1="80" y1="100" x2="125" y2="102"/>
+      <!-- CS -->
+      <line x1="80" y1="105" x2="125" y2="106"/>
+    </g>
+    
+    <!-- SPI signal labels -->
+    <g font-family="Arial, sans-serif" font-size="4" fill="#f39c12">
+      <text x="100" y="88" text-anchor="middle">SCLK</text>
+      <text x="100" y="93" text-anchor="middle">MOSI</text>
+      <text x="100" y="100" text-anchor="middle">MISO</text>
+      <text x="100" y="107" text-anchor="middle">CS</text>
+    </g>
+    
+    <!-- Data direction arrows -->
+    <g fill="#f39c12">
+      <!-- MOSI arrow -->
+      <polygon points="120,95 117,93 117,97"/>
+      <!-- MISO arrow -->
+      <polygon points="85,100 88,98 88,102"/>
+    </g>
+  </g>
+  
+  <!-- SPI Protocol Box -->
+  <g transform="translate(100, 70)">
+    <rect x="-15" y="-8" width="30" height="16" rx="2" fill="url(#spiGradient)" stroke="#e67e22" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">SPI</text>
+    <text x="0" y="6" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white">PROTOCOL</text>
+  </g>
+  
+  <!-- Memory Operations -->
+  <g>
+    <!-- Write Operation -->
+    <g transform="translate(50, 140)">
+      <circle cx="0" cy="0" r="8" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#e74c3c" font-weight="bold">WR</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#e74c3c">WRITE</text>
+    </g>
+    
+    <!-- Read Operation -->
+    <g transform="translate(80, 140)">
+      <circle cx="0" cy="0" r="8" fill="rgba(52, 152, 219, 0.3)" stroke="#3498db" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db" font-weight="bold">RD</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#3498db">READ</text>
+    </g>
+    
+    <!-- Erase Operation -->
+    <g transform="translate(110, 140)">
+      <circle cx="0" cy="0" r="8" fill="rgba(241, 196, 15, 0.3)" stroke="#f1c40f" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#f1c40f" font-weight="bold">ER</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f">ERASE</text>
+    </g>
+    
+    <!-- Verify Operation -->
+    <g transform="translate(140, 140)">
+      <circle cx="0" cy="0" r="8" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+      <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#27ae60" font-weight="bold">VF</text>
+      <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">VERIFY</text>
+    </g>
+  </g>
+  
+  <!-- Memory capacity indicator -->
+  <g transform="translate(170, 70)">
+    <rect x="-12" y="-6" width="24" height="12" rx="2" fill="rgba(155, 89, 182, 0.8)" stroke="#9b59b6" stroke-width="1"/>
+    <text x="0" y="-1" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white" font-weight="bold">1MB</text>
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="white">CAPACITY</text>
+  </g>
+  
+  <!-- Data representation -->
+  <g>
+    <!-- Binary data blocks -->
+    <g transform="translate(40, 60)">
+      <rect x="0" y="0" width="4" height="4" fill="#27ae60"/>
+      <rect x="5" y="0" width="4" height="4" fill="#e74c3c"/>
+      <rect x="10" y="0" width="4" height="4" fill="#27ae60"/>
+      <rect x="15" y="0" width="4" height="4" fill="#27ae60"/>
+      <rect x="0" y="5" width="4" height="4" fill="#e74c3c"/>
+      <rect x="5" y="5" width="4" height="4" fill="#27ae60"/>
+      <rect x="10" y="5" width="4" height="4" fill="#e74c3c"/>
+      <rect x="15" y="5" width="4" height="4" fill="#27ae60"/>
+      <text x="10" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#ecf0f1">DATA</text>
+    </g>
+    
+    <!-- Address pointer -->
+    <g transform="translate(170, 130)">
+      <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#f1c40f" font-weight="bold">0x1000</text>
+      <text x="0" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f39c12">ADDRESS</text>
+    </g>
+  </g>
+  
+  <!-- Clock signal -->
+  <g transform="translate(100, 50)">
+    <path d="M -8,0 L -6,0 L -6,-3 L -2,-3 L -2,0 L 2,0 L 2,-3 L 6,-3 L 6,0 L 8,0" 
+          stroke="#3498db" stroke-width="2" fill="none"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#3498db">CLOCK</text>
+  </g>
+  
+  <!-- Power supply indicator -->
+  <g transform="translate(30, 80)">
+    <rect x="-8" y="-4" width="16" height="8" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="white" font-weight="bold">3.3V</text>
+  </g>
+  
+  <!-- Communication status -->
+  <g transform="translate(30, 120)">
+    <circle cx="0" cy="0" r="6" fill="rgba(39, 174, 96, 0.3)" stroke="#27ae60" stroke-width="2"/>
+    <circle cx="0" cy="0" r="2" fill="#27ae60"/>
+    <text x="0" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#27ae60">ACTIVE</text>
+  </g>
+  
+  <!-- Speed indicator -->
+  <g transform="translate(170, 50)">
+    <circle cx="0" cy="0" r="8" fill="rgba(241, 196, 15, 0.3)" stroke="#f1c40f" stroke-width="2"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f" font-weight="bold">25MHz</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="4" fill="#f1c40f">MAX</text>
+  </g>
+  
+  <!-- Memory sectors -->
+  <g transform="translate(40, 30)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#9b59b6" font-weight="bold">SECTORS</text>
+    <g fill="#9b59b6" opacity="0.7">
+      <rect x="-10" y="5" width="4" height="3"/>
+      <rect x="-5" y="5" width="4" height="3"/>
+      <rect x="0" y="5" width="4" height="3"/>
+      <rect x="5" y="5" width="4" height="3"/>
+    </g>
+  </g>
+  
+  <!-- Chip select timing -->
+  <g transform="translate(100, 130)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#ecf0f1">CS TIMING</text>
+    <path d="M -8,5 L -6,5 L -6,8 L 6,8 L 6,5 L 8,5" stroke="#ecf0f1" stroke-width="1" fill="none"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ecf0f1" font-weight="bold">FLASH</text>
+  <text x="100" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bdc3c7">COMMUNICATION</text>
+</svg>
